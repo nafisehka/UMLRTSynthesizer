@@ -1,0 +1,22 @@
+Epsilon Script Path: epsilonScripts/mainScript.eol
+Metamodels and profiles loaded successfully for UMLRT models
+Model 'UMLRTModel' is loaded from '/Users/mojtababagherzadeh/git-nafiseh/ICSE2020/UMLRTSynthesizer/src/main/resources/evaluation/UMLRTModels/TrainExample/TrainExample.uml'
+Computation time of SMT formula of componets  Door is done in 0 milliseconds
+Computation time of SMT formula of componets  Engine is done in 0 milliseconds
+Computation time of SMT formula of componets  Train_Controller is done in 0 milliseconds
+-----  State Spape Exploration (SSE) of component : Train_Controller with a bound set to ------5
+Exploration node in level 0
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 2
+SSE of Train_Controller is done in  648 milliseconds
+Results: Number of state is : 5 and  Number edges: 12
+----- Sytesising actions of LTS for  : Train_Controller
+Sytesising actions of LTS for  : Train_Controlleris done in 331 milliseconds 
+---------LTS  mimization---------
+Minimizating of LTS with pairs count: 6
+Results: Number of state is : 4 and  Number edges: 8
+LTS minimization of : Train_Controller is done in  6 milliseconds
+Results: Number of state is : 4 and  Number edges: 8
+---------Transformation into UML-RT models ---------
+Transfomration into LTS for  : Train_Controller is done in  349 milliseconds

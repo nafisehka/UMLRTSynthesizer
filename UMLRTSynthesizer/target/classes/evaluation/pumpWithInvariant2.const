@@ -1,0 +1,74 @@
+Context PumpController{
+				 pumpOn : Boolean
+				 alarm: Boolean
+				 ciriticalMethanLevel:Boolean
+				 ciriticalAirflow:Boolean
+				 ciriticalMonoxcideLevel:Boolean
+				 isWaterLow:Boolean
+				 isWaterHigh:Boolean
+				Init {
+					pumpOn=false
+					alarm=false
+					ciriticalMethanLevel=false
+					isWaterLow=false
+					isWaterHigh=false	
+					ciriticalAirflow=false
+					ciriticalMonoxcideLevel=false
+				}
+				Message lowwaterSensor (isLow:Boolean) 
+					Pre: not isLow
+					Post: not isWaterLow
+				Message lowwaterSensor(isLow:Boolean) 
+					Pre: isLow
+					Post: not pumpOn and isWaterLow
+				Message highwaterSensor(isHigh:Boolean)
+					Pre: isHigh and not ciriticalMethanLevel
+					Post: pumpOn and isWaterHigh
+				Message highwaterSensor(isHigh:Boolean)
+					Pre: not isHigh
+					Post: not isWaterHigh
+				Message turnOnPump()
+					Post: pumpOn
+				Message turnOffPump()
+					Post: not pumpOn
+				Message turnOnPumpU()
+					Pre: not isWaterLow  and not ciriticalMethanLevel
+					Post: pumpOn
+				Message turnOffPumpU()
+					Pre: not isWaterHigh
+					Post: not pumpOn
+				Message turnOnPumpA()
+					Pre: not ciriticalMethanLevel
+					Post: pumpOn
+				Message turnOffPumpA()
+					Post: not pumpOn
+				Message alarmOn()
+					Post: alarm=true
+				Message alarmOff()
+					Post: alarm=false
+				Message monoxcideLevelSensor(highMonoxcideLevel:Boolean)
+					Pre: highMonoxcideLevel
+					Post: ciriticalMonoxcideLevel
+				Message monoxcideLevelSensor(highMonoxcideLevel:Boolean)
+					Pre: not highMonoxcideLevel
+					Post: not ciriticalMonoxcideLevel
+				Message airflowSensor(lowAirflowLevel:Boolean)
+					Pre: lowAirflowLevel
+					Post: ciriticalAirflow
+				Message airflowSensor(lowAirflowLevel:Boolean)
+					Pre: not lowAirflowLevel
+					Post: not ciriticalAirflow
+				Message methanLevelSensor(highMethanLevel:Boolean)
+					Pre: highMethanLevel
+					Post: ciriticalMethanLevel
+				Message methanLevelSensor(highMethanLevel:Boolean)
+					Pre: not highMethanLevel
+					Post: not ciriticalMethanLevel
+				Message timeout_1()
+					Pre: ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel
+					Post: alarm=true
+				Message timeout_1()
+					Pre: not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)
+					Post: alarm=false
+				
+			}

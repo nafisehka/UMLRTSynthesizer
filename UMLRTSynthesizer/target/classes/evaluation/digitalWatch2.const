@@ -1,0 +1,71 @@
+Context DigitalWatch{
+				 milliSecond : Integer
+				 second : Integer
+				 minute: Integer
+				 hour: Integer
+				 stopwatchCounter:Integer
+				 cur_milliSecond : Integer
+				 cur_second : Integer
+				 cur_minute: Integer
+				 cur_hour: Integer
+				 cur_stopwatchCounter:Integer
+				 watchMode:Boolean
+				 displayMode:Integer
+				Init {
+					milliSecond=0
+					second=0
+					minute=0
+					hour=0
+					stopwatchCounter=0
+					watchMode=true
+					displayMode=0
+				}
+				Message tick() 
+					Pre: not watchMode
+					Post: ( stopwatchCounter= (cur_stopwatchCounter+1) ) and 
+							( milliSecond = ((cur_milliSecond+1) %1000)) and 
+								( ((milliSecond %1000)=0) => ( second=(cur_second%60) +1 ) ) and 
+								( ((milliSecond %1000)!=0) => ( second=cur_second) ) and 
+								( ((second %60)=0) => (minute=(cur_minute % 60) + 1) ) and 
+								( ((second %60)!=0) => (minute=cur_minute) ) and 
+								( ((minute % 60) = 0) => (hour=((cur_hour%24)+1)) ) and 
+								( ((minute % 60) != 0) => (hour=cur_hour%24 ) )
+				Message tick() 
+					Pre:    watchMode
+					Post: 		( milliSecond = ((cur_milliSecond+1) %1000)) and 
+								( ((milliSecond %1000)=0) => ( second=(cur_second%60) +1 ) ) and 
+								( ((milliSecond %1000)!=0) => ( second=cur_second) ) and 
+								( ((second %60)=0) => (minute=(cur_minute % 60) + 1) ) and 
+								( ((second %60)!=0) => (minute=cur_minute) ) and 
+								( ((minute % 60) = 0) => (hour=((cur_hour%24)+1)) ) and 
+								( ((minute % 60) != 0) => (hour=cur_hour%24 ) )
+						  
+				Message Pin1Pressed() 
+					Pre:  watchMode  // switch to stopwatch
+					Post: not watchMode 
+			   Message Pin1Pressed()          // switch to watch
+					Pre:  watchMode
+					Post: not watchMode 
+				Message Pin2Pressed()        //reset stopwatch
+					Pre:  watchMode
+					Post: stopwatchCounter=0 
+
+
+					
+				Message Pin3Pressed()   // adjust
+					Pre:  watchMode=0 or watchMode=1
+					Post: watchMode=2 
+				Message Pin3Pressed()  // change minutes or hours
+					Pre:  watchMode=2 
+					Post: watchMode=3
+				Message Pin3Pressed()  // change minutes or hours
+					Pre:  watchMode=3 
+					Post: watchMode=2
+					
+				Message Pin4Pressed() // change hours
+					Pre: watchMode=2 
+					Post: hour=cur_hour+1 % 24
+				Message Pin4Pressed() 
+					Pre: watchMode=3 // change minutes
+					Post: minute=cur_minute+1 % 60
+			}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.queensu.cs/ca/kahani/ExecTraces">
+  <Node id="1626776512" Childs="//@Node.1 //@Node.2 //@Node.3" outgoingEdges="//@Edge.0 //@Edge.1 //@Edge.2 //@Edge.3 //@Edge.4">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1763736587" level="1" Parent="//@Node.0" Childs="//@Node.4 //@Node.3" outgoingEdges="//@Edge.5 //@Edge.6 //@Edge.7" incomingEdges="//@Edge.0 //@Edge.1">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1849444981" level="1" Parent="//@Node.0" Childs="//@Node.4 //@Node.5" outgoingEdges="//@Edge.8 //@Edge.9 //@Edge.10 //@Edge.11" incomingEdges="//@Edge.2">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="637484796" level="1" Parent="//@Node.0 //@Node.1" Childs="//@Node.5 //@Node.6" outgoingEdges="//@Edge.12 //@Edge.13 //@Edge.14" incomingEdges="//@Edge.3 //@Edge.4 //@Edge.6 //@Edge.7">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1169420384" level="2" Parent="//@Node.1 //@Node.2" Childs="//@Node.5" outgoingEdges="//@Edge.15 //@Edge.16" incomingEdges="//@Edge.5 //@Edge.8 //@Edge.9">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1817532345" level="2" Parent="//@Node.2 //@Node.3 //@Node.4 //@Node.7" incomingEdges="//@Edge.10 //@Edge.11 //@Edge.12 //@Edge.15 //@Edge.16 //@Edge.18 //@Edge.19">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1503022955" level="2" Parent="//@Node.3" Childs="//@Node.7" outgoingEdges="//@Edge.17" incomingEdges="//@Edge.13 //@Edge.14">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Node id="-356578248" level="3" Parent="//@Node.6" Childs="//@Node.5" outgoingEdges="//@Edge.18 //@Edge.19" incomingEdges="//@Edge.17">
+    <VarData name="cur_requestPending">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCached">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_cacheUpdated">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_readFromCache">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="readFromCacheFinished" actions="[set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="readFromServerFinished" actions="[set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="updateData" actions="[set_cur_cacheUpdated_to_true]"/>
+  <Edge source="//@Node.0" destination="//@Node.3" trigger="requestData" actions="[set_cur_isCached_to_true, set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.0" destination="//@Node.3" trigger="requestData" actions="[set_cur_isCached_to_true, set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.1" destination="//@Node.4" trigger="updateData" actions="[set_cur_cacheUpdated_to_true]"/>
+  <Edge source="//@Node.1" destination="//@Node.3" trigger="requestData" actions="[set_cur_isCached_to_true]"/>
+  <Edge source="//@Node.1" destination="//@Node.3" trigger="requestData" actions="[set_cur_isCached_to_true]"/>
+  <Edge source="//@Node.2" destination="//@Node.4" trigger="readFromCacheFinished" actions="[set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.2" destination="//@Node.4" trigger="readFromServerFinished" actions="[set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.2" destination="//@Node.5" trigger="requestData" actions="[set_cur_isCached_to_true, set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.2" destination="//@Node.5" trigger="requestData" actions="[set_cur_isCached_to_true, set_cur_requestPending_to_true]"/>
+  <Edge source="//@Node.3" destination="//@Node.5" trigger="updateData" actions="[set_cur_cacheUpdated_to_true]"/>
+  <Edge source="//@Node.3" destination="//@Node.6" trigger="requestData" actions=""/>
+  <Edge source="//@Node.3" destination="//@Node.6" trigger="requestData" actions=""/>
+  <Edge source="//@Node.4" destination="//@Node.5" trigger="requestData" actions="[set_cur_isCached_to_true]"/>
+  <Edge source="//@Node.4" destination="//@Node.5" trigger="requestData" actions="[set_cur_isCached_to_true]"/>
+  <Edge source="//@Node.6" destination="//@Node.7" trigger="updateData" actions="[set_cur_cacheUpdated_to_true]"/>
+  <Edge source="//@Node.7" destination="//@Node.5" trigger="requestData" actions="[send_readfromServer_to_Server]"/>
+  <Edge source="//@Node.7" destination="//@Node.5" trigger="requestData" actions="[send_readfromServer_to_Server]"/>
+</execTraces:ExecTraces>

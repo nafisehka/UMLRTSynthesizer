@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.ExecTraces.umlrtsyntesizer">
+  <Node id="-495260797" outgoingEdges="//@Edge.0 //@Edge.1 //@Edge.2 //@Edge.3 //@Edge.4 //@Edge.5 //@Edge.6 //@Edge.13 //@Edge.14 //@Edge.23 //@Edge.24 //@Edge.88 //@Edge.92" incomingEdges="//@Edge.7 //@Edge.13 //@Edge.17 //@Edge.21 //@Edge.23 //@Edge.24 //@Edge.61 //@Edge.88 //@Edge.1 //@Edge.45 //@Edge.46 //@Edge.92 //@Edge.5 //@Edge.6 //@Edge.14 //@Edge.59">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-989954478" level="1" outgoingEdges="//@Edge.7 //@Edge.8 //@Edge.9 //@Edge.10 //@Edge.11 //@Edge.12 //@Edge.25 //@Edge.26 //@Edge.42 //@Edge.43 //@Edge.96 //@Edge.44 //@Edge.45 //@Edge.46 //@Edge.57" incomingEdges="//@Edge.0 //@Edge.15 //@Edge.25 //@Edge.28 //@Edge.30 //@Edge.34 //@Edge.42 //@Edge.43 //@Edge.53 //@Edge.96 //@Edge.8 //@Edge.44 //@Edge.67 //@Edge.69 //@Edge.73 //@Edge.11 //@Edge.12 //@Edge.26 //@Edge.16 //@Edge.57 //@Edge.66 //@Edge.77 //@Edge.51 //@Edge.78 //@Edge.80">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1961425582" level="1" outgoingEdges="//@Edge.15 //@Edge.16 //@Edge.17 //@Edge.18 //@Edge.19 //@Edge.20 //@Edge.21 //@Edge.47 //@Edge.48 //@Edge.49 //@Edge.22 //@Edge.101" incomingEdges="//@Edge.2 //@Edge.4 //@Edge.22 //@Edge.27 //@Edge.48 //@Edge.49 //@Edge.101 //@Edge.19 //@Edge.20 //@Edge.3 //@Edge.18 //@Edge.35 //@Edge.60 //@Edge.62 //@Edge.63 //@Edge.47">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="474766791" level="2" outgoingEdges="//@Edge.27 //@Edge.28 //@Edge.29 //@Edge.30 //@Edge.31 //@Edge.32 //@Edge.33 //@Edge.34 //@Edge.74 //@Edge.75 //@Edge.76 //@Edge.102" incomingEdges="//@Edge.9 //@Edge.39 //@Edge.68 //@Edge.75 //@Edge.76 //@Edge.102 //@Edge.32 //@Edge.33 //@Edge.74">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-538440598" level="2" outgoingEdges="//@Edge.35 //@Edge.36 //@Edge.37 //@Edge.38 //@Edge.39 //@Edge.40 //@Edge.41 //@Edge.85 //@Edge.86 //@Edge.87 //@Edge.103" incomingEdges="//@Edge.10 //@Edge.31 //@Edge.52 //@Edge.54 //@Edge.79 //@Edge.86 //@Edge.87 //@Edge.103 //@Edge.40 //@Edge.41 //@Edge.85">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Node id="1769614975" level="2" outgoingEdges="//@Edge.50 //@Edge.51 //@Edge.52 //@Edge.53 //@Edge.54 //@Edge.55 //@Edge.56 //@Edge.89 //@Edge.90 //@Edge.91 //@Edge.104" incomingEdges="//@Edge.36 //@Edge.38 //@Edge.58 //@Edge.90 //@Edge.91 //@Edge.104 //@Edge.55 //@Edge.56 //@Edge.89">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Node id="-15542482" level="2" outgoingEdges="//@Edge.58 //@Edge.59 //@Edge.60 //@Edge.61 //@Edge.62 //@Edge.63 //@Edge.64 //@Edge.65 //@Edge.93 //@Edge.94 //@Edge.95 //@Edge.105" incomingEdges="//@Edge.50 //@Edge.94 //@Edge.95 //@Edge.105 //@Edge.64 //@Edge.65 //@Edge.93">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Node id="-84303310" level="3" outgoingEdges="//@Edge.66 //@Edge.67 //@Edge.68 //@Edge.69 //@Edge.70 //@Edge.71 //@Edge.72 //@Edge.73 //@Edge.97 //@Edge.98" incomingEdges="//@Edge.29 //@Edge.82 //@Edge.97 //@Edge.98 //@Edge.71 //@Edge.72 //@Edge.70">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-140833121" level="3" outgoingEdges="//@Edge.77 //@Edge.78 //@Edge.79 //@Edge.80 //@Edge.81 //@Edge.82 //@Edge.83 //@Edge.84 //@Edge.99 //@Edge.100" incomingEdges="//@Edge.37 //@Edge.99 //@Edge.100 //@Edge.83 //@Edge.84 //@Edge.81">
+    <VarData name="cur_pumpOn">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_alarm">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMethanLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_ciriticalAirflow">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_ciriticalMonoxcideLevel">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isWaterLow">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isWaterHigh">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="lowwaterSensor" actions="isWaterLow=true;&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="turnOnPumpA" actions="pumpPort.turnOnPump().send();&#xA;" guard=" not ciriticalMethanLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="highwaterSensor" actions="pumpPort.turnOnPump().send();&#xA;isWaterHigh=true;&#xA;" guard=" isHigh and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="turnOnPumpU" actions="pumpPort.turnOnPump().send();&#xA;" guard=" not isWaterLow  and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.0" trigger="lowwaterSensor" actions="isWaterLow=false;&#xA;" guard=" not isLow"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.3" trigger="turnOnPumpA" actions="pumpPort.turnOnPump().send();&#xA;" guard=" not ciriticalMethanLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.4" trigger="highwaterSensor" actions="pumpPort.turnOnPump().send();&#xA;isWaterHigh=true;&#xA;" guard=" isHigh and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="methanLevelSensor" actions="ciriticalMethanLevel=false;&#xA;" guard=" not highMethanLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.1" trigger="lowwaterSensor" actions="isWaterLow=true;&#xA;pumpPort.turnOffPump().send();&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.2" destination="//@Node.1" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.0" trigger="turnOffPumpA" actions="pumpPort.turnOffPump().send();&#xA;" guard=""/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="highwaterSensor" actions="isWaterHigh=true;&#xA;" guard=" isHigh and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.0" trigger="turnOffPumpU" actions="pumpPort.turnOffPump().send();&#xA;" guard=" not isWaterHigh"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="methanLevelSensor" actions="ciriticalMethanLevel=false;&#xA;" guard=" not highMethanLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.2" trigger="lowwaterSensor" actions="isWaterLow=false;&#xA;" guard=" not isLow"/>
+  <Edge source="//@Node.3" destination="//@Node.1" trigger="lowwaterSensor" actions="pumpPort.turnOffPump().send();&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.3" destination="//@Node.7" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.1" trigger="turnOffPumpA" actions="pumpPort.turnOffPump().send();&#xA;" guard=""/>
+  <Edge source="//@Node.3" destination="//@Node.4" trigger="highwaterSensor" actions="isWaterHigh=true;&#xA;" guard=" isHigh and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.1" trigger="turnOffPumpU" actions="pumpPort.turnOffPump().send();&#xA;" guard=" not isWaterHigh"/>
+  <Edge source="//@Node.4" destination="//@Node.2" trigger="lowwaterSensor" actions="isWaterLow=false;&#xA;" guard=" not isLow"/>
+  <Edge source="//@Node.4" destination="//@Node.5" trigger="lowwaterSensor" actions="pumpPort.turnOffPump().send();&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.4" destination="//@Node.8" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.4" destination="//@Node.5" trigger="turnOffPumpA" actions="pumpPort.turnOffPump().send();&#xA;" guard=""/>
+  <Edge source="//@Node.4" destination="//@Node.3" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="lowwaterSensor" actions="isWaterLow=true;&#xA;pumpPort.turnOffPump().send();&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.1" destination="//@Node.0" trigger="turnOffPumpA" actions="pumpPort.turnOffPump().send();&#xA;" guard=""/>
+  <Edge source="//@Node.1" destination="//@Node.0" trigger="turnOffPumpU" actions="pumpPort.turnOffPump().send();&#xA;" guard=" not isWaterHigh"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.6" trigger="lowwaterSensor" actions="isWaterLow=false;&#xA;" guard=" not isLow"/>
+  <Edge source="//@Node.5" destination="//@Node.1" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.4" trigger="turnOnPumpA" actions="pumpPort.turnOnPump().send();&#xA;" guard=" not ciriticalMethanLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.1" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.5" destination="//@Node.4" trigger="highwaterSensor" actions="pumpPort.turnOnPump().send();&#xA;" guard=" isHigh and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.6" destination="//@Node.5" trigger="lowwaterSensor" actions="isWaterLow=true;&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.6" destination="//@Node.0" trigger="methanLevelSensor" actions="ciriticalMethanLevel=true;&#xA;" guard=" highMethanLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.2" trigger="turnOnPumpA" actions="pumpPort.turnOnPump().send();&#xA;" guard=" not ciriticalMethanLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.0" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.6" destination="//@Node.2" trigger="highwaterSensor" actions="pumpPort.turnOnPump().send();&#xA;" guard=" isHigh and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.2" trigger="turnOnPumpU" actions="pumpPort.turnOnPump().send();&#xA;" guard=" not isWaterLow  and not ciriticalMethanLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.7" destination="//@Node.1" trigger="lowwaterSensor" actions="isWaterLow=false;&#xA;" guard=" not isLow"/>
+  <Edge source="//@Node.7" destination="//@Node.1" trigger="lowwaterSensor" actions="pumpPort.turnOffPump().send();&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.7" destination="//@Node.3" trigger="methanLevelSensor" actions="ciriticalMethanLevel=false;&#xA;" guard=" not highMethanLevel"/>
+  <Edge source="//@Node.7" destination="//@Node.1" trigger="turnOffPumpA" actions="pumpPort.turnOffPump().send();&#xA;" guard=""/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.7" destination="//@Node.1" trigger="turnOffPumpU" actions="pumpPort.turnOffPump().send();&#xA;" guard=" not isWaterHigh"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.8" destination="//@Node.1" trigger="lowwaterSensor" actions="isWaterLow=false;&#xA;" guard=" not isLow"/>
+  <Edge source="//@Node.8" destination="//@Node.1" trigger="lowwaterSensor" actions="pumpPort.turnOffPump().send();&#xA;" guard=" isLow"/>
+  <Edge source="//@Node.8" destination="//@Node.4" trigger="methanLevelSensor" actions="ciriticalMethanLevel=false;&#xA;" guard=" not highMethanLevel"/>
+  <Edge source="//@Node.8" destination="//@Node.1" trigger="turnOffPumpA" actions="pumpPort.turnOffPump().send();&#xA;" guard=""/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.8" destination="//@Node.7" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="airflowSensor" actions="ciriticalAirflow=true;&#xA;" guard=" lowAirflowLevel"/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=true;&#xA;" guard=" highMonoxcideLevel"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="highwaterSensor" actions="isWaterHigh=false;&#xA;" guard=" not isHigh"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="timeout_1" actions="alarmP.alarmOn().send();&#xA;" guard=" ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="airflowSensor" actions="ciriticalAirflow=false;&#xA;" guard=" not lowAirflowLevel"/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="monoxcideLevelSensor" actions="ciriticalMonoxcideLevel=false;&#xA;" guard=" not highMonoxcideLevel"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="timeout_1" actions="alarmP.alarmOff().send();&#xA;" guard=" not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)"/>
+</execTraces:ExecTraces>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JQHBsGcfEemuW4e_yrz1KQ" name="CacheManager">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JQHBsWcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JQHBsmcfEemuW4e_yrz1KQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YaycIGcfEemuW4e_yrz1KQ" name="Cache" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6bdjwMJGEemRyvX2EPZatw" name="aTMP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4HzBkcJSEemRyvX2EPZatw" name="requestPending" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4HzBksJSEemRyvX2EPZatw" name="isCached" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4HzBk8JSEemRyvX2EPZatw" name="cacheUpdated" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Kimu4GcgEemuW4e_yrz1KQ" name="ATMP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_KikSoGcgEemuW4e_yrz1KQ" name="ATMP">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KiuqsGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_KiqZQGcgEemuW4e_yrz1KQ" contract="_KiqZQGcgEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ki5p0GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ" contract="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_KiqZQGcgEemuW4e_yrz1KQ" name="ATMP">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_N2eTYGcgEemuW4e_yrz1KQ" name="requestData"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_QN3BgGcgEemuW4e_yrz1KQ" name="updateData"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pMXxYMLREemRyvX2EPZatw" name="readFromServerFinished"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_q-NicMLREemRyvX2EPZatw" name="readFromCacheFinished"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kiv40GcgEemuW4e_yrz1KQ" name="ATMP~">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_XhqiEMJAEemRyvX2EPZatw" name="readfromServer"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_KizjMGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Kiv40GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_Ki0KQGcgEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Ki0xUGcgEemuW4e_yrz1KQ" name="ATMPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Ki638GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_N2ndUGcgEemuW4e_yrz1KQ" operation="_N2eTYGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QN6E0GcgEemuW4e_yrz1KQ" operation="_QN3BgGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_XhtlYMJAEemRyvX2EPZatw" operation="_XhqiEMJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_pMYYcMLREemRyvX2EPZatw" operation="_pMXxYMLREemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_q-OwkMLREemRyvX2EPZatw" operation="_q-NicMLREemRyvX2EPZatw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4HzBkMJSEemRyvX2EPZatw" name="Server" isActive="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4HzBlMJSEemRyvX2EPZatw" name="readFromCache" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_4HzBl8JSEemRyvX2EPZatw" name="aTMP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JQHBs2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JQHBtGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JQHBtWcfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JQHBtmcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JQHBt2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JQHBuGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_Ya5w4GcfEemuW4e_yrz1KQ" base_Class="_YaycIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_KipLIGcgEemuW4e_yrz1KQ" base_Package="_Kimu4GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Kis1gGcgEemuW4e_yrz1KQ" base_Interface="_KiqZQGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_KiyVEGcgEemuW4e_yrz1KQ" base_Interface="_Kiv40GcgEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Ki4bsGcgEemuW4e_yrz1KQ" base_Interface="_Ki0xUGcgEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_Ki7fAGcgEemuW4e_yrz1KQ" base_Collaboration="_KikSoGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_6cFO0MJGEemRyvX2EPZatw" base_Port="_6bdjwMJGEemRyvX2EPZatw"/>
+  <UMLRealTime:Capsule xmi:id="_4IY3cMJSEemRyvX2EPZatw" base_Class="_4HzBkMJSEemRyvX2EPZatw"/>
+  <UMLRealTime:RTPort xmi:id="_4IgzQMJSEemRyvX2EPZatw" base_Port="_4HzBl8JSEemRyvX2EPZatw"/>
+</xmi:XMI>

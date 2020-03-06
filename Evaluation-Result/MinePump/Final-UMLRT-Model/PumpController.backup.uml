@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JQHBsGcfEemuW4e_yrz1KQ" name="PumpController">
+    <eAnnotations xmi:id="_JQHBsWcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:id="_JQHBsmcfEemuW4e_yrz1KQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LR4FIGcfEemuW4e_yrz1KQ" name="Pump" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XZgssL8AEemMNowE6OyDRQ" name="pumpP" visibility="public" type="_pOitMGcfEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:id="_gG29sL8IEemMNowE6OyDRQ" name="pumpOn" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YaycIGcfEemuW4e_yrz1KQ" name="Pump_Controller" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_nFEp0GcgEemuW4e_yrz1KQ" name="sensorPort" visibility="public" type="_4cTQ0GcfEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_sHgo8GcgEemuW4e_yrz1KQ" name="userCommandsP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_tXH2sGcgEemuW4e_yrz1KQ" name="pumpPort" visibility="public" type="_pOitMGcfEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_GdbbgL7_EemMNowE6OyDRQ" name="alarmP" visibility="public" type="_T8_cIb74EemMNowE6OyDRQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+      <ownedAttribute xmi:id="_09DwgL8IEemMNowE6OyDRQ" name="safeWaterLevel" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5lc38L8IEemMNowE6OyDRQ" name="ciriticalMethanLevel" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Bn32QL8JEemMNowE6OyDRQ" name="ciriticalAirflow" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_FJxPsL8JEemMNowE6OyDRQ" name="ciriticalMonoxcideLevel" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_MBA0UL8JEemMNowE6OyDRQ" name="isWaterLow" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_QEssML8JEemMNowE6OyDRQ" name="isWaterHigh" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pOmXkGcfEemuW4e_yrz1KQ" name="PumpP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_pOitMGcfEemuW4e_yrz1KQ" name="PumpP">
+        <interfaceRealization xmi:id="_pOuTYGcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pOrQEGcfEemuW4e_yrz1KQ" contract="_pOrQEGcfEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_pO5SgGcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pO1BEGcfEemuW4e_yrz1KQ" contract="_pO1BEGcfEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pOrQEGcfEemuW4e_yrz1KQ" name="PumpP">
+        <ownedOperation xmi:id="_taRGwGcfEemuW4e_yrz1KQ" name="turnOnPump"/>
+        <ownedOperation xmi:id="_vRtwkGcfEemuW4e_yrz1KQ" name="turnOffPump"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pOvhgGcfEemuW4e_yrz1KQ" name="PumpP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_pOzy8GcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pOvhgGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_pO0aAGcfEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pO1BEGcfEemuW4e_yrz1KQ" name="PumpPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_pO6goGcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pO1BEGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_taSU4GcfEemuW4e_yrz1KQ" operation="_taRGwGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_vRuXoGcfEemuW4e_yrz1KQ" operation="_vRtwkGcfEemuW4e_yrz1KQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4cWUIGcfEemuW4e_yrz1KQ" name="SensorP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_4cTQ0GcfEemuW4e_yrz1KQ" name="SensorP">
+        <interfaceRealization xmi:id="_4cgFIGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4cbMoGcfEemuW4e_yrz1KQ" contract="_4cbMoGcfEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_4cuHkGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4coA8GcfEemuW4e_yrz1KQ" contract="_4coA8GcfEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_4cbMoGcfEemuW4e_yrz1KQ" name="SensorP">
+        <ownedOperation xmi:id="_9OvsIGcfEemuW4e_yrz1KQ" name="lowwaterSensor">
+          <ownedParameter xmi:id="_1OFJsL71EemMNowE6OyDRQ" name="isLow">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="__5kToGcfEemuW4e_yrz1KQ" name="highwaterSensor">
+          <ownedParameter xmi:id="_AVKWYL73EemMNowE6OyDRQ" name="isHigh">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_CV0UQL6vEemMNowE6OyDRQ" name="monoxcideLevelSensor">
+          <ownedParameter xmi:id="_6iosML74EemMNowE6OyDRQ" name="highMonoxcideLevel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_BrgMUL75EemMNowE6OyDRQ" name="airflowSensor">
+          <ownedParameter xmi:id="_BrgMUb75EemMNowE6OyDRQ" name="lowAirflowLevel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_C8hvUL75EemMNowE6OyDRQ" name="methanLevelSensor">
+          <ownedParameter xmi:id="_C8hvUb75EemMNowE6OyDRQ" name="highMethanLevel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_4cgsMGcfEemuW4e_yrz1KQ" name="SensorP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_4clksGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4cgsMGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_4cmy0GcfEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_4coA8GcfEemuW4e_yrz1KQ" name="SensorPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_4cvVsGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4coA8GcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_9O6EMGcfEemuW4e_yrz1KQ" operation="_9OvsIGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="__5n-AGcfEemuW4e_yrz1KQ" operation="__5kToGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_CWXG0L6vEemMNowE6OyDRQ" operation="_CV0UQL6vEemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_BrhacL75EemMNowE6OyDRQ" operation="_BrgMUL75EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_C8iWYL75EemMNowE6OyDRQ" operation="_C8hvUL75EemMNowE6OyDRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Kimu4GcgEemuW4e_yrz1KQ" name="ControllerP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_KikSoGcgEemuW4e_yrz1KQ" name="ControllerP">
+        <interfaceRealization xmi:id="_KiuqsGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_KiqZQGcgEemuW4e_yrz1KQ" contract="_KiqZQGcgEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_Ki5p0GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ" contract="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_KiqZQGcgEemuW4e_yrz1KQ" name="ControllerP">
+        <ownedOperation xmi:id="_N2eTYGcgEemuW4e_yrz1KQ" name="turnOnPumpU"/>
+        <ownedOperation xmi:id="_QN3BgGcgEemuW4e_yrz1KQ" name="turnOffPumpU"/>
+        <ownedOperation xmi:id="_Qrgm0GcgEemuW4e_yrz1KQ" name="turnOnPumpA"/>
+        <ownedOperation xmi:id="_RFRKoGcgEemuW4e_yrz1KQ" name="turnOffPumpA"/>
+        <ownedOperation xmi:id="_aCY3oL75EemMNowE6OyDRQ" name="timeout_1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kiv40GcgEemuW4e_yrz1KQ" name="ControllerP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_KizjMGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Kiv40GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_Ki0KQGcgEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Ki0xUGcgEemuW4e_yrz1KQ" name="ControllerPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Ki638GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_N2ndUGcgEemuW4e_yrz1KQ" operation="_N2eTYGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QN6E0GcgEemuW4e_yrz1KQ" operation="_QN3BgGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QrjDEGcgEemuW4e_yrz1KQ" operation="_Qrgm0GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_RFUN8GcgEemuW4e_yrz1KQ" operation="_RFRKoGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_aCaFwL75EemMNowE6OyDRQ" operation="_aCY3oL75EemMNowE6OyDRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OTvUoL74EemMNowE6OyDRQ" name="Alarm" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Qkh5QL79EemMNowE6OyDRQ" name="alarmP" visibility="public" type="_T8_cIb74EemMNowE6OyDRQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:id="_g0ylQL8JEemMNowE6OyDRQ" name="alarm" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_T8_cIL74EemMNowE6OyDRQ" name="AlarmP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_T8_cIb74EemMNowE6OyDRQ" name="AlarmP">
+        <interfaceRealization xmi:id="_T8_cIr74EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cJL74EemMNowE6OyDRQ" contract="_T8_cJL74EemMNowE6OyDRQ"/>
+        <interfaceRealization xmi:id="_T8_cI774EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cLL74EemMNowE6OyDRQ" contract="_T8_cLL74EemMNowE6OyDRQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T8_cJL74EemMNowE6OyDRQ" name="AlarmP">
+        <ownedOperation xmi:id="_T8_cJb74EemMNowE6OyDRQ" name="alarmOn"/>
+        <ownedOperation xmi:id="_T8_cJr74EemMNowE6OyDRQ" name="alarmOff"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T8_cKb74EemMNowE6OyDRQ" name="AlarmP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_T8_cKr74EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cKb74EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_T8_cK774EemMNowE6OyDRQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T8_cLL74EemMNowE6OyDRQ" name="AlarmPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_T8_cLb74EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cLL74EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_T8_cLr74EemMNowE6OyDRQ" operation="_T8_cJb74EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_T8_cL774EemMNowE6OyDRQ" operation="_T8_cJr74EemMNowE6OyDRQ"/>
+    </packagedElement>
+    <profileApplication xmi:id="_JQHBs2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBtWcfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtmcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBt2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBuGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_LWTSIGcfEemuW4e_yrz1KQ" base_Class="_LR4FIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:Capsule xmi:id="_Ya5w4GcfEemuW4e_yrz1KQ" base_Class="_YaycIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_pOqB8GcfEemuW4e_yrz1KQ" base_Package="_pOmXkGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_pOtFQGcfEemuW4e_yrz1KQ" base_Interface="_pOrQEGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_pOx9wGcfEemuW4e_yrz1KQ" base_Interface="_pOvhgGcfEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_pO4EYGcfEemuW4e_yrz1KQ" base_Interface="_pO1BEGcfEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_pO7uwGcfEemuW4e_yrz1KQ" base_Collaboration="_pOitMGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_4cZ-gGcfEemuW4e_yrz1KQ" base_Package="_4cWUIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_4ceP8GcfEemuW4e_yrz1KQ" base_Interface="_4cbMoGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_4ckWkGcfEemuW4e_yrz1KQ" base_Interface="_4cgsMGcfEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_4crrUGcfEemuW4e_yrz1KQ" base_Interface="_4coA8GcfEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_4cv8wGcfEemuW4e_yrz1KQ" base_Collaboration="_4cTQ0GcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_KipLIGcgEemuW4e_yrz1KQ" base_Package="_Kimu4GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Kis1gGcgEemuW4e_yrz1KQ" base_Interface="_KiqZQGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_KiyVEGcgEemuW4e_yrz1KQ" base_Interface="_Kiv40GcgEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Ki4bsGcgEemuW4e_yrz1KQ" base_Interface="_Ki0xUGcgEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_Ki7fAGcgEemuW4e_yrz1KQ" base_Collaboration="_KikSoGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_nFI7QGcgEemuW4e_yrz1KQ" base_Port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_sHkTUGcgEemuW4e_yrz1KQ" base_Port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_tXK6AGcgEemuW4e_yrz1KQ" base_Port="_tXH2sGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:Capsule xmi:id="_OT-lML74EemMNowE6OyDRQ" base_Class="_OTvUoL74EemMNowE6OyDRQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_T9BRUL74EemMNowE6OyDRQ" base_Package="_T8_cIL74EemMNowE6OyDRQ"/>
+  <UMLRealTime:Protocol xmi:id="_T9DGgL74EemMNowE6OyDRQ" base_Collaboration="_T8_cIb74EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_T9E7sL74EemMNowE6OyDRQ" base_Interface="_T8_cJL74EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_T9Gw4L74EemMNowE6OyDRQ" base_Interface="_T8_cKb74EemMNowE6OyDRQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_T9H_AL74EemMNowE6OyDRQ" base_Interface="_T8_cLL74EemMNowE6OyDRQ" rtMsgKind="inOut"/>
+  <UMLRealTime:RTPort xmi:id="_QkpOAL79EemMNowE6OyDRQ" base_Port="_Qkh5QL79EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTPort xmi:id="_Gd2SQL7_EemMNowE6OyDRQ" base_Port="_GdbbgL7_EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTPort xmi:id="_XaEGUL8AEemMNowE6OyDRQ" base_Port="_XZgssL8AEemMNowE6OyDRQ"/>
+</xmi:XMI>

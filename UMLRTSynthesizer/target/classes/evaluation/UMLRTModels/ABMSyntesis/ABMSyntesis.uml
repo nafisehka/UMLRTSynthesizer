@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JQHBsGcfEemuW4e_yrz1KQ" name="ABM">
+    <eAnnotations xmi:id="_JQHBsWcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:id="_JQHBsmcfEemuW4e_yrz1KQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YaycIGcfEemuW4e_yrz1KQ" name="ABM_Controller" isActive="true">
+      <ownedAttribute xmi:id="_AJWb0IxeEemdG-l7PTW2OA" name="isCardReading" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_P91ncMJEEemRyvX2EPZatw" name="isPinReading" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_QXk9IMJEEemRyvX2EPZatw" name="isAuhorizing" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_QwnvQMJEEemRyvX2EPZatw" name="isCashDepositing" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RozUcMJEEemRyvX2EPZatw" name="isCaptuerCard" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Sd_QAMJEEemRyvX2EPZatw" name="cardInserted" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6bdjwMJGEemRyvX2EPZatw" name="aTMP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ws4YcF8rEeqxBs7iobdf3g" name="ABM_ControllerSM">
+        <region xmi:id="_WvmVQF8rEeqxBs7iobdf3g">
+          <transition xmi:id="_Wv4CEF8rEeqxBs7iobdf3g" name="init_trans" source="_WvxUYF8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <trigger xmi:id="_Wv4pIF8rEeqxBs7iobdf3g"/>
+          </transition>
+          <transition xmi:id="_WwE2YF8rEeqxBs7iobdf3g" name="cardInsertack[ not cardInserted]\" guard="_WwGEgV8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwGEgV8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwGEgl8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return  not cardInserted;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwGEgF8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwGrkF8rEeqxBs7iobdf3g" name="cardInsertack" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwGrkV8rEeqxBs7iobdf3g" name="cardReadResult[  (result2==0 and isCardReading )]\" guard="_WwGrk18rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwGrk18rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwGrlF8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   (result2==0 and isCardReading );</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwGrkl8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwGrlV8rEeqxBs7iobdf3g" name="cardReadResult" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwGrll8rEeqxBs7iobdf3g" name="cardReadResult[  ( result2==1 and isCardReading )]\aTMP.ejectCardReq().send();&#xA;isCardReading=false;&#xA;" guard="_WwHSoF8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwHSoF8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwHSoV8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   ( result2==1 and isCardReading );</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwGrl18rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isCardReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwHSol8rEeqxBs7iobdf3g" name="cardReadResult" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwHSo18rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==2)]\aTMP.ejectCardReq().send();&#xA;isPinReading=false;&#xA;" guard="_WwHSpV8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwHSpV8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwHSpl8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==2);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwHSpF8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isPinReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwH5sF8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwH5sV8rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==0)]\" guard="_WwH5s18rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwH5s18rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwH5tF8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwH5sl8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwH5tV8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwH5tl8rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==3)]\" guard="_WwH5uF8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wv4pIV8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwH5uF8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwIgwF8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==3);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwH5t18rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwIgwV8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwIgwl8rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==1)]\" guard="_WwIgxF8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wv4pIV8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwIgxF8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwIgxV8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==1);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwIgw18rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwIgxl8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwIgx18rEeqxBs7iobdf3g" name="autorizateResult[ isAuhorizing and (result4==0)]\isCashDepositing=true;&#xA;isAuhorizing=false;&#xA;" guard="_WwJH0F8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wv8TgF8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwJH0F8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwJH0V8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return  isAuhorizing and (result4==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwIgyF8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCashDepositing=true;
+isAuhorizing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwJH0l8rEeqxBs7iobdf3g" name="autorizateResult" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwJH018rEeqxBs7iobdf3g" name="autorizateResult[ isAuhorizing and (result4==1)]\cardInserted=false;&#xA;isAuhorizing=false;&#xA;" guard="_WwJH1V8rEeqxBs7iobdf3g" source="_Wvr00F8rEeqxBs7iobdf3g" target="_Wv8TgF8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwJH1V8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwJH1l8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return  isAuhorizing and (result4==1);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwJH1F8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cardInserted=false;
+isAuhorizing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwJu4F8rEeqxBs7iobdf3g" name="autorizateResult" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwJu4V8rEeqxBs7iobdf3g" name="cardCaptured[ isCaptuerCard]\isCaptuerCard=false;&#xA;" guard="_WwJu418rEeqxBs7iobdf3g" source="_Wv4pIV8rEeqxBs7iobdf3g" target="_WwAk8F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwJu418rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwJu5F8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return  isCaptuerCard;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwJu4l8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCaptuerCard=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwJu5V8rEeqxBs7iobdf3g" name="cardCaptured" event="_RJUTcF3REeqCnK6dDoxLRQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwJu5l8rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==2)]\aTMP.ejectCardReq().send();&#xA;isPinReading=false;&#xA;" guard="_WwJu6F8rEeqxBs7iobdf3g" source="_Wv4pIV8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwJu6F8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwKV8F8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==2);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwJu518rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isPinReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwKV8V8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwKV8l8rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==0)]\" guard="_WwKV9F8rEeqxBs7iobdf3g" source="_Wv4pIV8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwKV9F8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwKV9V8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwKV818rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwKV9l8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwK9AF8rEeqxBs7iobdf3g" name="pinReadResult[  isPinReading and (result3==3)]\" guard="_WwK9Al8rEeqxBs7iobdf3g" source="_Wv4pIV8rEeqxBs7iobdf3g" target="_Wv4pIV8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwK9Al8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwK9A18rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==3);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwK9AV8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwK9BF8rEeqxBs7iobdf3g" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwK9BV8rEeqxBs7iobdf3g" name="deposited[ isCashDepositing]\aTMP.ejectCardReq().send();&#xA;isCashDepositing=false;&#xA;" guard="_WwLkEV8rEeqxBs7iobdf3g" source="_Wv8TgF8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwLkEV8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwLkEl8rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return  isCashDepositing;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwLkEF8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isCashDepositing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_WwLkE18rEeqxBs7iobdf3g" name="deposited" event="_q382wMI_EemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_WwLkFF8rEeqxBs7iobdf3g" name="cardInsertack[ not cardInserted]\" guard="_WwLkFl8rEeqxBs7iobdf3g" source="_Wv8TgF8rEeqxBs7iobdf3g" target="_Wvr00F8rEeqxBs7iobdf3g">
+            <ownedRule xmi:id="_WwLkFl8rEeqxBs7iobdf3g" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_WwLkF18rEeqxBs7iobdf3g">
+                <language>C++</language>
+                <body>return  not cardInserted;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WwLkFV8rEeqxBs7iobdf3g" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_WwMLIF8rEeqxBs7iobdf3g" name="cardInsertack" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_Wvr00F8rEeqxBs7iobdf3g" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_WvxUYF8rEeqxBs7iobdf3g" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Wv4pIV8rEeqxBs7iobdf3g" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Wv8TgF8rEeqxBs7iobdf3g" name="S_3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_WwAk8F8rEeqxBs7iobdf3g" name="S_4"/>
+        </region>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_0FX8cF8rEeqdeLt-8KeDUA" name="ABM_ControllerSM">
+        <region xmi:id="_0IQ4YF8rEeqdeLt-8KeDUA">
+          <transition xmi:id="_0IpS4F8rEeqdeLt-8KeDUA" name="init_trans" source="_0Ih-IF8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <trigger xmi:id="_0IpS4V8rEeqdeLt-8KeDUA"/>
+          </transition>
+          <transition xmi:id="_0I7mwF8rEeqdeLt-8KeDUA" name="cardInsertack[ not cardInserted]\cardInserted=true;&#xA;isCardReading=true;&#xA;" guard="_0I7mwl8rEeqdeLt-8KeDUA" source="_0IapYF8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I7mwl8rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I7mw18rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return  not cardInserted;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I7mwV8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cardInserted=true;
+isCardReading=true;
+</body>
+            </effect>
+            <trigger xmi:id="_0I8N0F8rEeqdeLt-8KeDUA" name="cardInsertack" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I8N0V8rEeqdeLt-8KeDUA" name="cardReadResult[  (result2==0 and isCardReading )]\isPinReading=true;&#xA;isCardReading=false;&#xA;" guard="_0I804V8rEeqdeLt-8KeDUA" source="_0IapYF8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I804V8rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I804l8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return   (result2==0 and isCardReading );</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I804F8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isPinReading=true;
+isCardReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I80418rEeqdeLt-8KeDUA" name="cardReadResult" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I805F8rEeqdeLt-8KeDUA" name="cardReadResult[  ( result2==1 and isCardReading )]\aTMP.ejectCardReq().send();&#xA;isCardReading=false;&#xA;" guard="_0I9b8V8rEeqdeLt-8KeDUA" source="_0IapYF8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I9b8V8rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I9b8l8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return   ( result2==1 and isCardReading );</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I9b8F8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isCardReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I9b818rEeqdeLt-8KeDUA" name="cardReadResult" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I9b9F8rEeqdeLt-8KeDUA" name="pinReadResult[  isPinReading and (result3==0)]\isPinReading=false;&#xA;isAuhorizing=true;&#xA;" guard="_0I9b9l8rEeqdeLt-8KeDUA" source="_0IapYF8rEeqdeLt-8KeDUA" target="_0Ip58F8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I9b9l8rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I9b918rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I9b9V8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isPinReading=false;
+isAuhorizing=true;
+</body>
+            </effect>
+            <trigger xmi:id="_0I-DAF8rEeqdeLt-8KeDUA" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I-DAV8rEeqdeLt-8KeDUA" name="pinReadResult[  isPinReading and (result3==2)]\aTMP.ejectCardReq().send();&#xA;isPinReading=false;&#xA;" guard="_0I-DA18rEeqdeLt-8KeDUA" source="_0IapYF8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I-DA18rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I-DBF8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==2);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I-DAl8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isPinReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I-qEF8rEeqdeLt-8KeDUA" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I-qEV8rEeqdeLt-8KeDUA" name="pinReadResult[  isPinReading and (result3==3)]\aTMP.captureCardReq().send();&#xA;isPinReading=false;&#xA;" guard="_0I-qE18rEeqdeLt-8KeDUA" source="_0IapYF8rEeqdeLt-8KeDUA" target="_0Ip58F8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I-qE18rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I-qFF8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==3);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I-qEl8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.captureCardReq().send();
+isPinReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I-qFV8rEeqdeLt-8KeDUA" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I_RIF8rEeqdeLt-8KeDUA" name="autorizateResult[ isAuhorizing and (result4==0)]\isCashDepositing=true;&#xA;isAuhorizing=false;&#xA;" guard="_0I_RIl8rEeqdeLt-8KeDUA" source="_0Ip58F8rEeqdeLt-8KeDUA" target="_0IwnoF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I_RIl8rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I_RI18rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return  isAuhorizing and (result4==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I_RIV8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCashDepositing=true;
+isAuhorizing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I_RJF8rEeqdeLt-8KeDUA" name="autorizateResult" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I_RJV8rEeqdeLt-8KeDUA" name="autorizateResult[ isAuhorizing and (result4==1)]\aTMP.ejectCardReq().send();&#xA;isAuhorizing=false;&#xA;" guard="_0I_RJ18rEeqdeLt-8KeDUA" source="_0Ip58F8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I_RJ18rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I_RKF8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return  isAuhorizing and (result4==1);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I_RJl8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isAuhorizing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I_4MF8rEeqdeLt-8KeDUA" name="autorizateResult" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I_4MV8rEeqdeLt-8KeDUA" name="cardCaptured[ isCaptuerCard]\isCaptuerCard=false;&#xA;" guard="_0I_4M18rEeqdeLt-8KeDUA" source="_0Ip58F8rEeqdeLt-8KeDUA" target="_0IwnoF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0I_4M18rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0I_4NF8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return  isCaptuerCard;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0I_4Ml8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCaptuerCard=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0I_4NV8rEeqdeLt-8KeDUA" name="cardCaptured" event="_RJUTcF3REeqCnK6dDoxLRQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_0I_4Nl8rEeqdeLt-8KeDUA" name="deposited[ isCashDepositing]\aTMP.ejectCardReq().send();&#xA;isCashDepositing=false;&#xA;" guard="_0JAfQV8rEeqdeLt-8KeDUA" source="_0IwnoF8rEeqdeLt-8KeDUA" target="_0IapYF8rEeqdeLt-8KeDUA">
+            <ownedRule xmi:id="_0JAfQV8rEeqdeLt-8KeDUA" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0JAfQl8rEeqdeLt-8KeDUA">
+                <language>C++</language>
+                <body>return  isCashDepositing;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_0JAfQF8rEeqdeLt-8KeDUA" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isCashDepositing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_0JAfQ18rEeqdeLt-8KeDUA" name="deposited" event="_q382wMI_EemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_0IapYF8rEeqdeLt-8KeDUA" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_0Ih-IF8rEeqdeLt-8KeDUA" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0Ip58F8rEeqdeLt-8KeDUA" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0IwnoF8rEeqdeLt-8KeDUA" name="S_3"/>
+        </region>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_2ZSf0F8rEeqUCJxJGm5rpg" name="ABM_ControllerSM">
+        <region xmi:id="_2bkXwF8rEeqUCJxJGm5rpg">
+          <transition xmi:id="_2bv98F8rEeqUCJxJGm5rpg" name="init_trans" source="_2brsgF8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <trigger xmi:id="_2bv98V8rEeqUCJxJGm5rpg"/>
+          </transition>
+          <transition xmi:id="_2b35wF8rEeqUCJxJGm5rpg" name="cardInsertack[ not cardInserted]\cardInserted=true;&#xA;isCardReading=true;&#xA;" guard="_2b35wl8rEeqUCJxJGm5rpg" source="_2boCIF8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b35wl8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b35w18rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return  not cardInserted;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b35wV8rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cardInserted=true;
+isCardReading=true;
+</body>
+            </effect>
+            <trigger xmi:id="_2b4g0F8rEeqUCJxJGm5rpg" name="cardInsertack" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b4g0V8rEeqUCJxJGm5rpg" name="cardReadResult[  (result2==0 and isCardReading )]\isPinReading=true;&#xA;isCardReading=false;&#xA;" guard="_2b4g018rEeqUCJxJGm5rpg" source="_2boCIF8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b4g018rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b4g1F8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return   (result2==0 and isCardReading );</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b4g0l8rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isPinReading=true;
+isCardReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b4g1V8rEeqUCJxJGm5rpg" name="cardReadResult" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b4g1l8rEeqUCJxJGm5rpg" name="cardReadResult[  ( result2==1 and isCardReading )]\aTMP.ejectCardReq().send();&#xA;isCardReading=false;&#xA;" guard="_2b5H4F8rEeqUCJxJGm5rpg" source="_2boCIF8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b5H4F8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b5H4V8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return   ( result2==1 and isCardReading );</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b4g118rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isCardReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b5H4l8rEeqUCJxJGm5rpg" name="cardReadResult" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b5H418rEeqUCJxJGm5rpg" name="pinReadResult[  isPinReading and (result3==3)]\aTMP.captureCardReq().send();&#xA;isPinReading=false;&#xA;" guard="_2b5H5V8rEeqUCJxJGm5rpg" source="_2boCIF8rEeqUCJxJGm5rpg" target="_2bv98l8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b5H5V8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b5H5l8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==3);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b5H5F8rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.captureCardReq().send();
+isPinReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b5H518rEeqUCJxJGm5rpg" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b5H6F8rEeqUCJxJGm5rpg" name="pinReadResult[  isPinReading and (result3==0)]\isPinReading=false;&#xA;isAuhorizing=true;&#xA;" guard="_2b5H6l8rEeqUCJxJGm5rpg" source="_2boCIF8rEeqUCJxJGm5rpg" target="_2bv98l8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b5H6l8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b5H618rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b5H6V8rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isPinReading=false;
+isAuhorizing=true;
+</body>
+            </effect>
+            <trigger xmi:id="_2b5u8F8rEeqUCJxJGm5rpg" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b5u8V8rEeqUCJxJGm5rpg" name="pinReadResult[  isPinReading and (result3==2)]\aTMP.ejectCardReq().send();&#xA;isPinReading=false;&#xA;" guard="_2b5u818rEeqUCJxJGm5rpg" source="_2boCIF8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b5u818rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b5u9F8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return   isPinReading and (result3==2);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b5u8l8rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isPinReading=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b5u9V8rEeqUCJxJGm5rpg" name="pinReadResult" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b5u9l8rEeqUCJxJGm5rpg" name="cardCaptured[ isCaptuerCard]\isCaptuerCard=false;&#xA;" guard="_2b5u-F8rEeqUCJxJGm5rpg" source="_2bv98l8rEeqUCJxJGm5rpg" target="_2bzoUF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b5u-F8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b5u-V8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return  isCaptuerCard;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b5u918rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCaptuerCard=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b6WAF8rEeqUCJxJGm5rpg" name="cardCaptured" event="_RJUTcF3REeqCnK6dDoxLRQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b6WAV8rEeqUCJxJGm5rpg" name="autorizateResult[ isAuhorizing and (result4==1)]\aTMP.ejectCardReq().send();&#xA;isAuhorizing=false;&#xA;" guard="_2b6WA18rEeqUCJxJGm5rpg" source="_2bv98l8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b6WA18rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b6WBF8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return  isAuhorizing and (result4==1);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b6WAl8rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isAuhorizing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b6WBV8rEeqUCJxJGm5rpg" name="autorizateResult" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b6WBl8rEeqUCJxJGm5rpg" name="autorizateResult[ isAuhorizing and (result4==0)]\isCashDepositing=true;&#xA;isAuhorizing=false;&#xA;" guard="_2b6WCF8rEeqUCJxJGm5rpg" source="_2bv98l8rEeqUCJxJGm5rpg" target="_2bzoUF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b6WCF8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b69EF8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return  isAuhorizing and (result4==0);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b6WB18rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCashDepositing=true;
+isAuhorizing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b69EV8rEeqUCJxJGm5rpg" name="autorizateResult" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_2b69El8rEeqUCJxJGm5rpg" name="deposited[ isCashDepositing]\aTMP.ejectCardReq().send();&#xA;isCashDepositing=false;&#xA;" guard="_2b69FF8rEeqUCJxJGm5rpg" source="_2bzoUF8rEeqUCJxJGm5rpg" target="_2boCIF8rEeqUCJxJGm5rpg">
+            <ownedRule xmi:id="_2b69FF8rEeqUCJxJGm5rpg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_2b69FV8rEeqUCJxJGm5rpg">
+                <language>C++</language>
+                <body>return  isCashDepositing;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2b69E18rEeqUCJxJGm5rpg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.ejectCardReq().send();
+isCashDepositing=false;
+</body>
+            </effect>
+            <trigger xmi:id="_2b69Fl8rEeqUCJxJGm5rpg" name="deposited" event="_q382wMI_EemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_2boCIF8rEeqUCJxJGm5rpg" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_2brsgF8rEeqUCJxJGm5rpg" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_2bv98l8rEeqUCJxJGm5rpg" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_2bzoUF8rEeqUCJxJGm5rpg" name="S_3"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Kimu4GcgEemuW4e_yrz1KQ" name="ATMP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_KikSoGcgEemuW4e_yrz1KQ" name="ATMP">
+        <interfaceRealization xmi:id="_KiuqsGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_KiqZQGcgEemuW4e_yrz1KQ" contract="_KiqZQGcgEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_Ki5p0GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ" contract="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_KiqZQGcgEemuW4e_yrz1KQ" name="ATMP">
+        <ownedOperation xmi:id="_N2eTYGcgEemuW4e_yrz1KQ" name="cardInsertack">
+          <ownedParameter xmi:id="_Lu5UEMI_EemRyvX2EPZatw" name="result1">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QN3BgGcgEemuW4e_yrz1KQ" name="cardReadResult">
+          <ownedParameter xmi:id="_YKyNAMI_EemRyvX2EPZatw" name="result2">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Qrgm0GcgEemuW4e_yrz1KQ" name="pinReadResult">
+          <ownedParameter xmi:id="_fJTeUMI_EemRyvX2EPZatw" name="result3">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_RFRKoGcgEemuW4e_yrz1KQ" name="autorizateResult">
+          <ownedParameter xmi:id="_lh9pgMI_EemRyvX2EPZatw" name="result4">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_q30T4MI_EemRyvX2EPZatw" name="deposited"/>
+        <ownedOperation xmi:id="_RJTsYF3REeqCnK6dDoxLRQ" name="cardCaptured"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kiv40GcgEemuW4e_yrz1KQ" name="ATMP~">
+        <ownedOperation xmi:id="_XhqiEMJAEemRyvX2EPZatw" name="pinReadReq"/>
+        <ownedOperation xmi:id="_b_YDgMJAEemRyvX2EPZatw" name="cardReadReq"/>
+        <ownedOperation xmi:id="_cH7ikMJAEemRyvX2EPZatw" name="autorizateReq"/>
+        <ownedOperation xmi:id="_vZy00MJAEemRyvX2EPZatw" name="depositReq"/>
+        <ownedOperation xmi:id="_6zc0sMJAEemRyvX2EPZatw" name="ejectCardReq"/>
+        <ownedOperation xmi:id="_N3JIEMJBEemRyvX2EPZatw" name="captureCardReq"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_KizjMGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Kiv40GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_Ki0KQGcgEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Ki0xUGcgEemuW4e_yrz1KQ" name="ATMPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Ki638GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_N2ndUGcgEemuW4e_yrz1KQ" operation="_N2eTYGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QN6E0GcgEemuW4e_yrz1KQ" operation="_QN3BgGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QrjDEGcgEemuW4e_yrz1KQ" operation="_Qrgm0GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_RFUN8GcgEemuW4e_yrz1KQ" operation="_RFRKoGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_q382wMI_EemRyvX2EPZatw" operation="_q30T4MI_EemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_XhtlYMJAEemRyvX2EPZatw" operation="_XhqiEMJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_b_bG0MJAEemRyvX2EPZatw" operation="_b_YDgMJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_cH-l4MJAEemRyvX2EPZatw" operation="_cH7ikMJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_vZ14IMJAEemRyvX2EPZatw" operation="_vZy00MJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_6zhGIMJAEemRyvX2EPZatw" operation="_6zc0sMJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_N3MycMJBEemRyvX2EPZatw" operation="_N3JIEMJBEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_RJUTcF3REeqCnK6dDoxLRQ" operation="_RJTsYF3REeqCnK6dDoxLRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4HzBkMJSEemRyvX2EPZatw" name="ENV" isActive="true">
+      <ownedAttribute xmi:id="_4HzBkcJSEemRyvX2EPZatw" name="isCardReading" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBksJSEemRyvX2EPZatw" name="isPinReading" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBk8JSEemRyvX2EPZatw" name="isAuhorizing" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBlMJSEemRyvX2EPZatw" name="isCashDepositing" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBlcJSEemRyvX2EPZatw" name="isCaptuerCard" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBlsJSEemRyvX2EPZatw" name="cardInserted" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_4HzBl8JSEemRyvX2EPZatw" name="aTMP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+    </packagedElement>
+    <profileApplication xmi:id="_JQHBs2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBtWcfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtmcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBt2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBuGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_Ya5w4GcfEemuW4e_yrz1KQ" base_Class="_YaycIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_KipLIGcgEemuW4e_yrz1KQ" base_Package="_Kimu4GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Kis1gGcgEemuW4e_yrz1KQ" base_Interface="_KiqZQGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_KiyVEGcgEemuW4e_yrz1KQ" base_Interface="_Kiv40GcgEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Ki4bsGcgEemuW4e_yrz1KQ" base_Interface="_Ki0xUGcgEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_Ki7fAGcgEemuW4e_yrz1KQ" base_Collaboration="_KikSoGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_6cFO0MJGEemRyvX2EPZatw" base_Port="_6bdjwMJGEemRyvX2EPZatw"/>
+  <UMLRealTime:Capsule xmi:id="_4IY3cMJSEemRyvX2EPZatw" base_Class="_4HzBkMJSEemRyvX2EPZatw"/>
+  <UMLRealTime:RTPort xmi:id="_4IgzQMJSEemRyvX2EPZatw" base_Port="_4HzBl8JSEemRyvX2EPZatw"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_Wvg1sF8rEeqxBs7iobdf3g" base_StateMachine="_Ws4YcF8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_WvnjYF8rEeqxBs7iobdf3g" base_Region="_WvmVQF8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTState xmi:id="_WvtqAF8rEeqxBs7iobdf3g" base_State="_Wvr00F8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_WvzJkF8rEeqxBs7iobdf3g" base_Pseudostate="_WvxUYF8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTState xmi:id="_Wv53QF8rEeqxBs7iobdf3g" base_State="_Wv4pIV8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTState xmi:id="_Wv9hoF8rEeqxBs7iobdf3g" base_State="_Wv8TgF8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTState xmi:id="_WwBzEF8rEeqxBs7iobdf3g" base_State="_WwAk8F8rEeqxBs7iobdf3g"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_0II8kF8rEeqdeLt-8KeDUA" base_StateMachine="_0FX8cF8rEeqdeLt-8KeDUA"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_0IStkF8rEeqdeLt-8KeDUA" base_Region="_0IQ4YF8rEeqdeLt-8KeDUA"/>
+  <UMLRTStateMachines:RTState xmi:id="_0Ib3gF8rEeqdeLt-8KeDUA" base_State="_0IapYF8rEeqdeLt-8KeDUA"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_0IjMQF8rEeqdeLt-8KeDUA" base_Pseudostate="_0Ih-IF8rEeqdeLt-8KeDUA"/>
+  <UMLRTStateMachines:RTState xmi:id="_0IrIEF8rEeqdeLt-8KeDUA" base_State="_0Ip58F8rEeqdeLt-8KeDUA"/>
+  <UMLRTStateMachines:RTState xmi:id="_0IzD4F8rEeqdeLt-8KeDUA" base_State="_0IwnoF8rEeqdeLt-8KeDUA"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_2bh7gF8rEeqUCJxJGm5rpg" base_StateMachine="_2ZSf0F8rEeqUCJxJGm5rpg"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_2bll4F8rEeqUCJxJGm5rpg" base_Region="_2bkXwF8rEeqUCJxJGm5rpg"/>
+  <UMLRTStateMachines:RTState xmi:id="_2bpQQF8rEeqUCJxJGm5rpg" base_State="_2boCIF8rEeqUCJxJGm5rpg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_2bthsF8rEeqUCJxJGm5rpg" base_Pseudostate="_2brsgF8rEeqUCJxJGm5rpg"/>
+  <UMLRTStateMachines:RTState xmi:id="_2bxMEF8rEeqUCJxJGm5rpg" base_State="_2bv98l8rEeqUCJxJGm5rpg"/>
+  <UMLRTStateMachines:RTState xmi:id="_2b1dgF8rEeqUCJxJGm5rpg" base_State="_2bzoUF8rEeqUCJxJGm5rpg"/>
+</xmi:XMI>

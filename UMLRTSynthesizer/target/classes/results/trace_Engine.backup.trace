@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.queensu.cs/ca/kahani/ExecTraces">
+  <Node id="1626776512" Parent="//@Node.0 //@Node.2 //@Node.3" Childs="//@Node.0 //@Node.1 //@Node.2">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_startStopping">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-638617135" level="1" Parent="//@Node.0 //@Node.1" Childs="//@Node.1 //@Node.3">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_startStopping">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1849444981" level="1" Parent="//@Node.0 //@Node.2" Childs="//@Node.0 //@Node.3 //@Node.2">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_startStopping">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-994578876" level="2" Parent="//@Node.1 //@Node.2 //@Node.3" Childs="//@Node.0 //@Node.3">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_startStopping">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="timeout_1" status="Error"/>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="moveTrain" actions="[set_cur_isTrainMoving_to_true]"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="stopTrain" actions="[set_cur_startStopping_to_true]"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="timeout_1" status="Error"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="moveTrain" status="NoEffect"/>
+  <Edge source="//@Node.1" destination="//@Node.3" trigger="stopTrain" actions="[set_cur_startStopping_to_true]"/>
+  <Edge source="//@Node.2" destination="//@Node.0" trigger="timeout_1" actions="[set_cur_startStopping_to_false]"/>
+  <Edge source="//@Node.2" destination="//@Node.3" trigger="moveTrain" actions="[set_cur_isTrainMoving_to_true]"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="stopTrain" status="NoEffect"/>
+  <Edge source="//@Node.3" destination="//@Node.0" trigger="timeout_1" actions="[set_cur_isTrainMoving_to_false, set_cur_startStopping_to_false]"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="moveTrain" status="NoEffect"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="stopTrain" status="NoEffect"/>
+</execTraces:ExecTraces>

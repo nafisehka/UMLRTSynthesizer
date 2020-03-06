@@ -1,0 +1,71 @@
+grammar umlrtsyntesizer.ExecTraces with org.eclipse.xtext.common.Terminals
+
+generate execTraces "http://www.ExecTraces.umlrtsyntesizer"
+
+
+
+ExecTraces:
+	ComponentName=ID 
+	(Node+=Node|Edge+=Edge)+;
+
+Edge:
+	'From'    source=[Node]
+	'To'      destination=[Node]
+	'Trigger' trigger=STRING
+	'Actions' actions=STRING
+	'Status'  status=TransStatus
+	'guard'   guard=STRING
+
+;
+	
+enum StateStatus:
+    new='new' | unSafeState='unSafeTrans' | Repeated='repeated' ;
+enum TransStatus:
+    normal='Normal' | error='Error'  | unsafeTrans='unSafeTrans' | redundantTrans='Redundant';
+Node:
+	 //root ?= 'rootNode' 
+	'name' name=ID
+	'id'   id=INT
+	'level' level=INT
+	//'parent' '{' Parent+=[Node]*  '}'
+	//'childs' '{' Childs+=[Node]*  '}'
+	'VarData' '{' VarData+=Variable* '}'
+	'status' status=StateStatus 
+	'constraints'  constraints=STRING	
+	'outgoingEdges' outgoingEdges+=[Edge]* 
+	'incomingEdges' incomingEdges+=[Edge]* 
+;
+
+Variable:
+	 'name' name=ID '='  value=Literal
+;
+
+	
+/*VarType:  
+		name = (   'bool' | 'int'  | 'string'| 'real')
+;
+*/
+
+RealLiteral: 
+		 intPart=INT '.' decimalPart=INT
+;
+
+
+Literal:
+		IntLiteral
+		| BoolLiteral
+		| RealLiteral
+	;
+
+IntLiteral: 
+		 int=INT
+	;
+
+BoolLiteral:
+		 bool=BOOLEAN
+	;
+
+terminal BOOLEAN :	
+		 'true'
+		| 'false'
+	;

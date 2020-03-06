@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.ExecTraces.umlrtsyntesizer">
+  <Node id="982397344" outgoingEdges="//@Edge.0" incomingEdges="//@Edge.1 //@Edge.3 //@Edge.8 //@Edge.9">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node name="unsafeState" status="unSafeTrans"/>
+  <Node id="1056069596" level="1" outgoingEdges="//@Edge.1 //@Edge.2" incomingEdges="//@Edge.0">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Node id="1674775552" level="2" outgoingEdges="//@Edge.3 //@Edge.4 //@Edge.5" incomingEdges="//@Edge.2">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="278492196" level="3" outgoingEdges="//@Edge.6" incomingEdges="//@Edge.4">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1510206884" level="3" outgoingEdges="//@Edge.7 //@Edge.8" incomingEdges="//@Edge.5">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1635024747" level="4" incomingEdges="//@Edge.6">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="103650688" level="4" outgoingEdges="//@Edge.9" incomingEdges="//@Edge.7">
+    <VarData name="cur_isPinReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isAuhorizing">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isCashDepositing">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCaptuerCard">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_cardInserted">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isCardReading">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="cardInsertack" actions="cardInserted=true;&#xA;isCardReading=true;&#xA;" guard="2"/>
+  <Edge source="//@Node.2" destination="//@Node.0" trigger="cardReadResult" actions="aTMP.ejectCardReq().send();&#xA;isCardReading=false;&#xA;" guard="5"/>
+  <Edge source="//@Node.2" destination="//@Node.3" trigger="cardReadResult" actions="isPinReading=true;&#xA;isCardReading=false;&#xA;" guard="4"/>
+  <Edge source="//@Node.3" destination="//@Node.0" trigger="pinReadResult" actions="aTMP.ejectCardReq().send();&#xA;isPinReading=false;&#xA;" guard="8"/>
+  <Edge source="//@Node.3" destination="//@Node.4" trigger="pinReadResult" actions="aTMP.captureCardReq().send();&#xA;isPinReading=false;&#xA;" guard="9"/>
+  <Edge source="//@Node.3" destination="//@Node.5" trigger="pinReadResult" actions="isPinReading=false;&#xA;isAuhorizing=true;&#xA;" guard="6"/>
+  <Edge source="//@Node.4" destination="//@Node.6" trigger="cardCaptured" actions="isCaptuerCard=false;&#xA;" guard="10"/>
+  <Edge source="//@Node.5" destination="//@Node.7" trigger="autorizateResult" actions="isCashDepositing=true;&#xA;isAuhorizing=false;&#xA;" guard="12"/>
+  <Edge source="//@Node.5" destination="//@Node.0" trigger="autorizateResult" actions="aTMP.ejectCardReq().send();&#xA;isAuhorizing=false;&#xA;" guard="13"/>
+  <Edge source="//@Node.7" destination="//@Node.0" trigger="deposited" actions="aTMP.ejectCardReq().send();&#xA;isCashDepositing=false;&#xA;" guard="14"/>
+</execTraces:ExecTraces>

@@ -1,0 +1,177 @@
+grammar umlrtsyntesizer.ConstLang with org.eclipse.xtext.common.Terminals
+
+generate constLang "http://www.ConstLang.umlrtsyntesizer"
+
+Context :
+	'Context' name=ID
+	'{'
+		attributes+=Attribute+ init=Init systemInvariants+=SystemInvariant* messageConstraints+=MessageConstraint*
+	'}'
+;
+
+
+
+
+
+Init: 
+	'Init' '{'
+		(expressions+=Expression)+
+	'}'
+;
+
+
+SystemInvariant: 
+		'Invariant' name=ID  ('{' invariantExp=Expression '}')
+			 
+	;
+
+MessageConstraint: 
+		'Message' name=ID  '(' params+=Attribute* ')' 
+				( (WhereToApply=WhereToApplyEnum)? ('Pre:'    preConstraints=Expression? ))?
+				('Post:'   postConstraints=Expression )
+			 
+	;
+
+/////////////////////////////////////////////// Utility Rules
+enum VarType:  
+		Boolean='Boolean' | Integer='Integer' | Real='Real'
+	;
+
+
+Range:   
+	  '(' 
+		  from=Value '..' to=Value
+	   ')'
+	;
+enum WhereToApplyEnum:
+	SERVER='Server' | CLIENT='Client';
+
+Value: 
+		minues?=('-')?
+		value=INT
+		| fixedPointValue=RealLiteral
+	;
+
+RealLiteral: 
+		 intPart=INT '.' decimalPart=INT
+   ;
+	
+Attribute:   
+	       name=ID ':' propertyType=(VarType) 
+	      ('range'  range=Range )?        	 
+	;
+Param: name=ID ':' propertyType=(VarType);
+	
+/*=====================================================================================================
+ * Expressions
+ =====================================================================================================*/
+
+Expression:	
+		Assign
+	;
+
+Assign returns Expression: 
+	Implie ({Assign.left=current} '=' right=Implie)*  
+	;
+
+Implie returns Expression: 
+	   OrExpression	
+	   ({Implie.left=current} '=>' right=OrExpression)* 
+	;
+
+OrExpression  returns Expression:  
+		AndExpression 
+        ({OrExpression.left=current} 'or' right=AndExpression)*
+    ;
+
+AndExpression returns Expression: 
+		ComparisonOperators 
+    	({AndExpression.left=current} 'and' right=ComparisonOperators)*
+    ;
+
+
+ComparisonOperators returns Expression:  
+		Addition  (=>
+		  ( {GT.left=current} ">"  // Greater Than
+	      | {LT.left=current} "<"  // Lower Than
+	      | {GE.left=current} ">=" // Greater or Equal
+	      | {LE.left=current} "<=" // Lower or Equal
+	      | {EQ.left=current} "==" // Equal
+	      | {NE.left=current} "!=" // Not Equal
+		  ) 
+		rest=Addition)*
+	;
+	
+Addition returns Expression:  
+		 Multiplication (=>({Addition.left=current}  '+' 
+    	                | {Minus.left=current}  '-')
+    	 right=Multiplication )*
+    ;
+
+    
+ Multiplication returns Expression:   
+	 Unary (=>({Multiplication.left=current} '*'
+                  | {Divide.left=current}     '/' 
+    	             | {Modulo.left=current}     '%'
+                     ) 
+     right=Unary )*
+   ;
+    
+
+Unary  returns Expression:  
+		UnaryExpressionNotPlusMinus
+	    |  ({UnaryExpression} '-' exp=Unary)
+	    
+	   
+    ;
+
+UnaryExpressionNotPlusMinus returns Expression:  
+		NotBooleanExpression
+	    |	PrimaryExpression
+    ;
+
+NotBooleanExpression :	
+		'not' exp=PrimaryExpression
+	;
+
+PrimaryExpression returns Expression:	
+		LiteralOrIdentifier
+		| '(' Expression ')'
+	;
+
+LiteralOrIdentifier returns Expression:		
+		Literal
+		| Identifier 
+	;
+
+Parameter:
+	 paramname=[Param]
+;
+
+Identifier:  // work after come back
+	ref=[Attribute] 
+	;
+
+Literal:
+		IntLiteral
+		| BoolLiteral
+		| RealLiteral
+	;
+
+IntLiteral: 
+		 intLiteral=INT
+	;
+
+BoolLiteral:
+		 boolLiteral=BOOLEAN
+	;
+
+terminal BOOLEAN :	
+		 'true'
+		| 'false'
+;
+
+
+	
+
+	

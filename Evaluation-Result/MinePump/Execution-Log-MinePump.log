@@ -1,0 +1,147 @@
+Epsilon Script Path: epsilonScripts/mainScript.eol
+Metamodels and profiles loaded successfully for UMLRT models
+Model 'UMLRTModel' is loaded from '/Users/mojtababagherzadeh/git-nafiseh/ICSE2020/UMLRTSynthesizer/src/main/resources/evaluation/UMLRTModels/PumpController/PumpController.uml'
+Computation time of SMT formula of componets  Alarm is done in 0 milliseconds
+Computation time of SMT formula of componets  Pump_Controller is done in 1 milliseconds
+Computation time of SMT formula of componets  Pump is done in 1 milliseconds
+-----  State Spape Exploration (SSE) of component : Pump_Controller with a bound set to ------40
+Exploration node in level 0
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 4
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 5
+Exploration node in level 6
+Exploration node in level 6
+Exploration node in level 6
+Exploration node in level 6
+Number of explored execution paths: 2048
+SSE of Pump_Controller is done in  50519 milliseconds
+Results: Number of state is : 129 and  Number edges: 864
+----- Sytesising actions of LTS for  : Pump_Controller
+Sytesising actions of LTS for  : Pump_Controlleris done in 11404 milliseconds 
+---------LTS  mimization---------
+Minimizating of LTS
+Results: Number of state is : 9 and  Number edges: 106
+LTS minimization of : Pump_Controller is done in  172 milliseconds
+Results: Number of state is : 9 and  Number edges: 106
+---------Transformation into UML-RT models ---------
+Transfomration of LTS into UMLRT State Machine for  : Pump_Controller is done in  387 milliseconds

@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JQHBsGcfEemuW4e_yrz1KQ" name="PumpController">
+    <eAnnotations xmi:id="_JQHBsWcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:id="_JQHBsmcfEemuW4e_yrz1KQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LR4FIGcfEemuW4e_yrz1KQ" name="Pump" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XZgssL8AEemMNowE6OyDRQ" name="pumpP" visibility="public" type="_pOitMGcfEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:id="_gG29sL8IEemMNowE6OyDRQ" name="pumpOn" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YaycIGcfEemuW4e_yrz1KQ" name="Pump_Controller" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_nFEp0GcgEemuW4e_yrz1KQ" name="sensorPort" visibility="public" type="_4cTQ0GcfEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_sHgo8GcgEemuW4e_yrz1KQ" name="userCommandsP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_tXH2sGcgEemuW4e_yrz1KQ" name="pumpPort" visibility="public" type="_pOitMGcfEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_GdbbgL7_EemMNowE6OyDRQ" name="alarmP" visibility="public" type="_T8_cIb74EemMNowE6OyDRQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+      <ownedAttribute xmi:id="_09DwgL8IEemMNowE6OyDRQ" name="safeWaterLevel" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5lc38L8IEemMNowE6OyDRQ" name="ciriticalMethanLevel" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Bn32QL8JEemMNowE6OyDRQ" name="ciriticalAirflow" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_FJxPsL8JEemMNowE6OyDRQ" name="ciriticalMonoxcideLevel" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_MBA0UL8JEemMNowE6OyDRQ" name="isWaterLow" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_QEssML8JEemMNowE6OyDRQ" name="isWaterHigh" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_avsVUF8lEeq_Bc11CYX2bg" name="Pump_ControllerSM">
+        <region xmi:id="_ayDs0F8lEeq_Bc11CYX2bg">
+          <transition xmi:id="_ayWnwF8lEeq_Bc11CYX2bg" name="init_trans" source="_ayP6EF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <trigger xmi:id="_ayX14F8lEeq_Bc11CYX2bg"/>
+          </transition>
+          <transition xmi:id="_ay1I4F8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\isWaterLow=true;&#xA;" guard="_ay2-EF8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay2-EF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay2-EV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay2XAF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay2-El8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay3lIF8lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_ay3lIl8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay3lIl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay3lI18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay3lIV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay3lJF8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay3lJV8lEeq_Bc11CYX2bg" name="turnOnPumpA[ not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_ay3lJ18lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay3lJ18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay3lKF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay3lJl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay4MMF8lEeq_Bc11CYX2bg" name="turnOnPumpA" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay4MMV8lEeq_Bc11CYX2bg" name="highwaterSensor[ isHigh and not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;isWaterHigh=true;&#xA;" guard="_ay4MM18lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay4MM18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay4MNF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isHigh and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay4MMl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+isWaterHigh=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay4MNV8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay4MNl8lEeq_Bc11CYX2bg" name="turnOnPumpU[ not isWaterLow  and not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_ay4zQF8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay4zQF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay4zQV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isWaterLow  and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay4MN18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay4zQl8lEeq_Bc11CYX2bg" name="turnOnPumpU" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay4zQ18lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_ay4zRV8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay4zRV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay4zRl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay4zRF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay4zR18lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay4zSF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_ay5aUV8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay5aUV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay5aUl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay5aUF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay5aU18lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay5aVF8lEeq_Bc11CYX2bg" name="lowwaterSensor[ not isLow]\isWaterLow=false;&#xA;" guard="_ay5aVl8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay5aVl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay5aV18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay5aVV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_ay5aWF8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay6BYF8lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_ay6BYl8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay6BYl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay6BY18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay6BYV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay6BZF8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay6BZV8lEeq_Bc11CYX2bg" name="turnOnPumpA[ not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_ay6BZ18lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay6BZ18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay6BaF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay6BZl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay6ocF8lEeq_Bc11CYX2bg" name="turnOnPumpA" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay6ocV8lEeq_Bc11CYX2bg" name="highwaterSensor[ isHigh and not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;isWaterHigh=true;&#xA;" guard="_ay6oc18lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay6oc18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay6odF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isHigh and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay6ocl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+isWaterHigh=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay6odV8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay6odl8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_ay6oeF8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay6oeF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay7PgF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay6od18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay7PgV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay7Pgl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_ay7PhF8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay7PhF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay7PhV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay7Pg18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay7Phl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay7Ph18lEeq_Bc11CYX2bg" name="methanLevelSensor[ not highMethanLevel]\ciriticalMethanLevel=false;&#xA;" guard="_ay72kF8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay72kF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay72kV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay7PiF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_ay72kl8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay72k18lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_ay72lV8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay72lV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay72ll8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay72lF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay72l18lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay8doF8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\isWaterLow=true;&#xA;pumpPort.turnOffPump().send();&#xA;" guard="_ay8dol8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay8dol8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay8do18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay8doV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=true;
+pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay8dpF8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay8dpV8lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_ay8dp18lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay8dp18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay8dqF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay8dpl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay8dqV8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay9EsF8lEeq_Bc11CYX2bg" name="turnOffPumpA[]\pumpPort.turnOffPump().send();&#xA;" source="_aybgQF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay9EsV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay9Esl8lEeq_Bc11CYX2bg" name="turnOffPumpA" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay9Es18lEeq_Bc11CYX2bg" name="highwaterSensor[ isHigh and not ciriticalMethanLevel]\isWaterHigh=true;&#xA;" guard="_ay9EtV8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay9EtV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay9Etl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isHigh and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay9EtF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay9rwF8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay9rwV8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_ay9rw18lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay9rw18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay9rxF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay9rwl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay9rxV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay9rxl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_ay9ryF8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay9ryF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay9ryV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay9rx18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_ay-S0F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay-S0V8lEeq_Bc11CYX2bg" name="turnOffPumpU[ not isWaterHigh]\pumpPort.turnOffPump().send();&#xA;" guard="_ay-S018lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay-S018lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay-S1F8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isWaterHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay-S0l8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay-S1V8lEeq_Bc11CYX2bg" name="turnOffPumpU" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay-S1l8lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_ay-54F8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay-54F8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay-54V8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay-S118lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_ay-54l8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay-5418lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_ay-55V8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay-55V8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay-55l8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay-55F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_ay-5518lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay-56F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_ay-56l8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay-56l8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay-5618lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay-56V8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_ay-57F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay_g8F8lEeq_Bc11CYX2bg" name="methanLevelSensor[ not highMethanLevel]\ciriticalMethanLevel=false;&#xA;" guard="_ay_g8l8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay_g8l8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay_g818lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay_g8V8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_ay_g9F8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay_g9V8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_ay_g918lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay_g918lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_ay_g-F8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay_g9l8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_ay_g-V8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_ay_g-l8lEeq_Bc11CYX2bg" name="lowwaterSensor[ not isLow]\isWaterLow=false;&#xA;" guard="_ay_g_F8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_ay_g_F8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azAIAF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_ay_g-18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azAIAV8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azAIAl8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\pumpPort.turnOffPump().send();&#xA;" guard="_azAIBF8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azAIBF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azAIBV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azAIA18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azAIBl8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azAIB18lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_azAICV8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azAICV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azAICl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azAICF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azAIC18lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azAIDF8lEeq_Bc11CYX2bg" name="turnOffPumpA[]\pumpPort.turnOffPump().send();&#xA;" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azAIDV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azAvEF8lEeq_Bc11CYX2bg" name="turnOffPumpA" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azAvEV8lEeq_Bc11CYX2bg" name="highwaterSensor[ isHigh and not ciriticalMethanLevel]\isWaterHigh=true;&#xA;" guard="_azAvE18lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azAvE18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azAvFF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isHigh and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azAvEl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azAvFV8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azAvFl8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_azAvGF8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azAvGF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azAvGV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azAvF18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azAvGl8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azBWIF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_azBWIl8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azBWIl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azBWI18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azBWIV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azBWJF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azBWJV8lEeq_Bc11CYX2bg" name="turnOffPumpU[ not isWaterHigh]\pumpPort.turnOffPump().send();&#xA;" guard="_azBWJ18lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azBWJ18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azBWKF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isWaterHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azBWJl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azBWKV8lEeq_Bc11CYX2bg" name="turnOffPumpU" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azBWKl8lEeq_Bc11CYX2bg" name="lowwaterSensor[ not isLow]\isWaterLow=false;&#xA;" guard="_azB9MV8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azB9MV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azB9Ml8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azB9MF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azB9M18lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azB9NF8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\pumpPort.turnOffPump().send();&#xA;" guard="_azB9Nl8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azB9Nl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azB9N18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azB9NV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azB9OF8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azB9OV8lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_azB9O18lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayxegF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azB9O18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azB9PF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azB9Ol8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azCkQF8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azCkQV8lEeq_Bc11CYX2bg" name="turnOffPumpA[]\pumpPort.turnOffPump().send();&#xA;" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azCkQl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azCkQ18lEeq_Bc11CYX2bg" name="turnOffPumpA" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azCkRF8lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_azCkRl8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azCkRl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azCkR18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azCkRV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azDLUF8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azDLUV8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_azDLU18lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azDLU18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azDLVF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azDLUl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azDLVV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azDLVl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_azDLWF8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azDLWF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azDLWV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azDLV18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azDyYF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azDyYV8lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azDyY18lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azDyY18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azDyZF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azDyYl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azDyZV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azDyZl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azDyaF8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azDyaF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azDyaV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azDyZ18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azEZcF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azEZcV8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\isWaterLow=true;&#xA;pumpPort.turnOffPump().send();&#xA;" guard="_azEZc18lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azEZc18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azEZdF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azEZcl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=true;
+pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azEZdV8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azEZdl8lEeq_Bc11CYX2bg" name="turnOffPumpA[]\pumpPort.turnOffPump().send();&#xA;" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azEZd18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azFAgF8lEeq_Bc11CYX2bg" name="turnOffPumpA" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azFAgV8lEeq_Bc11CYX2bg" name="turnOffPumpU[ not isWaterHigh]\pumpPort.turnOffPump().send();&#xA;" guard="_azFAg18lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azFAg18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azFAhF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isWaterHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azFAgl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azFAhV8lEeq_Bc11CYX2bg" name="turnOffPumpU" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azFAhl8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azFnkF8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azFnkF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azFnkV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azFAh18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azFnkl8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azFnk18lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azFnlV8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azFnlV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azFnll8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azFnlF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azFnl18lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azFnmF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azGOoV8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azGOoV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azGOol8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azGOoF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azGOo18lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azGOpF8lEeq_Bc11CYX2bg" name="lowwaterSensor[ not isLow]\isWaterLow=false;&#xA;" guard="_azGOpl8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azGOpl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azGOp18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azGOpV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azGOqF8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azGOqV8lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_azG1sV8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azG1sV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azG1sl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azG1sF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azG1s18lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azG1tF8lEeq_Bc11CYX2bg" name="turnOnPumpA[ not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_azG1tl8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azG1tl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azG1t18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azG1tV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azG1uF8lEeq_Bc11CYX2bg" name="turnOnPumpA" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azHcwF8lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_azHcwl8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azHcwl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azHcw18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azHcwV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azHcxF8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azHcxV8lEeq_Bc11CYX2bg" name="highwaterSensor[ isHigh and not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_azHcx18lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azHcx18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azHcyF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isHigh and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azHcxl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azHcyV8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azHcyl8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_azID0V8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azID0V8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azID0l8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azID0F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azID018lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azID1F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_azID1l8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azID1l8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azID118lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azID1V8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azID2F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azID2V8lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_azIq4F8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azIq4F8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azIq4V8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azID2l8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azIq4l8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azIq418lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\isWaterLow=true;&#xA;" guard="_azIq5V8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azIq5V8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azIq5l8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azIq5F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azIq518lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azIq6F8lEeq_Bc11CYX2bg" name="methanLevelSensor[ highMethanLevel]\ciriticalMethanLevel=true;&#xA;" guard="_azIq6l8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azIq6l8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azJR8F8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azIq6V8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azJR8V8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azJR8l8lEeq_Bc11CYX2bg" name="turnOnPumpA[ not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_azJR9F8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azJR9F8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azJR9V8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azJR818lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azJR9l8lEeq_Bc11CYX2bg" name="turnOnPumpA" event="_QrjDEGcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azJR918lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_azJ5AF8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azJ5AF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azJ5AV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azJR-F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azJ5Al8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azJ5A18lEeq_Bc11CYX2bg" name="highwaterSensor[ isHigh and not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_azJ5BV8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azJ5BV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azJ5Bl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isHigh and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azJ5BF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azJ5B18lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azJ5CF8lEeq_Bc11CYX2bg" name="turnOnPumpU[ not isWaterLow  and not ciriticalMethanLevel]\pumpPort.turnOnPump().send();&#xA;" guard="_azJ5Cl8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azJ5Cl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azJ5C18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isWaterLow  and not ciriticalMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azJ5CV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOnPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azKgEF8lEeq_Bc11CYX2bg" name="turnOnPumpU" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azKgEV8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_azKgE18lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azKgE18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azKgFF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azKgEl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azKgFV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azKgFl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_azKgGF8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azKgGF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azKgGV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azKgF18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azLHIF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azLHIV8lEeq_Bc11CYX2bg" name="lowwaterSensor[ not isLow]\isWaterLow=false;&#xA;" guard="_azLHI18lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azLHI18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azLHJF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azLHIl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azLHJV8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azLHJl8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\pumpPort.turnOffPump().send();&#xA;" guard="_azLHKF8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azLHKF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azLHKV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azLHJ18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azLHKl8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azLuMF8lEeq_Bc11CYX2bg" name="methanLevelSensor[ not highMethanLevel]\ciriticalMethanLevel=false;&#xA;" guard="_azLuMl8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azLuMl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azLuM18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azLuMV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azLuNF8lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azLuNV8lEeq_Bc11CYX2bg" name="turnOffPumpA[]\pumpPort.turnOffPump().send();&#xA;" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azLuNl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azLuN18lEeq_Bc11CYX2bg" name="turnOffPumpA" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azLuOF8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azMVQF8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azMVQF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azMVQV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azLuOV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azMVQl8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azMVQ18lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_azMVRV8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azMVRV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azMVRl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azMVRF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azMVR18lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azM8UF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_azM8Ul8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azM8Ul8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azM8U18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azM8UV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azM8VF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azM8VV8lEeq_Bc11CYX2bg" name="turnOffPumpU[ not isWaterHigh]\pumpPort.turnOffPump().send();&#xA;" guard="_azM8V18lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azM8V18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azM8WF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isWaterHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azM8Vl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azM8WV8lEeq_Bc11CYX2bg" name="turnOffPumpU" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azM8Wl8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azNjYF8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azNjYF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azNjYV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azM8W18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azNjYl8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azNjY18lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azNjZV8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azNjZV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azNjZl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azNjZF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azNjZ18lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azNjaF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azNjal8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azNjal8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azNja18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azNjaV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azNjbF8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azOKcF8lEeq_Bc11CYX2bg" name="lowwaterSensor[ not isLow]\isWaterLow=false;&#xA;" guard="_azOKcl8lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azOKcl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azOKc18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azOKcV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterLow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azOKdF8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azOKdV8lEeq_Bc11CYX2bg" name="lowwaterSensor[ isLow]\pumpPort.turnOffPump().send();&#xA;" guard="_azOKd18lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azOKd18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azOKeF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  isLow;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azOKdl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azOKeV8lEeq_Bc11CYX2bg" name="lowwaterSensor" event="_9O6EMGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azOKel8lEeq_Bc11CYX2bg" name="methanLevelSensor[ not highMethanLevel]\ciriticalMethanLevel=false;&#xA;" guard="_azOxgV8lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azOxgV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azOxgl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMethanLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azOxgF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMethanLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azOxg18lEeq_Bc11CYX2bg" name="methanLevelSensor" event="_C8iWYL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azOxhF8lEeq_Bc11CYX2bg" name="turnOffPumpA[]\pumpPort.turnOffPump().send();&#xA;" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azOxhV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>pumpPort.turnOffPump().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azOxhl8lEeq_Bc11CYX2bg" name="turnOffPumpA" event="_RFUN8GcgEemuW4e_yrz1KQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azOxh18lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azOxiV8lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayxegF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azOxiV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azOxil8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azOxiF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azOxi18lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azOxjF8lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_azPYkV8lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azPYkV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azPYkl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azPYkF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azPYk18lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azPYlF8lEeq_Bc11CYX2bg" name="airflowSensor[ lowAirflowLevel]\ciriticalAirflow=true;&#xA;" guard="_azPYll8lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayxegF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azPYll8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azPYl18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azPYlV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azPYmF8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azPYmV8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ highMonoxcideLevel]\ciriticalMonoxcideLevel=true;&#xA;" guard="_azPYm18lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayxegF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azPYm18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azPYnF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azPYml8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=true;
+</body>
+            </effect>
+            <trigger xmi:id="_azPYnV8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azPYnl8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azPYoF8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azPYoF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azPYoV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azPYn18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azP_oF8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azP_oV8lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azP_o18lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azP_o18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azP_pF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azP_ol8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azP_pV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azP_pl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azP_qF8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azP_qF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azP_qV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azP_p18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azP_ql8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azP_q18lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azP_rV8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azP_rV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azP_rl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azP_rF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azP_r18lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azQmsF8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azQmsl8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azQmsl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azQms18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azQmsV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azQmtF8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azQmtV8lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azQmt18lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azQmt18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azQmuF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azQmtl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azQmuV8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azQmul8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azQmvF8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azQmvF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azQmvV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azQmu18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azQmvl8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azQmv18lEeq_Bc11CYX2bg" name="highwaterSensor[ not isHigh]\isWaterHigh=false;&#xA;" guard="_azQmwV8lEeq_Bc11CYX2bg" source="_ayKagF8lEeq_Bc11CYX2bg" target="_ayKagF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azQmwV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azRNwF8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not isHigh;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azQmwF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isWaterHigh=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azRNwV8lEeq_Bc11CYX2bg" name="highwaterSensor" event="__5n-AGcfEemuW4e_yrz1KQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azRNwl8lEeq_Bc11CYX2bg" name="timeout_1[ ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel]\alarmP.alarmOn().send();&#xA;" guard="_azRNxF8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azRNxF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azRNxV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azRNw18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOn().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azRNxl8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azRNx18lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azR00V8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azR00V8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azR00l8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azR00F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azR0018lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azR01F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azR01l8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azR01l8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azR0118lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azR01V8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azR02F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azR02V8lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azSb4F8lEeq_Bc11CYX2bg" source="_ayX14V8lEeq_Bc11CYX2bg" target="_ayX14V8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azSb4F8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azSb4V8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azR02l8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azSb4l8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azSb418lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azSb5V8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azSb5V8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azSb5l8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azSb5F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azSb518lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azSb6F8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azTC8V8lEeq_Bc11CYX2bg" source="_ayt0IF8lEeq_Bc11CYX2bg" target="_ayt0IF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azTC8V8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azTC8l8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTC8F8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azTC818lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azTC9F8lEeq_Bc11CYX2bg" name="airflowSensor[ not lowAirflowLevel]\ciriticalAirflow=false;&#xA;" guard="_azTC9l8lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayxegF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azTC9l8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azTC918lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not lowAirflowLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTC9V8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalAirflow=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azTC-F8lEeq_Bc11CYX2bg" name="airflowSensor" event="_BrhacL75EemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azTC-V8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor[ not highMonoxcideLevel]\ciriticalMonoxcideLevel=false;&#xA;" guard="_azTC-18lEeq_Bc11CYX2bg" source="_ayxegF8lEeq_Bc11CYX2bg" target="_ayxegF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azTC-18lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azTC_F8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not highMonoxcideLevel;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTC-l8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>ciriticalMonoxcideLevel=false;
+</body>
+            </effect>
+            <trigger xmi:id="_azTC_V8lEeq_Bc11CYX2bg" name="monoxcideLevelSensor" event="_CWXG0L6vEemMNowE6OyDRQ" port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azTC_l8lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azTqAF8lEeq_Bc11CYX2bg" source="_aybgQF8lEeq_Bc11CYX2bg" target="_aybgQF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azTqAF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azTqAV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTC_18lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azTqAl8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azTqA18lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azTqBV8lEeq_Bc11CYX2bg" source="_ayfKoF8lEeq_Bc11CYX2bg" target="_ayfKoF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azTqBV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azTqBl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTqBF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azTqB18lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azTqCF8lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azTqCl8lEeq_Bc11CYX2bg" source="_ayi1AF8lEeq_Bc11CYX2bg" target="_ayi1AF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azTqCl8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azTqC18lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTqCV8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azTqDF8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azTqDV8lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azUREF8lEeq_Bc11CYX2bg" source="_aymfYF8lEeq_Bc11CYX2bg" target="_aymfYF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azUREF8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azUREV8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azTqDl8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azUREl8lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <transition xmi:id="_azURE18lEeq_Bc11CYX2bg" name="timeout_1[ not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel)]\alarmP.alarmOff().send();&#xA;" guard="_azURFV8lEeq_Bc11CYX2bg" source="_ayqJwF8lEeq_Bc11CYX2bg" target="_ayqJwF8lEeq_Bc11CYX2bg">
+            <ownedRule xmi:id="_azURFV8lEeq_Bc11CYX2bg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azURFl8lEeq_Bc11CYX2bg">
+                <language>C++</language>
+                <body>return  not (ciriticalMethanLevel or ciriticalAirflow or ciriticalMonoxcideLevel);</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_azURFF8lEeq_Bc11CYX2bg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>alarmP.alarmOff().send();
+</body>
+            </effect>
+            <trigger xmi:id="_azURF18lEeq_Bc11CYX2bg" name="timeout_1" event="_aCaFwL75EemMNowE6OyDRQ" port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_ayKagF8lEeq_Bc11CYX2bg" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_ayP6EF8lEeq_Bc11CYX2bg" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ayX14V8lEeq_Bc11CYX2bg" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_aybgQF8lEeq_Bc11CYX2bg" name="S_3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ayfKoF8lEeq_Bc11CYX2bg" name="S_4"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ayi1AF8lEeq_Bc11CYX2bg" name="S_5"/>
+          <subvertex xmi:type="uml:State" xmi:id="_aymfYF8lEeq_Bc11CYX2bg" name="S_6"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ayqJwF8lEeq_Bc11CYX2bg" name="S_7"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ayt0IF8lEeq_Bc11CYX2bg" name="S_8"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ayxegF8lEeq_Bc11CYX2bg" name="S_9"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pOmXkGcfEemuW4e_yrz1KQ" name="PumpP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_pOitMGcfEemuW4e_yrz1KQ" name="PumpP">
+        <interfaceRealization xmi:id="_pOuTYGcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pOrQEGcfEemuW4e_yrz1KQ" contract="_pOrQEGcfEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_pO5SgGcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pO1BEGcfEemuW4e_yrz1KQ" contract="_pO1BEGcfEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pOrQEGcfEemuW4e_yrz1KQ" name="PumpP">
+        <ownedOperation xmi:id="_taRGwGcfEemuW4e_yrz1KQ" name="turnOnPump"/>
+        <ownedOperation xmi:id="_vRtwkGcfEemuW4e_yrz1KQ" name="turnOffPump"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pOvhgGcfEemuW4e_yrz1KQ" name="PumpP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_pOzy8GcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pOvhgGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_pO0aAGcfEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_pO1BEGcfEemuW4e_yrz1KQ" name="PumpPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_pO6goGcfEemuW4e_yrz1KQ" client="_pOitMGcfEemuW4e_yrz1KQ" supplier="_pO1BEGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_taSU4GcfEemuW4e_yrz1KQ" operation="_taRGwGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_vRuXoGcfEemuW4e_yrz1KQ" operation="_vRtwkGcfEemuW4e_yrz1KQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4cWUIGcfEemuW4e_yrz1KQ" name="SensorP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_4cTQ0GcfEemuW4e_yrz1KQ" name="SensorP">
+        <interfaceRealization xmi:id="_4cgFIGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4cbMoGcfEemuW4e_yrz1KQ" contract="_4cbMoGcfEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_4cuHkGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4coA8GcfEemuW4e_yrz1KQ" contract="_4coA8GcfEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_4cbMoGcfEemuW4e_yrz1KQ" name="SensorP">
+        <ownedOperation xmi:id="_9OvsIGcfEemuW4e_yrz1KQ" name="lowwaterSensor">
+          <ownedParameter xmi:id="_1OFJsL71EemMNowE6OyDRQ" name="isLow">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="__5kToGcfEemuW4e_yrz1KQ" name="highwaterSensor">
+          <ownedParameter xmi:id="_AVKWYL73EemMNowE6OyDRQ" name="isHigh">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_CV0UQL6vEemMNowE6OyDRQ" name="monoxcideLevelSensor">
+          <ownedParameter xmi:id="_6iosML74EemMNowE6OyDRQ" name="highMonoxcideLevel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_BrgMUL75EemMNowE6OyDRQ" name="airflowSensor">
+          <ownedParameter xmi:id="_BrgMUb75EemMNowE6OyDRQ" name="lowAirflowLevel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_C8hvUL75EemMNowE6OyDRQ" name="methanLevelSensor">
+          <ownedParameter xmi:id="_C8hvUb75EemMNowE6OyDRQ" name="highMethanLevel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_4cgsMGcfEemuW4e_yrz1KQ" name="SensorP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_4clksGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4cgsMGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_4cmy0GcfEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_4coA8GcfEemuW4e_yrz1KQ" name="SensorPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_4cvVsGcfEemuW4e_yrz1KQ" client="_4cTQ0GcfEemuW4e_yrz1KQ" supplier="_4coA8GcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_9O6EMGcfEemuW4e_yrz1KQ" operation="_9OvsIGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="__5n-AGcfEemuW4e_yrz1KQ" operation="__5kToGcfEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_CWXG0L6vEemMNowE6OyDRQ" operation="_CV0UQL6vEemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_BrhacL75EemMNowE6OyDRQ" operation="_BrgMUL75EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_C8iWYL75EemMNowE6OyDRQ" operation="_C8hvUL75EemMNowE6OyDRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Kimu4GcgEemuW4e_yrz1KQ" name="ControllerP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_KikSoGcgEemuW4e_yrz1KQ" name="ControllerP">
+        <interfaceRealization xmi:id="_KiuqsGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_KiqZQGcgEemuW4e_yrz1KQ" contract="_KiqZQGcgEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_Ki5p0GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ" contract="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_KiqZQGcgEemuW4e_yrz1KQ" name="ControllerP">
+        <ownedOperation xmi:id="_N2eTYGcgEemuW4e_yrz1KQ" name="turnOnPumpU"/>
+        <ownedOperation xmi:id="_QN3BgGcgEemuW4e_yrz1KQ" name="turnOffPumpU"/>
+        <ownedOperation xmi:id="_Qrgm0GcgEemuW4e_yrz1KQ" name="turnOnPumpA"/>
+        <ownedOperation xmi:id="_RFRKoGcgEemuW4e_yrz1KQ" name="turnOffPumpA"/>
+        <ownedOperation xmi:id="_aCY3oL75EemMNowE6OyDRQ" name="timeout_1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kiv40GcgEemuW4e_yrz1KQ" name="ControllerP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_KizjMGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Kiv40GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_Ki0KQGcgEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Ki0xUGcgEemuW4e_yrz1KQ" name="ControllerPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Ki638GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_N2ndUGcgEemuW4e_yrz1KQ" operation="_N2eTYGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QN6E0GcgEemuW4e_yrz1KQ" operation="_QN3BgGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QrjDEGcgEemuW4e_yrz1KQ" operation="_Qrgm0GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_RFUN8GcgEemuW4e_yrz1KQ" operation="_RFRKoGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_aCaFwL75EemMNowE6OyDRQ" operation="_aCY3oL75EemMNowE6OyDRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OTvUoL74EemMNowE6OyDRQ" name="Alarm" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Qkh5QL79EemMNowE6OyDRQ" name="alarmP" visibility="public" type="_T8_cIb74EemMNowE6OyDRQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:id="_g0ylQL8JEemMNowE6OyDRQ" name="alarm" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_T8_cIL74EemMNowE6OyDRQ" name="AlarmP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_T8_cIb74EemMNowE6OyDRQ" name="AlarmP">
+        <interfaceRealization xmi:id="_T8_cIr74EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cJL74EemMNowE6OyDRQ" contract="_T8_cJL74EemMNowE6OyDRQ"/>
+        <interfaceRealization xmi:id="_T8_cI774EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cLL74EemMNowE6OyDRQ" contract="_T8_cLL74EemMNowE6OyDRQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T8_cJL74EemMNowE6OyDRQ" name="AlarmP">
+        <ownedOperation xmi:id="_T8_cJb74EemMNowE6OyDRQ" name="alarmOn"/>
+        <ownedOperation xmi:id="_T8_cJr74EemMNowE6OyDRQ" name="alarmOff"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T8_cKb74EemMNowE6OyDRQ" name="AlarmP~"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_T8_cKr74EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cKb74EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_T8_cK774EemMNowE6OyDRQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T8_cLL74EemMNowE6OyDRQ" name="AlarmPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_T8_cLb74EemMNowE6OyDRQ" client="_T8_cIb74EemMNowE6OyDRQ" supplier="_T8_cLL74EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_T8_cLr74EemMNowE6OyDRQ" operation="_T8_cJb74EemMNowE6OyDRQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_T8_cL774EemMNowE6OyDRQ" operation="_T8_cJr74EemMNowE6OyDRQ"/>
+    </packagedElement>
+    <profileApplication xmi:id="_JQHBs2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBtWcfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtmcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBt2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBuGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_LWTSIGcfEemuW4e_yrz1KQ" base_Class="_LR4FIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:Capsule xmi:id="_Ya5w4GcfEemuW4e_yrz1KQ" base_Class="_YaycIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_pOqB8GcfEemuW4e_yrz1KQ" base_Package="_pOmXkGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_pOtFQGcfEemuW4e_yrz1KQ" base_Interface="_pOrQEGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_pOx9wGcfEemuW4e_yrz1KQ" base_Interface="_pOvhgGcfEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_pO4EYGcfEemuW4e_yrz1KQ" base_Interface="_pO1BEGcfEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_pO7uwGcfEemuW4e_yrz1KQ" base_Collaboration="_pOitMGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_4cZ-gGcfEemuW4e_yrz1KQ" base_Package="_4cWUIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_4ceP8GcfEemuW4e_yrz1KQ" base_Interface="_4cbMoGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_4ckWkGcfEemuW4e_yrz1KQ" base_Interface="_4cgsMGcfEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_4crrUGcfEemuW4e_yrz1KQ" base_Interface="_4coA8GcfEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_4cv8wGcfEemuW4e_yrz1KQ" base_Collaboration="_4cTQ0GcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_KipLIGcgEemuW4e_yrz1KQ" base_Package="_Kimu4GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Kis1gGcgEemuW4e_yrz1KQ" base_Interface="_KiqZQGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_KiyVEGcgEemuW4e_yrz1KQ" base_Interface="_Kiv40GcgEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Ki4bsGcgEemuW4e_yrz1KQ" base_Interface="_Ki0xUGcgEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_Ki7fAGcgEemuW4e_yrz1KQ" base_Collaboration="_KikSoGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_nFI7QGcgEemuW4e_yrz1KQ" base_Port="_nFEp0GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_sHkTUGcgEemuW4e_yrz1KQ" base_Port="_sHgo8GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_tXK6AGcgEemuW4e_yrz1KQ" base_Port="_tXH2sGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:Capsule xmi:id="_OT-lML74EemMNowE6OyDRQ" base_Class="_OTvUoL74EemMNowE6OyDRQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_T9BRUL74EemMNowE6OyDRQ" base_Package="_T8_cIL74EemMNowE6OyDRQ"/>
+  <UMLRealTime:Protocol xmi:id="_T9DGgL74EemMNowE6OyDRQ" base_Collaboration="_T8_cIb74EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_T9E7sL74EemMNowE6OyDRQ" base_Interface="_T8_cJL74EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_T9Gw4L74EemMNowE6OyDRQ" base_Interface="_T8_cKb74EemMNowE6OyDRQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_T9H_AL74EemMNowE6OyDRQ" base_Interface="_T8_cLL74EemMNowE6OyDRQ" rtMsgKind="inOut"/>
+  <UMLRealTime:RTPort xmi:id="_QkpOAL79EemMNowE6OyDRQ" base_Port="_Qkh5QL79EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTPort xmi:id="_Gd2SQL7_EemMNowE6OyDRQ" base_Port="_GdbbgL7_EemMNowE6OyDRQ"/>
+  <UMLRealTime:RTPort xmi:id="_XaEGUL8AEemMNowE6OyDRQ" base_Port="_XZgssL8AEemMNowE6OyDRQ"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_ax-0UF8lEeq_Bc11CYX2bg" base_StateMachine="_avsVUF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_ayE68F8lEeq_Bc11CYX2bg" base_Region="_ayDs0F8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayLooF8lEeq_Bc11CYX2bg" base_State="_ayKagF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_ayRvQF8lEeq_Bc11CYX2bg" base_Pseudostate="_ayP6EF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayYc8F8lEeq_Bc11CYX2bg" base_State="_ayX14V8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_aycHUF8lEeq_Bc11CYX2bg" base_State="_aybgQF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayfxsF8lEeq_Bc11CYX2bg" base_State="_ayfKoF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayjcEF8lEeq_Bc11CYX2bg" base_State="_ayi1AF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayntgF8lEeq_Bc11CYX2bg" base_State="_aymfYF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayqw0F8lEeq_Bc11CYX2bg" base_State="_ayqJwF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayvCQF8lEeq_Bc11CYX2bg" base_State="_ayt0IF8lEeq_Bc11CYX2bg"/>
+  <UMLRTStateMachines:RTState xmi:id="_ayysoF8lEeq_Bc11CYX2bg" base_State="_ayxegF8lEeq_Bc11CYX2bg"/>
+</xmi:XMI>

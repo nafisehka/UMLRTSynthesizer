@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <notation:Diagram xmi:id="_LWHr8GcfEemuW4e_yrz1KQ" type="CompositeStructure" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_LWLWUGcfEemuW4e_yrz1KQ" type="Class_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LWNykGcfEemuW4e_yrz1KQ" type="Class_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_LWNykWcfEemuW4e_yrz1KQ" type="Class_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LWNykmcfEemuW4e_yrz1KQ" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_LWOZoGcfEemuW4e_yrz1KQ" type="Class_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_LWOZoWcfEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LWOZomcfEemuW4e_yrz1KQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_X24oYGcgEemuW4e_yrz1KQ" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_X24oYWcgEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X24oYmcgEemuW4e_yrz1KQ"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ybo4EL8AEemMNowE6OyDRQ" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Ybo4Er8AEemMNowE6OyDRQ" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Ybo4E78AEemMNowE6OyDRQ" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_Ybo4FL8AEemMNowE6OyDRQ" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Ybo4Fb8AEemMNowE6OyDRQ" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="PumpController.uml#_XZgssL8AEemMNowE6OyDRQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ybo4Eb8AEemMNowE6OyDRQ" x="466" y="149" width="16" height="16"/>
+      </children>
+      <element xmi:type="uml:Class" href="PumpController.uml#_LR4FIGcfEemuW4e_yrz1KQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LWLWUWcfEemuW4e_yrz1KQ" x="40" y="40" width="500" height="250"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_LWHr8WcfEemuW4e_yrz1KQ" name="diagram_compatibility_version" stringValue="1.3.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_LWHr8mcfEemuW4e_yrz1KQ"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_LWHr82cfEemuW4e_yrz1KQ" diagramKindId="org.eclipse.papyrusrt.umlrt.tooling.diagram.common.UMLRTCapsuleStructure">
+      <owner xmi:type="uml:Class" href="PumpController.uml#_LR4FIGcfEemuW4e_yrz1KQ"/>
+    </styles>
+    <element xmi:type="uml:Class" href="PumpController.uml#_LR4FIGcfEemuW4e_yrz1KQ"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_Ya4iwGcfEemuW4e_yrz1KQ" type="CompositeStructure" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_Ya4ixGcfEemuW4e_yrz1KQ" type="Class_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Ya5J0GcfEemuW4e_yrz1KQ" type="Class_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Ya5J0WcfEemuW4e_yrz1KQ" type="Class_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ya5J0mcfEemuW4e_yrz1KQ" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Ya5J02cfEemuW4e_yrz1KQ" type="Class_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_Ya5J1GcfEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ya5J1WcfEemuW4e_yrz1KQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_mOpYIGcgEemuW4e_yrz1KQ" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_mOpYIWcgEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOpYImcgEemuW4e_yrz1KQ"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_pBCAMGcgEemuW4e_yrz1KQ" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_pBCAMmcgEemuW4e_yrz1KQ" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_pBCnQGcgEemuW4e_yrz1KQ" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_pBCnQWcgEemuW4e_yrz1KQ" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_pBCnQmcgEemuW4e_yrz1KQ" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="PumpController.uml#_nFEp0GcgEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pBCAMWcgEemuW4e_yrz1KQ" x="296" y="109" width="16" height="16"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_sIe5UGcgEemuW4e_yrz1KQ" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_sIe5UmcgEemuW4e_yrz1KQ" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sIe5U2cgEemuW4e_yrz1KQ" x="21" y="17"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_sIe5VGcgEemuW4e_yrz1KQ" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sIe5VWcgEemuW4e_yrz1KQ" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="PumpController.uml#_sHgo8GcgEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sIe5UWcgEemuW4e_yrz1KQ" x="265" y="169" width="16" height="16"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_tXPygGcgEemuW4e_yrz1KQ" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_tXPygmcgEemuW4e_yrz1KQ" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tXPyg2cgEemuW4e_yrz1KQ" x="6" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_tXPyhGcgEemuW4e_yrz1KQ" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tXPyhWcgEemuW4e_yrz1KQ" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="PumpController.uml#_tXH2sGcgEemuW4e_yrz1KQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tXPygWcgEemuW4e_yrz1KQ" x="154" y="242" width="16" height="16"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_He-YEL7_EemMNowE6OyDRQ" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_He-_IL7_EemMNowE6OyDRQ" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_He-_Ib7_EemMNowE6OyDRQ" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_He-_Ir7_EemMNowE6OyDRQ" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_He_mML7_EemMNowE6OyDRQ" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="PumpController.uml#_GdbbgL7_EemMNowE6OyDRQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_He-YEb7_EemMNowE6OyDRQ" x="475" y="229" width="16" height="16"/>
+      </children>
+      <element xmi:type="uml:Class" href="PumpController.uml#_YaycIGcfEemuW4e_yrz1KQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ya4ixWcfEemuW4e_yrz1KQ" x="40" y="40" width="500" height="250"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_Ya4iwWcfEemuW4e_yrz1KQ" name="diagram_compatibility_version" stringValue="1.3.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Ya4iwmcfEemuW4e_yrz1KQ"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_Ya4iw2cfEemuW4e_yrz1KQ" diagramKindId="org.eclipse.papyrusrt.umlrt.tooling.diagram.common.UMLRTCapsuleStructure">
+      <owner xmi:type="uml:Class" href="PumpController.uml#_YaycIGcfEemuW4e_yrz1KQ"/>
+    </styles>
+    <element xmi:type="uml:Class" href="PumpController.uml#_YaycIGcfEemuW4e_yrz1KQ"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_OT6TwL74EemMNowE6OyDRQ" type="CompositeStructure" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_OT8I8L74EemMNowE6OyDRQ" type="Class_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OT8wAL74EemMNowE6OyDRQ" type="Class_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_OT8wAb74EemMNowE6OyDRQ" type="Class_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OT9XEL74EemMNowE6OyDRQ" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_OT9XEb74EemMNowE6OyDRQ" type="Class_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_OT9XEr74EemMNowE6OyDRQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OT9XE774EemMNowE6OyDRQ"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_P-J1wL79EemMNowE6OyDRQ" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_P-J1wb79EemMNowE6OyDRQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P-J1wr79EemMNowE6OyDRQ"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Rof3sL79EemMNowE6OyDRQ" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_RogewL79EemMNowE6OyDRQ" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Rogewb79EemMNowE6OyDRQ" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_Rogewr79EemMNowE6OyDRQ" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Rogew779EemMNowE6OyDRQ" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="PumpController.uml#_Qkh5QL79EemMNowE6OyDRQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rof3sb79EemMNowE6OyDRQ" x="394" y="242" width="16" height="16"/>
+      </children>
+      <element xmi:type="uml:Class" href="PumpController.uml#_OTvUoL74EemMNowE6OyDRQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OT8I8b74EemMNowE6OyDRQ" x="40" y="40" width="500" height="250"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_OT6Twb74EemMNowE6OyDRQ" name="diagram_compatibility_version" stringValue="1.3.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_OT6Twr74EemMNowE6OyDRQ"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_OT6Tw774EemMNowE6OyDRQ" diagramKindId="org.eclipse.papyrusrt.umlrt.tooling.diagram.common.UMLRTCapsuleStructure">
+      <owner xmi:type="uml:Class" href="PumpController.uml#_OTvUoL74EemMNowE6OyDRQ"/>
+    </styles>
+    <element xmi:type="uml:Class" href="PumpController.uml#_OTvUoL74EemMNowE6OyDRQ"/>
+  </notation:Diagram>
+</xmi:XMI>

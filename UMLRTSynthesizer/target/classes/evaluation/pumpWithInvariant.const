@@ -1,0 +1,73 @@
+Context PumpController{
+				 pumpOn : Boolean
+				 alarm: Boolean
+				 ciriticalMethanLevel:Boolean
+				 isWaterLow:Boolean
+				 isWaterHigh:Boolean
+				Init {
+					pumpOn=false
+					alarm=false
+					ciriticalMethanLevel=false
+					isWaterLow=false
+					isWaterHigh=false	
+				}
+				Invariant R1 { ciriticalMethanLevel => ( not pumpOn ) }
+				
+				Message lowwaterSensor (isLow:Boolean) 
+					Pre: not isLow
+					Post: not isWaterLow
+					
+				Message lowwaterSensor(isLow:Boolean) 
+					Pre: isLow and pumpOn
+					Post: not pumpOn and isWaterLow
+					
+				Message highwaterSensor(isHigh:Boolean)
+					Pre: isHigh and not ciriticalMethanLevel and not pumpOn
+					Post: pumpOn and isWaterHigh
+					
+				Message highwaterSensor(isHigh:Boolean)
+					Pre: not isHigh
+					Post: not isWaterHigh
+					
+				Message turnOnPump()
+					Post: pumpOn
+				Message turnOffPump()
+					Post: not pumpOn
+					
+				Message turnOnPumpU()
+					Pre: not isWaterLow  and not ciriticalMethanLevel and not pumpOn
+					Post: pumpOn
+					
+				Message turnOffPumpU()
+					Pre: not isWaterHigh and pumpOn
+					Post: not pumpOn
+					
+				Message turnOnPumpA()
+					Pre: not ciriticalMethanLevel and not pumpOn
+					Post: pumpOn
+					
+				Message turnOffPumpA()
+					Pre: pumpOn
+					Post: not pumpOn
+					
+				Message alarmOn()
+					Post: alarm=true
+				Message alarmOff()
+					Post: alarm=false
+					
+				Message methanLevelSensor(highMethanLevel:Boolean)
+					Pre: highMethanLevel
+					Post: ciriticalMethanLevel
+					
+				Message methanLevelSensor(highMethanLevel:Boolean)
+					Pre: not highMethanLevel
+					Post: not ciriticalMethanLevel
+					
+				Message timeout_1()
+					Pre: ciriticalMethanLevel and not alarm
+					Post: alarm=true
+				Message timeout_1()
+					Pre: not ciriticalMethanLevel and alarm
+					Post: alarm=false
+				
+			}

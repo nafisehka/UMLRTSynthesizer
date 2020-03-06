@@ -1,0 +1,33 @@
+Context PumpController{
+				 requestPending : Boolean
+				 isCached : Boolean
+				 cacheUpdated: Boolean
+				 readFromCache: Boolean
+				Init {
+					requestPending=false
+					isCached=false
+					cacheUpdated=false
+					readFromCache=false
+				}
+				Message requestData() 
+					Pre: isCached and not cacheUpdated 
+					Post: readFromCache and requestPending
+					
+				Message requestData() 
+					Pre:  not isCached or cacheUpdated
+					Post: not readFromCache and isCached and requestPending
+					
+				Message readFromCacheFinished()
+					Post: not requestPending
+					
+				Message readFromServerFinished()
+					Post: not requestPending
+				
+				Message updateData() 
+					Post: cacheUpdated
+					
+				Message readfromServer()
+					Post: not readFromCache
+					
+				
+			}

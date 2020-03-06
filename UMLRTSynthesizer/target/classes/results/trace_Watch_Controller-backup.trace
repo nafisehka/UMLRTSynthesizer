@@ -1,0 +1,3327 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.queensu.cs/ca/kahani/ExecTraces">
+  <Node id="2121265168" Parent="//@Node.0 //@Node.1 //@Node.2 //@Node.5" Childs="//@Node.0 //@Node.1 //@Node.2" outgoingEdges="//@Edge.0 //@Edge.1 //@Edge.2 //@Edge.3 //@Edge.4 //@Edge.5 //@Edge.6 //@Edge.7 //@Edge.8" incomingEdges="//@Edge.0 //@Edge.1 //@Edge.2 //@Edge.7 //@Edge.8 //@Edge.9 //@Edge.12 //@Edge.13 //@Edge.18 //@Edge.47">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-2044619409" level="1" Parent="//@Node.0 //@Node.1 //@Node.2 //@Node.5" Childs="//@Node.0 //@Node.3 //@Node.2 //@Node.1" outgoingEdges="//@Edge.9 //@Edge.10 //@Edge.11 //@Edge.12 //@Edge.13 //@Edge.14 //@Edge.15 //@Edge.16 //@Edge.17" incomingEdges="//@Edge.3 //@Edge.4 //@Edge.16 //@Edge.17 //@Edge.22 //@Edge.23 //@Edge.51 //@Edge.52">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1915536690" level="1" Parent="//@Node.0 //@Node.1 //@Node.2 //@Node.5" Childs="//@Node.0 //@Node.4 //@Node.2 //@Node.1 //@Node.5 //@Node.6" outgoingEdges="//@Edge.18 //@Edge.19 //@Edge.20 //@Edge.21 //@Edge.22 //@Edge.23 //@Edge.24 //@Edge.25 //@Edge.26 //@Edge.27" incomingEdges="//@Edge.5 //@Edge.6 //@Edge.14 //@Edge.15 //@Edge.21 //@Edge.53 //@Edge.54">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-691309712" level="2" Parent="//@Node.1 //@Node.3 //@Node.7 //@Node.9 //@Node.12 //@Node.24" Childs="//@Node.7 //@Node.8 //@Node.9 //@Node.3" outgoingEdges="//@Edge.28 //@Edge.29 //@Edge.30 //@Edge.31 //@Edge.32 //@Edge.33 //@Edge.34 //@Edge.35 //@Edge.36" incomingEdges="//@Edge.10 //@Edge.11 //@Edge.35 //@Edge.36 //@Edge.70 //@Edge.71 //@Edge.89 //@Edge.90 //@Edge.117 //@Edge.234 //@Edge.235">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-855630000" level="2" Parent="//@Node.2 //@Node.4 //@Node.10 //@Node.12 //@Node.13" Childs="//@Node.10 //@Node.11 //@Node.4 //@Node.12 //@Node.13 //@Node.14" outgoingEdges="//@Edge.37 //@Edge.38 //@Edge.39 //@Edge.40 //@Edge.41 //@Edge.42 //@Edge.43 //@Edge.44 //@Edge.45 //@Edge.46" incomingEdges="//@Edge.19 //@Edge.20 //@Edge.40 //@Edge.100 //@Edge.101 //@Edge.120 //@Edge.121 //@Edge.130 //@Edge.131">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1786453971" level="2" Parent="//@Node.2 //@Node.5" Childs="//@Node.0 //@Node.5 //@Node.1 //@Node.2 //@Node.15" outgoingEdges="//@Edge.47 //@Edge.48 //@Edge.49 //@Edge.50 //@Edge.51 //@Edge.52 //@Edge.53 //@Edge.54 //@Edge.55 //@Edge.56" incomingEdges="//@Edge.24 //@Edge.25 //@Edge.48 //@Edge.49 //@Edge.50">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1873871981" level="2" Parent="//@Node.2 //@Node.6 //@Node.16 //@Node.17 //@Node.18" Childs="//@Node.16 //@Node.14 //@Node.6 //@Node.17 //@Node.18 //@Node.19" outgoingEdges="//@Edge.57 //@Edge.58 //@Edge.59 //@Edge.60 //@Edge.61 //@Edge.62 //@Edge.63 //@Edge.64 //@Edge.65 //@Edge.66" incomingEdges="//@Edge.26 //@Edge.27 //@Edge.60 //@Edge.159 //@Edge.160 //@Edge.168 //@Edge.169 //@Edge.178 //@Edge.179">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-820392431" level="3" Parent="//@Node.3 //@Node.7 //@Node.9 //@Node.24" Childs="//@Node.7 //@Node.3 //@Node.9" outgoingEdges="//@Edge.67 //@Edge.68 //@Edge.69 //@Edge.70 //@Edge.71 //@Edge.72 //@Edge.73 //@Edge.74 //@Edge.75" incomingEdges="//@Edge.28 //@Edge.31 //@Edge.32 //@Edge.67 //@Edge.68 //@Edge.69 //@Edge.74 //@Edge.75 //@Edge.85 //@Edge.230">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="661999985" level="3" Parent="//@Node.3 //@Node.8 //@Node.20 //@Node.22 //@Node.28 //@Node.31" Childs="//@Node.20 //@Node.21 //@Node.22 //@Node.8" outgoingEdges="//@Edge.76 //@Edge.77 //@Edge.78 //@Edge.79 //@Edge.80 //@Edge.81 //@Edge.82 //@Edge.83 //@Edge.84" incomingEdges="//@Edge.29 //@Edge.30 //@Edge.83 //@Edge.84 //@Edge.195 //@Edge.196 //@Edge.214 //@Edge.215 //@Edge.272 //@Edge.302">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-562226993" level="3" Parent="//@Node.3 //@Node.7 //@Node.9 //@Node.24" Childs="//@Node.7 //@Node.23 //@Node.9 //@Node.3 //@Node.24 //@Node.25" outgoingEdges="//@Edge.85 //@Edge.86 //@Edge.87 //@Edge.88 //@Edge.89 //@Edge.90 //@Edge.91 //@Edge.92 //@Edge.93 //@Edge.94" incomingEdges="//@Edge.33 //@Edge.34 //@Edge.72 //@Edge.73 //@Edge.88 //@Edge.236 //@Edge.237">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1113795438" level="3" Parent="//@Node.4 //@Node.10 //@Node.12 //@Node.13" Childs="//@Node.10 //@Node.12 //@Node.4" outgoingEdges="//@Edge.95 //@Edge.96 //@Edge.97 //@Edge.98 //@Edge.99 //@Edge.100 //@Edge.101 //@Edge.102 //@Edge.103" incomingEdges="//@Edge.37 //@Edge.95 //@Edge.96 //@Edge.97 //@Edge.102 //@Edge.103 //@Edge.114 //@Edge.118 //@Edge.119 //@Edge.124">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="204276690" level="3" Parent="//@Node.4 //@Node.11 //@Node.26 //@Node.28 //@Node.29" Childs="//@Node.26 //@Node.27 //@Node.11 //@Node.28 //@Node.29 //@Node.30" outgoingEdges="//@Edge.104 //@Edge.105 //@Edge.106 //@Edge.107 //@Edge.108 //@Edge.109 //@Edge.110 //@Edge.111 //@Edge.112 //@Edge.113" incomingEdges="//@Edge.38 //@Edge.39 //@Edge.107 //@Edge.255 //@Edge.256 //@Edge.275 //@Edge.276 //@Edge.285 //@Edge.286">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-984712719" level="3" Parent="//@Node.4 //@Node.10 //@Node.12 //@Node.13" Childs="//@Node.10 //@Node.31 //@Node.3 //@Node.4 //@Node.12" outgoingEdges="//@Edge.114 //@Edge.115 //@Edge.116 //@Edge.117 //@Edge.118 //@Edge.119 //@Edge.120 //@Edge.121 //@Edge.122 //@Edge.123" incomingEdges="//@Edge.41 //@Edge.42 //@Edge.98 //@Edge.99 //@Edge.122 //@Edge.123 //@Edge.128 //@Edge.129">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-726547281" level="3" Parent="//@Node.4 //@Node.13" Childs="//@Node.10 //@Node.13 //@Node.12 //@Node.4 //@Node.32" outgoingEdges="//@Edge.124 //@Edge.125 //@Edge.126 //@Edge.127 //@Edge.128 //@Edge.129 //@Edge.130 //@Edge.131 //@Edge.132 //@Edge.133" incomingEdges="//@Edge.43 //@Edge.44 //@Edge.125 //@Edge.126 //@Edge.127">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1361188625" level="3" Parent="//@Node.4 //@Node.6 //@Node.14 //@Node.33 //@Node.34 //@Node.35" Childs="//@Node.33 //@Node.30 //@Node.14 //@Node.34 //@Node.35 //@Node.36" outgoingEdges="//@Edge.134 //@Edge.135 //@Edge.136 //@Edge.137 //@Edge.138 //@Edge.139 //@Edge.140 //@Edge.141 //@Edge.142 //@Edge.143" incomingEdges="//@Edge.45 //@Edge.46 //@Edge.58 //@Edge.59 //@Edge.137 //@Edge.324 //@Edge.325 //@Edge.334 //@Edge.335 //@Edge.344 //@Edge.345">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-278902162" level="3" Parent="//@Node.5 //@Node.15 //@Node.39" Childs="//@Node.37 //@Node.15 //@Node.38 //@Node.39 //@Node.40" outgoingEdges="//@Edge.144 //@Edge.145 //@Edge.146 //@Edge.147 //@Edge.148 //@Edge.149 //@Edge.150 //@Edge.151 //@Edge.152 //@Edge.153" incomingEdges="//@Edge.55 //@Edge.56 //@Edge.145 //@Edge.146 //@Edge.147 //@Edge.382 //@Edge.383">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1615706543" level="3" Parent="//@Node.6 //@Node.16 //@Node.17 //@Node.18" Childs="//@Node.16 //@Node.17 //@Node.6" outgoingEdges="//@Edge.154 //@Edge.155 //@Edge.156 //@Edge.157 //@Edge.158 //@Edge.159 //@Edge.160 //@Edge.161 //@Edge.162" incomingEdges="//@Edge.57 //@Edge.154 //@Edge.155 //@Edge.156 //@Edge.161 //@Edge.162 //@Edge.163 //@Edge.166 //@Edge.167 //@Edge.172">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1744789262" level="3" Parent="//@Node.6 //@Node.16 //@Node.17 //@Node.18" Childs="//@Node.16 //@Node.41 //@Node.6 //@Node.17" outgoingEdges="//@Edge.163 //@Edge.164 //@Edge.165 //@Edge.166 //@Edge.167 //@Edge.168 //@Edge.169 //@Edge.170 //@Edge.171" incomingEdges="//@Edge.61 //@Edge.62 //@Edge.157 //@Edge.158 //@Edge.170 //@Edge.171 //@Edge.176 //@Edge.177">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="2002954700" level="3" Parent="//@Node.6 //@Node.18" Childs="//@Node.16 //@Node.18 //@Node.17 //@Node.6 //@Node.42" outgoingEdges="//@Edge.172 //@Edge.173 //@Edge.174 //@Edge.175 //@Edge.176 //@Edge.177 //@Edge.178 //@Edge.179 //@Edge.180 //@Edge.181" incomingEdges="//@Edge.63 //@Edge.64 //@Edge.173 //@Edge.174 //@Edge.175">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1368313356" level="3" Parent="//@Node.6 //@Node.19 //@Node.43 //@Node.44 //@Node.45" Childs="//@Node.43 //@Node.36 //@Node.19 //@Node.44 //@Node.45 //@Node.46" outgoingEdges="//@Edge.182 //@Edge.183 //@Edge.184 //@Edge.185 //@Edge.186 //@Edge.187 //@Edge.188 //@Edge.189 //@Edge.190 //@Edge.191" incomingEdges="//@Edge.65 //@Edge.66 //@Edge.185 //@Edge.420 //@Edge.421 //@Edge.429 //@Edge.430 //@Edge.439 //@Edge.440">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="532917266" level="4" Parent="//@Node.8 //@Node.20 //@Node.22" Childs="//@Node.20 //@Node.8 //@Node.22" outgoingEdges="//@Edge.192 //@Edge.193 //@Edge.194 //@Edge.195 //@Edge.196 //@Edge.197 //@Edge.198 //@Edge.199 //@Edge.200" incomingEdges="//@Edge.76 //@Edge.79 //@Edge.80 //@Edge.192 //@Edge.193 //@Edge.194 //@Edge.199 //@Edge.200 //@Edge.210">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="2015309682" level="4" Parent="//@Node.8 //@Node.21" Childs="//@Node.47 //@Node.48 //@Node.49 //@Node.21" outgoingEdges="//@Edge.201 //@Edge.202 //@Edge.203 //@Edge.204 //@Edge.205 //@Edge.206 //@Edge.207 //@Edge.208 //@Edge.209" incomingEdges="//@Edge.77 //@Edge.78 //@Edge.208 //@Edge.209">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="791082704" level="4" Parent="//@Node.8 //@Node.20 //@Node.22" Childs="//@Node.20 //@Node.50 //@Node.22 //@Node.8 //@Node.51 //@Node.52" outgoingEdges="//@Edge.210 //@Edge.211 //@Edge.212 //@Edge.213 //@Edge.214 //@Edge.215 //@Edge.216 //@Edge.217 //@Edge.218 //@Edge.219" incomingEdges="//@Edge.81 //@Edge.82 //@Edge.197 //@Edge.198 //@Edge.213">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="497679697" level="4" Parent="//@Node.9 //@Node.23 //@Node.31" Childs="//@Node.53 //@Node.54 //@Node.23 //@Node.31 //@Node.55 //@Node.56" outgoingEdges="//@Edge.220 //@Edge.221 //@Edge.222 //@Edge.223 //@Edge.224 //@Edge.225 //@Edge.226 //@Edge.227 //@Edge.228 //@Edge.229" incomingEdges="//@Edge.86 //@Edge.87 //@Edge.223 //@Edge.305 //@Edge.306">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-433144274" level="4" Parent="//@Node.9 //@Node.24" Childs="//@Node.7 //@Node.24 //@Node.3 //@Node.9 //@Node.57" outgoingEdges="//@Edge.230 //@Edge.231 //@Edge.232 //@Edge.233 //@Edge.234 //@Edge.235 //@Edge.236 //@Edge.237 //@Edge.238 //@Edge.239" incomingEdges="//@Edge.91 //@Edge.92 //@Edge.231 //@Edge.232 //@Edge.233">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1067785618" level="4" Parent="//@Node.9 //@Node.25 //@Node.41" Childs="//@Node.58 //@Node.56 //@Node.25 //@Node.41 //@Node.59 //@Node.60" outgoingEdges="//@Edge.240 //@Edge.241 //@Edge.242 //@Edge.243 //@Edge.244 //@Edge.245 //@Edge.246 //@Edge.247 //@Edge.248 //@Edge.249" incomingEdges="//@Edge.93 //@Edge.94 //@Edge.243 //@Edge.401 //@Edge.402">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-53888748" level="4" Parent="//@Node.11 //@Node.26 //@Node.28 //@Node.29" Childs="//@Node.26 //@Node.28 //@Node.11" outgoingEdges="//@Edge.250 //@Edge.251 //@Edge.252 //@Edge.253 //@Edge.254 //@Edge.255 //@Edge.256 //@Edge.257 //@Edge.258" incomingEdges="//@Edge.104 //@Edge.250 //@Edge.251 //@Edge.252 //@Edge.257 //@Edge.258 //@Edge.269 //@Edge.273 //@Edge.274 //@Edge.279">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1264183380" level="4" Parent="//@Node.11 //@Node.27" Childs="//@Node.61 //@Node.62 //@Node.27 //@Node.63 //@Node.64 //@Node.65" outgoingEdges="//@Edge.259 //@Edge.260 //@Edge.261 //@Edge.262 //@Edge.263 //@Edge.264 //@Edge.265 //@Edge.266 //@Edge.267 //@Edge.268" incomingEdges="//@Edge.105 //@Edge.106 //@Edge.262">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="75193971" level="4" Parent="//@Node.11 //@Node.26 //@Node.28 //@Node.29" Childs="//@Node.26 //@Node.66 //@Node.8 //@Node.11 //@Node.28" outgoingEdges="//@Edge.269 //@Edge.270 //@Edge.271 //@Edge.272 //@Edge.273 //@Edge.274 //@Edge.275 //@Edge.276 //@Edge.277 //@Edge.278" incomingEdges="//@Edge.108 //@Edge.109 //@Edge.253 //@Edge.254 //@Edge.277 //@Edge.278 //@Edge.283 //@Edge.284">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="333359409" level="4" Parent="//@Node.11 //@Node.29" Childs="//@Node.26 //@Node.29 //@Node.28 //@Node.11 //@Node.67" outgoingEdges="//@Edge.279 //@Edge.280 //@Edge.281 //@Edge.282 //@Edge.283 //@Edge.284 //@Edge.285 //@Edge.286 //@Edge.287 //@Edge.288" incomingEdges="//@Edge.110 //@Edge.111 //@Edge.280 //@Edge.281 //@Edge.282">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-301281935" level="4" Parent="//@Node.11 //@Node.14 //@Node.30" Childs="//@Node.68 //@Node.65 //@Node.30 //@Node.69 //@Node.70 //@Node.71" outgoingEdges="//@Edge.289 //@Edge.290 //@Edge.291 //@Edge.292 //@Edge.293 //@Edge.294 //@Edge.295 //@Edge.296 //@Edge.297 //@Edge.298" incomingEdges="//@Edge.112 //@Edge.113 //@Edge.135 //@Edge.136 //@Edge.292">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="368596978" level="4" Parent="//@Node.12 //@Node.23 //@Node.31" Childs="//@Node.53 //@Node.72 //@Node.8 //@Node.23 //@Node.31" outgoingEdges="//@Edge.299 //@Edge.300 //@Edge.301 //@Edge.302 //@Edge.303 //@Edge.304 //@Edge.305 //@Edge.306 //@Edge.307 //@Edge.308" incomingEdges="//@Edge.115 //@Edge.116 //@Edge.224 //@Edge.225 //@Edge.307 //@Edge.308">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="781004528" level="4" Parent="//@Node.13 //@Node.32" Childs="//@Node.73 //@Node.32 //@Node.74 //@Node.75 //@Node.76" outgoingEdges="//@Edge.309 //@Edge.310 //@Edge.311 //@Edge.312 //@Edge.313 //@Edge.314 //@Edge.315 //@Edge.316 //@Edge.317 //@Edge.318" incomingEdges="//@Edge.132 //@Edge.133 //@Edge.310 //@Edge.311 //@Edge.312">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1619354063" level="4" Parent="//@Node.14 //@Node.33 //@Node.34 //@Node.35" Childs="//@Node.33 //@Node.34 //@Node.14" outgoingEdges="//@Edge.319 //@Edge.320 //@Edge.321 //@Edge.322 //@Edge.323 //@Edge.324 //@Edge.325 //@Edge.326 //@Edge.327" incomingEdges="//@Edge.134 //@Edge.319 //@Edge.320 //@Edge.321 //@Edge.326 //@Edge.327 //@Edge.328 //@Edge.332 //@Edge.333 //@Edge.338">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1490271344" level="4" Parent="//@Node.14 //@Node.33 //@Node.34 //@Node.35" Childs="//@Node.33 //@Node.77 //@Node.41 //@Node.14 //@Node.34" outgoingEdges="//@Edge.328 //@Edge.329 //@Edge.330 //@Edge.331 //@Edge.332 //@Edge.333 //@Edge.334 //@Edge.335 //@Edge.336 //@Edge.337" incomingEdges="//@Edge.138 //@Edge.139 //@Edge.322 //@Edge.323 //@Edge.336 //@Edge.337 //@Edge.342 //@Edge.343">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1232105906" level="4" Parent="//@Node.14 //@Node.35" Childs="//@Node.33 //@Node.35 //@Node.34 //@Node.14 //@Node.78" outgoingEdges="//@Edge.338 //@Edge.339 //@Edge.340 //@Edge.341 //@Edge.342 //@Edge.343 //@Edge.344 //@Edge.345 //@Edge.346 //@Edge.347" incomingEdges="//@Edge.140 //@Edge.141 //@Edge.339 //@Edge.340 //@Edge.341">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1866747250" level="4" Parent="//@Node.14 //@Node.19 //@Node.36" Childs="//@Node.79 //@Node.71 //@Node.36 //@Node.80 //@Node.81 //@Node.82" outgoingEdges="//@Edge.348 //@Edge.349 //@Edge.350 //@Edge.351 //@Edge.352 //@Edge.353 //@Edge.354 //@Edge.355 //@Edge.356 //@Edge.357" incomingEdges="//@Edge.142 //@Edge.143 //@Edge.183 //@Edge.184 //@Edge.351">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-666150319" level="4" Parent="//@Node.15 //@Node.37 //@Node.38 //@Node.39" Childs="//@Node.37 //@Node.38 //@Node.39" outgoingEdges="//@Edge.358 //@Edge.359 //@Edge.360 //@Edge.361 //@Edge.362 //@Edge.363 //@Edge.364 //@Edge.365 //@Edge.366" incomingEdges="//@Edge.144 //@Edge.358 //@Edge.359 //@Edge.360 //@Edge.365 //@Edge.366 //@Edge.367 //@Edge.370 //@Edge.371 //@Edge.376">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-537067600" level="4" Parent="//@Node.15 //@Node.37 //@Node.38 //@Node.39" Childs="//@Node.37 //@Node.83 //@Node.39 //@Node.38" outgoingEdges="//@Edge.367 //@Edge.368 //@Edge.369 //@Edge.370 //@Edge.371 //@Edge.372 //@Edge.373 //@Edge.374 //@Edge.375" incomingEdges="//@Edge.148 //@Edge.149 //@Edge.361 //@Edge.362 //@Edge.374 //@Edge.375 //@Edge.380 //@Edge.381">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-407984881" level="4" Parent="//@Node.15 //@Node.37 //@Node.38 //@Node.39" Childs="//@Node.37 //@Node.75 //@Node.39 //@Node.38 //@Node.15 //@Node.84" outgoingEdges="//@Edge.376 //@Edge.377 //@Edge.378 //@Edge.379 //@Edge.380 //@Edge.381 //@Edge.382 //@Edge.383 //@Edge.384 //@Edge.385" incomingEdges="//@Edge.150 //@Edge.151 //@Edge.363 //@Edge.364 //@Edge.372 //@Edge.373 //@Edge.379">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1228649647" level="4" Parent="//@Node.15 //@Node.40" Childs="//@Node.85 //@Node.40 //@Node.86 //@Node.87 //@Node.88" outgoingEdges="//@Edge.386 //@Edge.387 //@Edge.388 //@Edge.389 //@Edge.390 //@Edge.391 //@Edge.392 //@Edge.393 //@Edge.394 //@Edge.395" incomingEdges="//@Edge.152 //@Edge.153 //@Edge.387 //@Edge.388 //@Edge.389">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1196868337" level="4" Parent="//@Node.17 //@Node.25 //@Node.34 //@Node.41" Childs="//@Node.58 //@Node.89 //@Node.25 //@Node.41" outgoingEdges="//@Edge.396 //@Edge.397 //@Edge.398 //@Edge.399 //@Edge.400 //@Edge.401 //@Edge.402 //@Edge.403 //@Edge.404" incomingEdges="//@Edge.164 //@Edge.165 //@Edge.244 //@Edge.245 //@Edge.331 //@Edge.403 //@Edge.404">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-784460787" level="4" Parent="//@Node.18 //@Node.42" Childs="//@Node.90 //@Node.42 //@Node.91 //@Node.84 //@Node.92" outgoingEdges="//@Edge.405 //@Edge.406 //@Edge.407 //@Edge.408 //@Edge.409 //@Edge.410 //@Edge.411 //@Edge.412 //@Edge.413 //@Edge.414" incomingEdges="//@Edge.180 //@Edge.181 //@Edge.406 //@Edge.407 //@Edge.408">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1110147918" level="4" Parent="//@Node.19 //@Node.43 //@Node.44 //@Node.45" Childs="//@Node.43 //@Node.44 //@Node.19" outgoingEdges="//@Edge.415 //@Edge.416 //@Edge.417 //@Edge.418 //@Edge.419 //@Edge.420 //@Edge.421 //@Edge.422 //@Edge.423" incomingEdges="//@Edge.182 //@Edge.415 //@Edge.416 //@Edge.417 //@Edge.422 //@Edge.423 //@Edge.424 //@Edge.427 //@Edge.428 //@Edge.433">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1239230637" level="4" Parent="//@Node.19 //@Node.43 //@Node.44 //@Node.45" Childs="//@Node.43 //@Node.93 //@Node.19 //@Node.44" outgoingEdges="//@Edge.424 //@Edge.425 //@Edge.426 //@Edge.427 //@Edge.428 //@Edge.429 //@Edge.430 //@Edge.431 //@Edge.432" incomingEdges="//@Edge.186 //@Edge.187 //@Edge.418 //@Edge.419 //@Edge.431 //@Edge.432 //@Edge.437 //@Edge.438">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1497396075" level="4" Parent="//@Node.19 //@Node.45" Childs="//@Node.43 //@Node.45 //@Node.44 //@Node.19 //@Node.94" outgoingEdges="//@Edge.433 //@Edge.434 //@Edge.435 //@Edge.436 //@Edge.437 //@Edge.438 //@Edge.439 //@Edge.440 //@Edge.441 //@Edge.442" incomingEdges="//@Edge.188 //@Edge.189 //@Edge.434 //@Edge.435 //@Edge.436">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="862754731" level="4" Parent="//@Node.19 //@Node.46" Childs="//@Node.95 //@Node.82 //@Node.46 //@Node.96 //@Node.97 //@Node.98" outgoingEdges="//@Edge.443 //@Edge.444 //@Edge.445 //@Edge.446 //@Edge.447 //@Edge.448 //@Edge.449 //@Edge.450 //@Edge.451 //@Edge.452" incomingEdges="//@Edge.190 //@Edge.191 //@Edge.446">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1886226963" level="5" Parent="//@Node.21" incomingEdges="//@Edge.201 //@Edge.204 //@Edge.205">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-926347917" level="5" Parent="//@Node.21" incomingEdges="//@Edge.202 //@Edge.203">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="4"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="2144392401" level="5" Parent="//@Node.21" incomingEdges="//@Edge.206 //@Edge.207">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1850989394" level="5" Parent="//@Node.22" incomingEdges="//@Edge.211 //@Edge.212">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="920165423" level="5" Parent="//@Node.22" incomingEdges="//@Edge.216 //@Edge.217">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="285524079" level="5" Parent="//@Node.22" incomingEdges="//@Edge.218 //@Edge.219">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="239514259" level="5" Parent="//@Node.23 //@Node.31" incomingEdges="//@Edge.220 //@Edge.299 //@Edge.303 //@Edge.304">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1557586387" level="5" Parent="//@Node.23" incomingEdges="//@Edge.221 //@Edge.222">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="626762416" level="5" Parent="//@Node.23" incomingEdges="//@Edge.226 //@Edge.227">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-7878928" level="5" Parent="//@Node.23 //@Node.25" incomingEdges="//@Edge.228 //@Edge.229 //@Edge.241 //@Edge.242">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1074407535" level="5" Parent="//@Node.24" incomingEdges="//@Edge.238 //@Edge.239">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1325951056" level="5" Parent="//@Node.25 //@Node.41" incomingEdges="//@Edge.240 //@Edge.396 //@Edge.399 //@Edge.400">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-938702899" level="5" Parent="//@Node.25" incomingEdges="//@Edge.246 //@Edge.247">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1573344243" level="5" Parent="//@Node.25" incomingEdges="//@Edge.248 //@Edge.249">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1006017942" level="5" Parent="//@Node.27" incomingEdges="//@Edge.259">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1970877226" level="5" Parent="//@Node.27" incomingEdges="//@Edge.260 //@Edge.261">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="4"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="4"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1135100661" level="5" Parent="//@Node.27" incomingEdges="//@Edge.263 //@Edge.264">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1393266099" level="5" Parent="//@Node.27" incomingEdges="//@Edge.265 //@Edge.266">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="758624755" level="5" Parent="//@Node.27 //@Node.30" incomingEdges="//@Edge.267 //@Edge.268 //@Edge.290 //@Edge.291">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1428503668" level="5" Parent="//@Node.28" incomingEdges="//@Edge.270 //@Edge.271">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1840911218" level="5" Parent="//@Node.29" incomingEdges="//@Edge.287 //@Edge.288">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-559447373" level="5" Parent="//@Node.30" incomingEdges="//@Edge.289">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-430364654" level="5" Parent="//@Node.30" incomingEdges="//@Edge.293 //@Edge.294">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-172199216" level="5" Parent="//@Node.30" incomingEdges="//@Edge.295 //@Edge.296">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-806840560" level="5" Parent="//@Node.30 //@Node.36" incomingEdges="//@Edge.297 //@Edge.298 //@Edge.349 //@Edge.350">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1721906675" level="5" Parent="//@Node.31" incomingEdges="//@Edge.300 //@Edge.301">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="393756371" level="5" Parent="//@Node.32" incomingEdges="//@Edge.309">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="522839090" level="5" Parent="//@Node.32" incomingEdges="//@Edge.313 //@Edge.314">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="651921809" level="5" Parent="//@Node.32 //@Node.39" incomingEdges="//@Edge.315 //@Edge.316 //@Edge.377 //@Edge.378">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-2006410959" level="5" Parent="//@Node.32" incomingEdges="//@Edge.317 //@Edge.318">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-136961647" level="5" Parent="//@Node.34" incomingEdges="//@Edge.329 //@Edge.330">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="275445903" level="5" Parent="//@Node.35" incomingEdges="//@Edge.346 //@Edge.347">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-2124912688" level="5" Parent="//@Node.36" incomingEdges="//@Edge.348">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1995829969" level="5" Parent="//@Node.36" incomingEdges="//@Edge.352 //@Edge.353">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1737664531" level="5" Parent="//@Node.36" incomingEdges="//@Edge.354 //@Edge.355">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1922661421" level="5" Parent="//@Node.36 //@Node.46" incomingEdges="//@Edge.356 //@Edge.357 //@Edge.444 //@Edge.445">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="816242097" level="5" Parent="//@Node.38" incomingEdges="//@Edge.368 //@Edge.369">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-913543506" level="5" Parent="//@Node.39 //@Node.42" incomingEdges="//@Edge.384 //@Edge.385 //@Edge.411 //@Edge.412">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="841401490" level="5" Parent="//@Node.40" incomingEdges="//@Edge.386">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="970484209" level="5" Parent="//@Node.40" incomingEdges="//@Edge.390 //@Edge.391">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1099566928" level="5" Parent="//@Node.40" incomingEdges="//@Edge.392 //@Edge.393">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1558765840" level="5" Parent="//@Node.40" incomingEdges="//@Edge.394 //@Edge.395">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="156441360" level="5" Parent="//@Node.41" incomingEdges="//@Edge.397 //@Edge.398">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1171708944" level="5" Parent="//@Node.42" incomingEdges="//@Edge.405">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1042626225" level="5" Parent="//@Node.42" incomingEdges="//@Edge.409 //@Edge.410">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="723091022" level="5" Parent="//@Node.42" incomingEdges="//@Edge.413 //@Edge.414">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1702426962" level="5" Parent="//@Node.44" incomingEdges="//@Edge.425 //@Edge.426">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="-1290019412" level="5" Parent="//@Node.45" incomingEdges="//@Edge.441 //@Edge.442">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="604589293" level="5" Parent="//@Node.46" incomingEdges="//@Edge.443">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="733672012" level="5" Parent="//@Node.46" incomingEdges="//@Edge.447 //@Edge.448">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="1"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="991837450" level="5" Parent="//@Node.46" incomingEdges="//@Edge.449 //@Edge.450">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="3"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="357196106" level="5" Parent="//@Node.46" incomingEdges="//@Edge.451 //@Edge.452">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral" int="4"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_displayMode">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hourAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_minuteAdjust">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.1" destination="//@Node.0" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.1" destination="//@Node.3" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.1" destination="//@Node.3" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.1" destination="//@Node.0" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.1" destination="//@Node.0" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.1" destination="//@Node.2" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.1" destination="//@Node.2" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.1" destination="//@Node.1" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.2" destination="//@Node.0" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.2" destination="//@Node.4" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.2" destination="//@Node.4" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.2" destination="//@Node.2" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.2" destination="//@Node.1" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.2" destination="//@Node.1" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.2" destination="//@Node.5" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.2" destination="//@Node.5" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.2" destination="//@Node.6" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.2" destination="//@Node.6" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.3" destination="//@Node.7" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.3" destination="//@Node.8" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.3" destination="//@Node.8" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.3" destination="//@Node.7" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.3" destination="//@Node.7" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.3" destination="//@Node.9" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.3" destination="//@Node.9" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.3" destination="//@Node.3" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.4" destination="//@Node.10" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.4" destination="//@Node.11" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.4" destination="//@Node.11" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.4" destination="//@Node.4" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.4" destination="//@Node.12" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.4" destination="//@Node.12" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.4" destination="//@Node.13" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.4" destination="//@Node.13" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.4" destination="//@Node.14" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.4" destination="//@Node.14" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.5" destination="//@Node.0" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.5" destination="//@Node.5" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.5" destination="//@Node.1" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.5" destination="//@Node.1" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.5" destination="//@Node.2" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.5" destination="//@Node.2" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.5" destination="//@Node.15" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.5" destination="//@Node.15" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.6" destination="//@Node.16" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.6" destination="//@Node.14" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.6" destination="//@Node.14" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.6" destination="//@Node.6" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.6" destination="//@Node.17" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.6" destination="//@Node.17" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.6" destination="//@Node.18" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.6" destination="//@Node.18" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.6" destination="//@Node.19" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.6" destination="//@Node.19" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.7" destination="//@Node.3" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.7" destination="//@Node.3" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.7" destination="//@Node.9" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.7" destination="//@Node.9" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.7" destination="//@Node.7" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.8" destination="//@Node.20" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.8" destination="//@Node.21" trigger="tick" actions="[set_cur_milliSecond_to_3]"/>
+  <Edge source="//@Node.8" destination="//@Node.21" trigger="tick" actions="[set_cur_milliSecond_to_3]"/>
+  <Edge source="//@Node.8" destination="//@Node.20" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.8" destination="//@Node.20" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.8" destination="//@Node.22" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.8" destination="//@Node.22" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.8" destination="//@Node.8" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.9" destination="//@Node.7" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.9" destination="//@Node.23" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.9" destination="//@Node.23" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.9" destination="//@Node.9" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.9" destination="//@Node.3" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.9" destination="//@Node.3" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.9" destination="//@Node.24" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.9" destination="//@Node.24" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.9" destination="//@Node.25" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.9" destination="//@Node.25" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.10" destination="//@Node.10" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.10" destination="//@Node.10" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.10" destination="//@Node.10" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.10" destination="//@Node.12" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.10" destination="//@Node.12" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.10" destination="//@Node.4" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.10" destination="//@Node.4" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.10" destination="//@Node.10" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.10" destination="//@Node.10" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.11" destination="//@Node.26" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.11" destination="//@Node.27" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_3]"/>
+  <Edge source="//@Node.11" destination="//@Node.27" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_3]"/>
+  <Edge source="//@Node.11" destination="//@Node.11" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.11" destination="//@Node.28" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.11" destination="//@Node.28" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.11" destination="//@Node.29" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.11" destination="//@Node.29" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.11" destination="//@Node.30" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.11" destination="//@Node.30" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.12" destination="//@Node.10" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.12" destination="//@Node.31" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.12" destination="//@Node.31" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.12" destination="//@Node.3" trigger="Pin2Pressed" actions="[set_cur_stopwatchCounter_to_0]"/>
+  <Edge source="//@Node.12" destination="//@Node.10" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.12" destination="//@Node.10" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.12" destination="//@Node.4" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.12" destination="//@Node.4" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.12" destination="//@Node.12" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.12" destination="//@Node.12" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.13" destination="//@Node.10" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.13" destination="//@Node.13" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.13" destination="//@Node.13" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.13" destination="//@Node.13" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.13" destination="//@Node.12" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.13" destination="//@Node.12" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.13" destination="//@Node.4" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.13" destination="//@Node.4" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.13" destination="//@Node.32" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.13" destination="//@Node.32" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.14" destination="//@Node.33" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.14" destination="//@Node.30" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.14" destination="//@Node.30" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.14" destination="//@Node.14" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.14" destination="//@Node.34" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.14" destination="//@Node.34" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.14" destination="//@Node.35" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.14" destination="//@Node.35" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.14" destination="//@Node.36" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.14" destination="//@Node.36" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.15" destination="//@Node.37" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.15" destination="//@Node.15" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.15" destination="//@Node.15" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.15" destination="//@Node.15" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.15" destination="//@Node.38" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.15" destination="//@Node.38" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.15" destination="//@Node.39" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.15" destination="//@Node.39" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.15" destination="//@Node.40" trigger="Pin4Pressed" actions="[set_cur_minute_to_2]"/>
+  <Edge source="//@Node.15" destination="//@Node.40" trigger="Pin4Pressed" actions="[set_cur_minute_to_2]"/>
+  <Edge source="//@Node.16" destination="//@Node.16" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.16" destination="//@Node.16" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.16" destination="//@Node.16" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.16" destination="//@Node.17" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.16" destination="//@Node.17" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.16" destination="//@Node.6" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.16" destination="//@Node.6" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.16" destination="//@Node.16" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.16" destination="//@Node.16" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.17" destination="//@Node.16" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.17" destination="//@Node.41" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.17" destination="//@Node.41" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.17" destination="//@Node.16" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.17" destination="//@Node.16" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.17" destination="//@Node.6" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.17" destination="//@Node.6" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.17" destination="//@Node.17" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.17" destination="//@Node.17" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.18" destination="//@Node.16" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.18" destination="//@Node.18" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.18" destination="//@Node.18" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.18" destination="//@Node.18" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.18" destination="//@Node.17" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.18" destination="//@Node.17" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.18" destination="//@Node.6" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.18" destination="//@Node.6" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.18" destination="//@Node.42" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.18" destination="//@Node.42" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.19" destination="//@Node.43" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.19" destination="//@Node.36" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.19" destination="//@Node.36" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.19" destination="//@Node.19" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.19" destination="//@Node.44" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.19" destination="//@Node.44" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.19" destination="//@Node.45" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.19" destination="//@Node.45" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.19" destination="//@Node.46" trigger="Pin4Pressed" actions="[set_cur_hour_to_3]"/>
+  <Edge source="//@Node.19" destination="//@Node.46" trigger="Pin4Pressed" actions="[set_cur_hour_to_3]"/>
+  <Edge source="//@Node.20" destination="//@Node.20" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.20" destination="//@Node.20" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.20" destination="//@Node.20" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.20" destination="//@Node.8" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.20" destination="//@Node.8" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.20" destination="//@Node.22" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.20" destination="//@Node.22" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.20" destination="//@Node.20" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.20" destination="//@Node.20" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.21" destination="//@Node.47" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.21" destination="//@Node.48" trigger="tick" actions="[set_cur_milliSecond_to_4]"/>
+  <Edge source="//@Node.21" destination="//@Node.48" trigger="tick" actions="[set_cur_milliSecond_to_4]"/>
+  <Edge source="//@Node.21" destination="//@Node.47" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.21" destination="//@Node.47" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.21" destination="//@Node.49" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.21" destination="//@Node.49" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.21" destination="//@Node.21" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.21" destination="//@Node.21" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.22" destination="//@Node.20" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.22" destination="//@Node.50" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.22" destination="//@Node.50" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.22" destination="//@Node.22" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.22" destination="//@Node.8" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.22" destination="//@Node.8" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.22" destination="//@Node.51" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.22" destination="//@Node.51" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.22" destination="//@Node.52" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.22" destination="//@Node.52" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.23" destination="//@Node.53" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.23" destination="//@Node.54" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.23" destination="//@Node.54" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.23" destination="//@Node.23" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.23" destination="//@Node.31" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.23" destination="//@Node.31" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.23" destination="//@Node.55" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.23" destination="//@Node.55" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.23" destination="//@Node.56" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.23" destination="//@Node.56" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.24" destination="//@Node.7" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.24" destination="//@Node.24" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.24" destination="//@Node.24" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.24" destination="//@Node.24" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.24" destination="//@Node.3" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.24" destination="//@Node.3" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.24" destination="//@Node.9" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.24" destination="//@Node.9" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.24" destination="//@Node.57" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.24" destination="//@Node.57" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.25" destination="//@Node.58" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.25" destination="//@Node.56" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.25" destination="//@Node.56" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.25" destination="//@Node.25" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.25" destination="//@Node.41" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.25" destination="//@Node.41" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.25" destination="//@Node.59" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.25" destination="//@Node.59" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.25" destination="//@Node.60" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.25" destination="//@Node.60" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.26" destination="//@Node.26" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.26" destination="//@Node.26" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.26" destination="//@Node.26" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.26" destination="//@Node.28" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.26" destination="//@Node.28" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.26" destination="//@Node.11" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.26" destination="//@Node.11" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.26" destination="//@Node.26" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.26" destination="//@Node.26" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.27" destination="//@Node.61" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.27" destination="//@Node.62" trigger="tick" actions="[set_cur_milliSecond_to_4, set_cur_stopwatchCounter_to_4]"/>
+  <Edge source="//@Node.27" destination="//@Node.62" trigger="tick" actions="[set_cur_milliSecond_to_4, set_cur_stopwatchCounter_to_4]"/>
+  <Edge source="//@Node.27" destination="//@Node.27" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.27" destination="//@Node.63" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.27" destination="//@Node.63" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.27" destination="//@Node.64" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.27" destination="//@Node.64" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.27" destination="//@Node.65" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.27" destination="//@Node.65" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.28" destination="//@Node.26" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.28" destination="//@Node.66" trigger="tick" actions="[set_cur_milliSecond_to_3]"/>
+  <Edge source="//@Node.28" destination="//@Node.66" trigger="tick" actions="[set_cur_milliSecond_to_3]"/>
+  <Edge source="//@Node.28" destination="//@Node.8" trigger="Pin2Pressed" actions="[set_cur_stopwatchCounter_to_0]"/>
+  <Edge source="//@Node.28" destination="//@Node.26" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.28" destination="//@Node.26" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.28" destination="//@Node.11" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.28" destination="//@Node.11" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.28" destination="//@Node.28" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.28" destination="//@Node.28" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.29" destination="//@Node.26" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.29" destination="//@Node.29" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.29" destination="//@Node.29" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.29" destination="//@Node.29" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.29" destination="//@Node.28" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.29" destination="//@Node.28" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.29" destination="//@Node.11" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.29" destination="//@Node.11" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.29" destination="//@Node.67" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.29" destination="//@Node.67" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.30" destination="//@Node.68" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.30" destination="//@Node.65" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_3]"/>
+  <Edge source="//@Node.30" destination="//@Node.65" trigger="tick" actions="[set_cur_milliSecond_to_3, set_cur_stopwatchCounter_to_3]"/>
+  <Edge source="//@Node.30" destination="//@Node.30" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.30" destination="//@Node.69" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.30" destination="//@Node.69" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.30" destination="//@Node.70" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.30" destination="//@Node.70" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.30" destination="//@Node.71" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.30" destination="//@Node.71" trigger="Pin4Pressed" actions="[set_cur_hour_to_2]"/>
+  <Edge source="//@Node.31" destination="//@Node.53" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.31" destination="//@Node.72" trigger="tick" actions="[set_cur_milliSecond_to_3]"/>
+  <Edge source="//@Node.31" destination="//@Node.72" trigger="tick" actions="[set_cur_milliSecond_to_3]"/>
+  <Edge source="//@Node.31" destination="//@Node.8" trigger="Pin2Pressed" actions="[set_cur_stopwatchCounter_to_0]"/>
+  <Edge source="//@Node.31" destination="//@Node.53" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.31" destination="//@Node.53" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.31" destination="//@Node.23" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.31" destination="//@Node.23" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.31" destination="//@Node.31" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.31" destination="//@Node.31" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.32" destination="//@Node.73" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.32" destination="//@Node.32" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.32" destination="//@Node.32" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.32" destination="//@Node.32" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.32" destination="//@Node.74" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.32" destination="//@Node.74" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.32" destination="//@Node.75" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.32" destination="//@Node.75" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.32" destination="//@Node.76" trigger="Pin4Pressed" actions="[set_cur_minute_to_2]"/>
+  <Edge source="//@Node.32" destination="//@Node.76" trigger="Pin4Pressed" actions="[set_cur_minute_to_2]"/>
+  <Edge source="//@Node.33" destination="//@Node.33" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.33" destination="//@Node.33" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.33" destination="//@Node.33" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.33" destination="//@Node.34" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.33" destination="//@Node.34" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.33" destination="//@Node.14" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.33" destination="//@Node.14" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.33" destination="//@Node.33" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.33" destination="//@Node.33" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.34" destination="//@Node.33" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.34" destination="//@Node.77" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.34" destination="//@Node.77" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.34" destination="//@Node.41" trigger="Pin2Pressed" actions="[set_cur_stopwatchCounter_to_0]"/>
+  <Edge source="//@Node.34" destination="//@Node.33" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.34" destination="//@Node.33" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.34" destination="//@Node.14" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.34" destination="//@Node.14" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.34" destination="//@Node.34" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.34" destination="//@Node.34" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.35" destination="//@Node.33" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.35" destination="//@Node.35" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.35" destination="//@Node.35" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.35" destination="//@Node.35" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.35" destination="//@Node.34" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.35" destination="//@Node.34" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.35" destination="//@Node.14" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.35" destination="//@Node.14" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.35" destination="//@Node.78" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.35" destination="//@Node.78" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.36" destination="//@Node.79" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.36" destination="//@Node.71" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.36" destination="//@Node.71" trigger="tick" actions="[set_cur_milliSecond_to_2, set_cur_stopwatchCounter_to_2]"/>
+  <Edge source="//@Node.36" destination="//@Node.36" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.36" destination="//@Node.80" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.36" destination="//@Node.80" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.36" destination="//@Node.81" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.36" destination="//@Node.81" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.36" destination="//@Node.82" trigger="Pin4Pressed" actions="[set_cur_hour_to_3]"/>
+  <Edge source="//@Node.36" destination="//@Node.82" trigger="Pin4Pressed" actions="[set_cur_hour_to_3]"/>
+  <Edge source="//@Node.37" destination="//@Node.37" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.37" destination="//@Node.37" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.37" destination="//@Node.37" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.37" destination="//@Node.38" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.37" destination="//@Node.38" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.37" destination="//@Node.39" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.37" destination="//@Node.39" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.37" destination="//@Node.37" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.37" destination="//@Node.37" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.38" destination="//@Node.37" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.38" destination="//@Node.83" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.38" destination="//@Node.83" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.38" destination="//@Node.37" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.38" destination="//@Node.37" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.38" destination="//@Node.39" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.38" destination="//@Node.39" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.38" destination="//@Node.38" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.38" destination="//@Node.38" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.39" destination="//@Node.37" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.39" destination="//@Node.75" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.39" destination="//@Node.75" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.39" destination="//@Node.39" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.39" destination="//@Node.38" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.39" destination="//@Node.38" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.39" destination="//@Node.15" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.39" destination="//@Node.15" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.39" destination="//@Node.84" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.39" destination="//@Node.84" trigger="Pin4Pressed" actions="[set_cur_hour_to_1]"/>
+  <Edge source="//@Node.40" destination="//@Node.85" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.40" destination="//@Node.40" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.40" destination="//@Node.40" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.40" destination="//@Node.40" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.40" destination="//@Node.86" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.40" destination="//@Node.86" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.40" destination="//@Node.87" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.40" destination="//@Node.87" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.40" destination="//@Node.88" trigger="Pin4Pressed" actions="[set_cur_minute_to_3]"/>
+  <Edge source="//@Node.40" destination="//@Node.88" trigger="Pin4Pressed" actions="[set_cur_minute_to_3]"/>
+  <Edge source="//@Node.41" destination="//@Node.58" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.41" destination="//@Node.89" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.41" destination="//@Node.89" trigger="tick" actions="[set_cur_milliSecond_to_2]"/>
+  <Edge source="//@Node.41" destination="//@Node.58" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.41" destination="//@Node.58" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.41" destination="//@Node.25" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.41" destination="//@Node.25" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.41" destination="//@Node.41" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.41" destination="//@Node.41" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.42" destination="//@Node.90" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.42" destination="//@Node.42" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.42" destination="//@Node.42" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.42" destination="//@Node.42" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.42" destination="//@Node.91" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.42" destination="//@Node.91" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.42" destination="//@Node.84" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.42" destination="//@Node.84" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.42" destination="//@Node.92" trigger="Pin4Pressed" actions="[set_cur_minute_to_2]"/>
+  <Edge source="//@Node.42" destination="//@Node.92" trigger="Pin4Pressed" actions="[set_cur_minute_to_2]"/>
+  <Edge source="//@Node.43" destination="//@Node.43" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.43" destination="//@Node.43" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.43" destination="//@Node.43" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.43" destination="//@Node.44" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.43" destination="//@Node.44" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.43" destination="//@Node.19" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.43" destination="//@Node.19" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.43" destination="//@Node.43" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.43" destination="//@Node.43" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.44" destination="//@Node.43" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.44" destination="//@Node.93" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.44" destination="//@Node.93" trigger="tick" actions="[set_cur_milliSecond_to_1]"/>
+  <Edge source="//@Node.44" destination="//@Node.43" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.44" destination="//@Node.43" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.44" destination="//@Node.19" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.44" destination="//@Node.19" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.44" destination="//@Node.44" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.44" destination="//@Node.44" trigger="Pin4Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.45" destination="//@Node.43" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.45" destination="//@Node.45" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.45" destination="//@Node.45" trigger="tick" actions="Error" status="Error"/>
+  <Edge source="//@Node.45" destination="//@Node.45" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.45" destination="//@Node.44" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.45" destination="//@Node.44" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.45" destination="//@Node.19" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.45" destination="//@Node.19" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_2]"/>
+  <Edge source="//@Node.45" destination="//@Node.94" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.45" destination="//@Node.94" trigger="Pin4Pressed" actions="[set_cur_minute_to_1]"/>
+  <Edge source="//@Node.46" destination="//@Node.95" trigger="timeout_1" actions="[set_cur_watchMode_to_0]"/>
+  <Edge source="//@Node.46" destination="//@Node.82" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.46" destination="//@Node.82" trigger="tick" actions="[set_cur_milliSecond_to_1, set_cur_stopwatchCounter_to_1]"/>
+  <Edge source="//@Node.46" destination="//@Node.46" trigger="Pin2Pressed" actions="Error" status="Error"/>
+  <Edge source="//@Node.46" destination="//@Node.96" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.46" destination="//@Node.96" trigger="Pin1Pressed" actions="[set_cur_watchMode_to_1]"/>
+  <Edge source="//@Node.46" destination="//@Node.97" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.46" destination="//@Node.97" trigger="Pin3Pressed" actions="[set_cur_watchMode_to_3]"/>
+  <Edge source="//@Node.46" destination="//@Node.98" trigger="Pin4Pressed" actions="[set_cur_hour_to_4]"/>
+  <Edge source="//@Node.46" destination="//@Node.98" trigger="Pin4Pressed" actions="[set_cur_hour_to_4]"/>
+</execTraces:ExecTraces>

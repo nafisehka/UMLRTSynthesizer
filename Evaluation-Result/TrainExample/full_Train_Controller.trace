@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.ExecTraces.umlrtsyntesizer">
+  <Node id="8750915" outgoingEdges="//@Edge.0 //@Edge.1 //@Edge.2" incomingEdges="//@Edge.4 //@Edge.7">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node name="unsafeState" status="unSafeTrans" incomingEdges="//@Edge.0 //@Edge.3 //@Edge.5 //@Edge.9"/>
+  <Node id="1801831278" level="1" outgoingEdges="//@Edge.3 //@Edge.4 //@Edge.5" incomingEdges="//@Edge.1 //@Edge.8 //@Edge.10">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+  </Node>
+  <Node id="-1660642834" level="1" outgoingEdges="//@Edge.6 //@Edge.7 //@Edge.8" incomingEdges="//@Edge.2 //@Edge.11">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Node id="1050662535" level="2" outgoingEdges="//@Edge.9 //@Edge.10 //@Edge.11" incomingEdges="//@Edge.6">
+    <VarData name="cur_isDoorClosed">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isTrainMoving">
+      <value xsi:type="execTraces:BoolLiteral" bool="true"/>
+    </VarData>
+    <VarData name="cur_isEmergency">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.1" trigger="moveTrainC" actions="Error" status="unSafeTrans" guard="10"/>
+  <Edge source="//@Node.0" destination="//@Node.2" trigger="emergency" actions="isEmergency=true;&#xA;" guard="6"/>
+  <Edge source="//@Node.0" destination="//@Node.3" trigger="closeDoorC" actions="doorPr.closeDoor().send();&#xA;" guard="9"/>
+  <Edge source="//@Node.2" destination="//@Node.1" trigger="moveTrainC" actions="Error" status="unSafeTrans" guard="10"/>
+  <Edge source="//@Node.2" destination="//@Node.0" trigger="emergency" actions="isEmergency=false;&#xA;" guard="7"/>
+  <Edge source="//@Node.2" destination="//@Node.1" trigger="closeDoorC" actions="Error" status="unSafeTrans" guard="9"/>
+  <Edge source="//@Node.3" destination="//@Node.4" trigger="moveTrainC" actions="enginPr.moveTrain().send();&#xA;" guard="10"/>
+  <Edge source="//@Node.3" destination="//@Node.0" trigger="openDoorC" actions="doorPr.openDoor().send();&#xA;" guard="8"/>
+  <Edge source="//@Node.3" destination="//@Node.2" trigger="emergency" actions="doorPr.openDoor().send();&#xA;isEmergency=true;&#xA;" guard="6"/>
+  <Edge source="//@Node.4" destination="//@Node.1" trigger="openDoorC" actions="Error" status="unSafeTrans" guard="8"/>
+  <Edge source="//@Node.4" destination="//@Node.2" trigger="emergency" actions="enginPr.stopTrain().send();&#xA;doorPr.openDoor().send();&#xA;isEmergency=true;&#xA;" guard="6"/>
+  <Edge source="//@Node.4" destination="//@Node.3" trigger="stopTrainC" actions="enginPr.stopTrain().send();&#xA;" guard="11"/>
+</execTraces:ExecTraces>

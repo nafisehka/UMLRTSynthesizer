@@ -1,0 +1,34 @@
+Context TrainExample {
+				 isDoorClosed : Boolean
+				 isTrainMoving : Boolean
+				 isEmergency:Boolean
+				Init {
+					isDoorClosed=false
+					isTrainMoving=false
+					isEmergency=false
+				}
+				Invariant R2 { isTrainMoving => ( isDoorClosed and  not isEmergency ) }
+				Invariant R3 { isEmergency => (not isDoorClosed and not isTrainMoving ) }
+				Message openDoor() 
+					Post: not isDoorClosed 
+				Message closeDoor()
+					Post:  isDoorClosed
+				Message moveTrain()
+					Post: isTrainMoving
+				Message stopTrain()
+					Post: not isTrainMoving
+				Message emergency(pressed:Boolean)
+					Pre: pressed
+					Post: isEmergency and not isTrainMoving and not isDoorClosed 
+				Message emergency(pressed:Boolean)
+					Pre: not pressed
+					Post: not isEmergency 
+				Message openDoorC()
+					Post: not isDoorClosed 
+				Message closeDoorC()
+					Post: isDoorClosed  
+				Message moveTrainC()
+					Post: isTrainMoving 
+				Message stopTrainC()
+					Post: not isTrainMoving 
+			}

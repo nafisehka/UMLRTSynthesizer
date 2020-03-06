@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execTraces:ExecTraces xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:execTraces="http://www.ExecTraces.umlrtsyntesizer">
+  <Node id="1078207793" level="2" outgoingEdges="//@Edge.0 //@Edge.1 //@Edge.2 //@Edge.3 //@Edge.4" incomingEdges="//@Edge.0 //@Edge.3 //@Edge.4 //@Edge.1 //@Edge.2">
+    <VarData name="cur_milliSecond">
+      <value xsi:type="execTraces:IntLiteral" int="2"/>
+    </VarData>
+    <VarData name="cur_second">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_minute">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_hour">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_stopwatchCounter">
+      <value xsi:type="execTraces:IntLiteral"/>
+    </VarData>
+    <VarData name="cur_watchMode">
+      <value xsi:type="execTraces:BoolLiteral" bool="false"/>
+    </VarData>
+  </Node>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="tick" actions="milliSecond=milliSecond=+1" guard=" not watchMode"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="Pin1Pressed" actions="watchMode=true;&#xA;" guard="  not watchMode"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="tick" actions="milliSecond=milliSecond=+1&#xA;stopwatchCounter=stopwatchCounter+1" guard="  watchMode"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="Pin1Pressed" actions="watchMode=false;&#xA;" guard="  watchMode"/>
+  <Edge source="//@Node.0" destination="//@Node.0" trigger="Pin2Pressed" actions="stopwatchCounter=0;&#xA;" guard="  not watchMode"/>
+</execTraces:ExecTraces>

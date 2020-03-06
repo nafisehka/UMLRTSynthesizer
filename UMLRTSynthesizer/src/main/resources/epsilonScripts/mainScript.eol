@@ -1,0 +1,119 @@
+/*
+   
+    
+    Developers:
+	No names
+
+*/
+
+
+
+
+
+import "UMLRTQuery.eol";
+import "LogUtil.eol";
+import "UMLRTProfileOperations.eol";
+
+var  Off:Integer=0;
+var  Fatal:Integer=1;	
+var  Error:Integer=2;	
+var  Warn:Integer=3;	
+var  Info:Integer=4;	
+var  Debug:Integer=5;	
+var  Trace:Integer=6;	
+var UniqueID=0;
+var EndLine="\n";
+var ModelRoot;
+var AllClasses;
+var AllCapsules;
+var CurrentLogLevel=Error;
+var PreviousLogMsg="";
+var UMLIntegerType; 
+var UMLBooleanType; 
+var UMLRealType;  
+var UMLStringType;
+var UMLUnlimitedNaturalType;
+var AllPrimitiveType; 
+var AllPrimitiveTypeExceptString;
+var configMap;
+var clevels:Set=Set{"partial","full-partial","complete"};
+var TimingProtocol;
+var PossibleEvents; //used to cash possible events of each capsule
+//clevels=Set;
+//////// End of global varibles
+    
+var  logContext:String="RefineForPMD";
+    
+// loading config, models and intialize global vraibles
+if (params.isDefined())
+	configMap=loadConfig(params); 
+
+
+Info.log(logContext, "Script Execution is started");
+ModelRoot=UMLRTModel!Package.all.select(c|c.type.name="Model").first();
+Info.log(logContext, "UMLRTModel  '"+ ModelRoot.name + "' is loaded" );
+Trace.log(logContext, "Number of Classes inside the model "+ AllCapsules.size());
+Trace.log(logContext, "Classes inside the model "+ AllCapsules );
+var AllCapsules:Set=ModelRoot.getAllOwnedCapsules();
+Trace.log(logContext, "Number of Capsules inside the model "+ AllCapsules.size());
+Trace.log(logContext, "Capsules inside the model "+ AllCapsules );
+ 
+/// load UMLPrimitiveType 
+//var UMLPrimitiveTypes=UMLRTModel!Package.all.select(c|c.name="PrimitiveTypes").first();
+//UMLIntegerType=UMLPrimitiveTypes.packagedElement.selectOne(t|t.name="Integer");
+// UMLBooleanType=UMLPrimitiveTypes.packagedElement.selectOne(t|t.name="Boolean");
+
+
+//UMLRealType=UMLPrimitiveTypes.packagedElement.selectOne(t|t.name="Real");
+//UMLStringType=UMLPrimitiveTypes.packagedElement.selectOne(t|t.name="String");
+//UMLUnlimitedNaturalType=UMLPrimitiveTypes.packagedElement.selectOne(t|t.name="UnlimitedNatural");
+//AllPrimitiveType=Set{UMLIntegerType,UMLBooleanType,UMLStringType,UMLUnlimitedNaturalType,UMLRealType};
+//AllPrimitiveTypeExceptString=Set{UMLIntegerType,UMLBooleanType,UMLUnlimitedNaturalType,UMLRealType};
+// load Timing protocl
+//TimingProtocol=UMLRTModel!Package.all.select(c|c.name="Timing").first().packagedElement.first();
+csvScriptOutputs="";
+//args.println("Passed Args: ");
+if (args="capsules"){
+	for (capsule in ModelRoot.getAllOwnedCapsules())
+		csvScriptOutputs=csvScriptOutputs+capsule.name+",";
+}else if (args.startsWith("input:")){
+	var capsuleName:String=args.split(":").at(1);
+	for (m in ModelRoot.getAllOwnedCapsules().select(c|c.name=capsuleName).first().messageIn())
+		csvScriptOutputs=csvScriptOutputs+m+",";
+}else if (args.startsWith("output:")){
+	var capsuleName:String=args.split(":").at(1);
+	for (m in ModelRoot.getAllOwnedCapsules().select(c|c.name=capsuleName).first().messageOut())
+		csvScriptOutputs=csvScriptOutputs+m+",";
+}else if (args.startsWith("vars:")){
+	var capsuleName:String=args.split(":").at(1);
+	for (attr in ModelRoot.getAllOwnedCapsules().select(c|c.name=capsuleName).first().getPrimitiveAttributeNames())
+		csvScriptOutputs=csvScriptOutputs+attr+",";
+}
+else if (args.startsWith("payloads:")){
+	var messageName:String=args.split(":").at(1);
+	//messageName.println("Finind all paylof of messsage: ");
+	for (capsule in ModelRoot.getAllOwnedCapsules()){
+		//capsule.println("checking port of capsule: ");
+		for (port in capsule.getAllPorts()){
+			//port.println("checking message of port: ");
+			for (msg in port.messagesDetail()) {
+				//msg.println("checking parameters of message: ");
+				if (msg.first()==messageName){
+					for (payload in msg.excluding(messageName))
+						csvScriptOutputs=csvScriptOutputs+payload.split(":").at(0)+",";
+				}
+			}
+		}
+	}
+}
+
+
+
+
+//csvScriptOutputs.println("Result: ");
+
+       
+
+
+
+

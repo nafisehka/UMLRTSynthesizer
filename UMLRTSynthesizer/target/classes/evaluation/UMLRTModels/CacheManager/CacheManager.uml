@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JQHBsGcfEemuW4e_yrz1KQ" name="CacheManager">
+    <eAnnotations xmi:id="_JQHBsWcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:id="_JQHBsmcfEemuW4e_yrz1KQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YaycIGcfEemuW4e_yrz1KQ" name="Cache" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6bdjwMJGEemRyvX2EPZatw" name="aTMP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:id="_4HzBkcJSEemRyvX2EPZatw" name="requestPending" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBksJSEemRyvX2EPZatw" name="isCached" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4HzBk8JSEemRyvX2EPZatw" name="cacheUpdated" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_4aJikF6iEeqWQYAYEryVBQ" name="CacheSM">
+        <region xmi:id="_4cqEAF6iEeqWQYAYEryVBQ">
+          <transition xmi:id="_4dB3cF6iEeqWQYAYEryVBQ" name="init_trans" source="_4c6isF6iEeqWQYAYEryVBQ" target="_4czN8F6iEeqWQYAYEryVBQ">
+            <trigger xmi:id="_4dCegF6iEeqWQYAYEryVBQ"/>
+          </transition>
+          <transition xmi:id="_4dRIAF6iEeqWQYAYEryVBQ" name="updateData[]\cacheUpdated=true;&#xA;" source="_4czN8F6iEeqWQYAYEryVBQ" target="_4czN8F6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dS9MF6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dS9MV6iEeqWQYAYEryVBQ" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dTkQF6iEeqWQYAYEryVBQ" name="requestData[  not isCached or cacheUpdated]\isCached=true;&#xA;requestPending=true;&#xA;" guard="_4dTkQl6iEeqWQYAYEryVBQ" source="_4czN8F6iEeqWQYAYEryVBQ" target="_4czN8F6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dTkQl6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dTkQ16iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dTkQV6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCached=true;
+requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dTkRF6iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dTkRV6iEeqWQYAYEryVBQ" name="readFromCacheFinished[]\requestPending=false;&#xA;" source="_4czN8F6iEeqWQYAYEryVBQ" target="_4dDFkF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dTkRl6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_4dTkR16iEeqWQYAYEryVBQ" name="readFromCacheFinished" event="_q-OwkMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dTkSF6iEeqWQYAYEryVBQ" name="readFromServerFinished[]\requestPending=false;&#xA;" source="_4czN8F6iEeqWQYAYEryVBQ" target="_4dDFkF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dULUF6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_4dULUV6iEeqWQYAYEryVBQ" name="readFromServerFinished" event="_pMYYcMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dULUl6iEeqWQYAYEryVBQ" name="requestData[ isCached and not cacheUpdated]\" guard="_4dULVF6iEeqWQYAYEryVBQ" source="_4czN8F6iEeqWQYAYEryVBQ" target="_4dHXAF6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dULVF6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dULVV6iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dULU16iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_4dULVl6iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dUyYF6iEeqWQYAYEryVBQ" name="updateData[]\cacheUpdated=true;&#xA;" source="_4dDFkF6iEeqWQYAYEryVBQ" target="_4dDFkF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dUyYV6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dUyYl6iEeqWQYAYEryVBQ" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dUyY16iEeqWQYAYEryVBQ" name="requestData[ isCached and not cacheUpdated]\" guard="_4dUyZV6iEeqWQYAYEryVBQ" source="_4dDFkF6iEeqWQYAYEryVBQ" target="_4dHXAF6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dUyZV6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dUyZl6iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dUyZF6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_4dUyZ16iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dUyaF6iEeqWQYAYEryVBQ" name="readFromCacheFinished[]\requestPending=false;&#xA;" source="_4dHXAF6iEeqWQYAYEryVBQ" target="_4dM2kF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dUyaV6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_4dVZcF6iEeqWQYAYEryVBQ" name="readFromCacheFinished" event="_q-OwkMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dVZcV6iEeqWQYAYEryVBQ" name="readFromServerFinished[]\requestPending=false;&#xA;" source="_4dHXAF6iEeqWQYAYEryVBQ" target="_4dM2kF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dVZcl6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_4dVZc16iEeqWQYAYEryVBQ" name="readFromServerFinished" event="_pMYYcMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dVZdF6iEeqWQYAYEryVBQ" name="updateData[]\cacheUpdated=true;&#xA;" source="_4dHXAF6iEeqWQYAYEryVBQ" target="_4dHXAF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dWAgF6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dWAgV6iEeqWQYAYEryVBQ" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dWAgl6iEeqWQYAYEryVBQ" name="requestData[  not isCached or cacheUpdated]\requestPending=true;&#xA;" guard="_4dWAhF6iEeqWQYAYEryVBQ" source="_4dDFkF6iEeqWQYAYEryVBQ" target="_4czN8F6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dWAhF6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dWAhV6iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dWAg16iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dWAhl6iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dWAh16iEeqWQYAYEryVBQ" name="updateData[]\cacheUpdated=true;&#xA;" source="_4dM2kF6iEeqWQYAYEryVBQ" target="_4dM2kF6iEeqWQYAYEryVBQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dWnkF6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dWnkV6iEeqWQYAYEryVBQ" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dWnkl6iEeqWQYAYEryVBQ" name="requestData[ isCached and not cacheUpdated]\requestPending=true;&#xA;" guard="_4dWnlF6iEeqWQYAYEryVBQ" source="_4dM2kF6iEeqWQYAYEryVBQ" target="_4dHXAF6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dWnlF6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dWnlV6iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dWnk16iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dWnll6iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dWnl16iEeqWQYAYEryVBQ" name="requestData[  not isCached or cacheUpdated]\aTMP.readfromServer().send();&#xA;" guard="_4dXOoV6iEeqWQYAYEryVBQ" source="_4dHXAF6iEeqWQYAYEryVBQ" target="_4czN8F6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dXOoV6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dXOol6iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dXOoF6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.readfromServer().send();
+</body>
+            </effect>
+            <trigger xmi:id="_4dXOo16iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_4dXOpF6iEeqWQYAYEryVBQ" name="requestData[  not isCached or cacheUpdated]\aTMP.readfromServer().send();&#xA;requestPending=true;&#xA;" guard="_4dXOpl6iEeqWQYAYEryVBQ" source="_4dM2kF6iEeqWQYAYEryVBQ" target="_4czN8F6iEeqWQYAYEryVBQ">
+            <ownedRule xmi:id="_4dXOpl6iEeqWQYAYEryVBQ" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4dXOp16iEeqWQYAYEryVBQ">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_4dXOpV6iEeqWQYAYEryVBQ" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.readfromServer().send();
+requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_4dXOqF6iEeqWQYAYEryVBQ" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_4czN8F6iEeqWQYAYEryVBQ" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_4c6isF6iEeqWQYAYEryVBQ" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_4dDFkF6iEeqWQYAYEryVBQ" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_4dHXAF6iEeqWQYAYEryVBQ" name="S_3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_4dM2kF6iEeqWQYAYEryVBQ" name="S_4"/>
+        </region>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CObeoF8oEeq0u_Ld1VKUzg" name="CacheSM">
+        <region xmi:id="_CRARgF8oEeq0u_Ld1VKUzg">
+          <transition xmi:id="_CRKpkF8oEeq0u_Ld1VKUzg" name="init_trans" source="_CRG_MF8oEeq0u_Ld1VKUzg" target="_CRD74F8oEeq0u_Ld1VKUzg">
+            <trigger xmi:id="_CRLQoF8oEeq0u_Ld1VKUzg"/>
+          </transition>
+          <transition xmi:id="_CRVBoF8oEeq0u_Ld1VKUzg" name="updateData[]\cacheUpdated=true;&#xA;" source="_CRD74F8oEeq0u_Ld1VKUzg" target="_CRD74F8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRVBoV8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRVBol8oEeq0u_Ld1VKUzg" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRVosF8oEeq0u_Ld1VKUzg" name="requestData[  not isCached or cacheUpdated]\isCached=true;&#xA;requestPending=true;&#xA;" guard="_CRVosl8oEeq0u_Ld1VKUzg" source="_CRD74F8oEeq0u_Ld1VKUzg" target="_CRD74F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRVosl8oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRVos18oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRVosV8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCached=true;
+requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRVotF8oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRVotV8oEeq0u_Ld1VKUzg" name="readFromCacheFinished[]\requestPending=false;&#xA;" source="_CRD74F8oEeq0u_Ld1VKUzg" target="_CRLQoV8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRVotl8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_CRVot18oEeq0u_Ld1VKUzg" name="readFromCacheFinished" event="_q-OwkMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRVouF8oEeq0u_Ld1VKUzg" name="readFromServerFinished[]\requestPending=false;&#xA;" source="_CRD74F8oEeq0u_Ld1VKUzg" target="_CRLQoV8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRVouV8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_CRWPwF8oEeq0u_Ld1VKUzg" name="readFromServerFinished" event="_pMYYcMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRWPwV8oEeq0u_Ld1VKUzg" name="requestData[ isCached and not cacheUpdated]\" guard="_CRWPw18oEeq0u_Ld1VKUzg" source="_CRD74F8oEeq0u_Ld1VKUzg" target="_CROT8F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRWPw18oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRWPxF8oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRWPwl8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_CRWPxV8oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRWPxl8oEeq0u_Ld1VKUzg" name="updateData[]\cacheUpdated=true;&#xA;" source="_CRLQoV8oEeq0u_Ld1VKUzg" target="_CRLQoV8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRWPx18oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRWPyF8oEeq0u_Ld1VKUzg" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRWPyV8oEeq0u_Ld1VKUzg" name="requestData[ isCached and not cacheUpdated]\" guard="_CRWPy18oEeq0u_Ld1VKUzg" source="_CRLQoV8oEeq0u_Ld1VKUzg" target="_CROT8F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRWPy18oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRWPzF8oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRWPyl8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_CRW20F8oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRW20V8oEeq0u_Ld1VKUzg" name="readFromCacheFinished[]\requestPending=false;&#xA;" source="_CROT8F8oEeq0u_Ld1VKUzg" target="_CRR-UF8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRW20l8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_CRW2018oEeq0u_Ld1VKUzg" name="readFromCacheFinished" event="_q-OwkMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRW21F8oEeq0u_Ld1VKUzg" name="readFromServerFinished[]\requestPending=false;&#xA;" source="_CROT8F8oEeq0u_Ld1VKUzg" target="_CRR-UF8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRW21V8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_CRW21l8oEeq0u_Ld1VKUzg" name="readFromServerFinished" event="_pMYYcMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRW2118oEeq0u_Ld1VKUzg" name="updateData[]\cacheUpdated=true;&#xA;" source="_CROT8F8oEeq0u_Ld1VKUzg" target="_CROT8F8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRW22F8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRXd4F8oEeq0u_Ld1VKUzg" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRXd4V8oEeq0u_Ld1VKUzg" name="requestData[  not isCached or cacheUpdated]\requestPending=true;&#xA;" guard="_CRXd418oEeq0u_Ld1VKUzg" source="_CRLQoV8oEeq0u_Ld1VKUzg" target="_CRD74F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRXd418oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRXd5F8oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRXd4l8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRXd5V8oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRXd5l8oEeq0u_Ld1VKUzg" name="updateData[]\cacheUpdated=true;&#xA;" source="_CRR-UF8oEeq0u_Ld1VKUzg" target="_CRR-UF8oEeq0u_Ld1VKUzg">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRXd518oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRXd6F8oEeq0u_Ld1VKUzg" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRXd6V8oEeq0u_Ld1VKUzg" name="requestData[ isCached and not cacheUpdated]\requestPending=true;&#xA;" guard="_CRYE8V8oEeq0u_Ld1VKUzg" source="_CRR-UF8oEeq0u_Ld1VKUzg" target="_CROT8F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRYE8V8oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRYE8l8oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRYE8F8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRYE818oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRYE9F8oEeq0u_Ld1VKUzg" name="requestData[  not isCached or cacheUpdated]\aTMP.readfromServer().send();&#xA;" guard="_CRYE9l8oEeq0u_Ld1VKUzg" source="_CROT8F8oEeq0u_Ld1VKUzg" target="_CRD74F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRYE9l8oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRYE918oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRYE9V8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.readfromServer().send();
+</body>
+            </effect>
+            <trigger xmi:id="_CRYE-F8oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_CRYE-V8oEeq0u_Ld1VKUzg" name="requestData[  not isCached or cacheUpdated]\aTMP.readfromServer().send();&#xA;requestPending=true;&#xA;" guard="_CRYE-18oEeq0u_Ld1VKUzg" source="_CRR-UF8oEeq0u_Ld1VKUzg" target="_CRD74F8oEeq0u_Ld1VKUzg">
+            <ownedRule xmi:id="_CRYE-18oEeq0u_Ld1VKUzg" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_CRYE_F8oEeq0u_Ld1VKUzg">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_CRYE-l8oEeq0u_Ld1VKUzg" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.readfromServer().send();
+requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_CRYE_V8oEeq0u_Ld1VKUzg" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_CRD74F8oEeq0u_Ld1VKUzg" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_CRG_MF8oEeq0u_Ld1VKUzg" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CRLQoV8oEeq0u_Ld1VKUzg" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CROT8F8oEeq0u_Ld1VKUzg" name="S_3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CRR-UF8oEeq0u_Ld1VKUzg" name="S_4"/>
+        </region>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_eP-oYF8pEeq6VN3dS8Kibw" name="CacheSM">
+        <region xmi:id="_eSctkF8pEeq6VN3dS8Kibw">
+          <transition xmi:id="_eSoTwF8pEeq6VN3dS8Kibw" name="init_trans" source="_eSkCUF8pEeq6VN3dS8Kibw" target="_eSgX8F8pEeq6VN3dS8Kibw">
+            <trigger xmi:id="_eSoTwV8pEeq6VN3dS8Kibw"/>
+          </transition>
+          <transition xmi:id="_eS0hAF8pEeq6VN3dS8Kibw" name="updateData[]\cacheUpdated=true;&#xA;" source="_eSgX8F8pEeq6VN3dS8Kibw" target="_eSgX8F8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS0hAV8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS0hAl8pEeq6VN3dS8Kibw" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS0hA18pEeq6VN3dS8Kibw" name="requestData[  not isCached or cacheUpdated]\isCached=true;&#xA;requestPending=true;&#xA;" guard="_eS0hBV8pEeq6VN3dS8Kibw" source="_eSgX8F8pEeq6VN3dS8Kibw" target="_eSgX8F8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS0hBV8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS1IEF8pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS0hBF8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>isCached=true;
+requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS1IEV8pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS1IEl8pEeq6VN3dS8Kibw" name="readFromCacheFinished[]\requestPending=false;&#xA;" source="_eSgX8F8pEeq6VN3dS8Kibw" target="_eSoTwl8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS1IE18pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_eS1IFF8pEeq6VN3dS8Kibw" name="readFromCacheFinished" event="_q-OwkMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS1IFV8pEeq6VN3dS8Kibw" name="readFromServerFinished[]\requestPending=false;&#xA;" source="_eSgX8F8pEeq6VN3dS8Kibw" target="_eSoTwl8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS1IFl8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_eS1IF18pEeq6VN3dS8Kibw" name="readFromServerFinished" event="_pMYYcMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS1IGF8pEeq6VN3dS8Kibw" name="requestData[ isCached and not cacheUpdated]\" guard="_eS1vIV8pEeq6VN3dS8Kibw" source="_eSgX8F8pEeq6VN3dS8Kibw" target="_eSr-IF8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS1vIV8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS1vIl8pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS1vIF8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_eS1vI18pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS1vJF8pEeq6VN3dS8Kibw" name="updateData[]\cacheUpdated=true;&#xA;" source="_eSoTwl8pEeq6VN3dS8Kibw" target="_eSoTwl8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS1vJV8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS1vJl8pEeq6VN3dS8Kibw" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS1vJ18pEeq6VN3dS8Kibw" name="requestData[ isCached and not cacheUpdated]\" guard="_eS1vKV8pEeq6VN3dS8Kibw" source="_eSoTwl8pEeq6VN3dS8Kibw" target="_eSr-IF8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS1vKV8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS1vKl8pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS1vKF8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body></body>
+            </effect>
+            <trigger xmi:id="_eS1vK18pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS1vLF8pEeq6VN3dS8Kibw" name="readFromCacheFinished[]\requestPending=false;&#xA;" source="_eSr-IF8pEeq6VN3dS8Kibw" target="_eSwPkF8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS1vLV8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_eS2WMF8pEeq6VN3dS8Kibw" name="readFromCacheFinished" event="_q-OwkMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS2WMV8pEeq6VN3dS8Kibw" name="readFromServerFinished[]\requestPending=false;&#xA;" source="_eSr-IF8pEeq6VN3dS8Kibw" target="_eSwPkF8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS2WMl8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=false;
+</body>
+            </effect>
+            <trigger xmi:id="_eS2WM18pEeq6VN3dS8Kibw" name="readFromServerFinished" event="_pMYYcMLREemRyvX2EPZatw" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS2WNF8pEeq6VN3dS8Kibw" name="updateData[]\cacheUpdated=true;&#xA;" source="_eSr-IF8pEeq6VN3dS8Kibw" target="_eSr-IF8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS2WNV8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS2WNl8pEeq6VN3dS8Kibw" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS2WN18pEeq6VN3dS8Kibw" name="requestData[  not isCached or cacheUpdated]\requestPending=true;&#xA;" guard="_eS2WOV8pEeq6VN3dS8Kibw" source="_eSoTwl8pEeq6VN3dS8Kibw" target="_eSgX8F8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS2WOV8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS2WOl8pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS2WOF8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS29QF8pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS29QV8pEeq6VN3dS8Kibw" name="updateData[]\cacheUpdated=true;&#xA;" source="_eSwPkF8pEeq6VN3dS8Kibw" target="_eSwPkF8pEeq6VN3dS8Kibw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS29Ql8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>cacheUpdated=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS29Q18pEeq6VN3dS8Kibw" name="updateData" event="_QN6E0GcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS29RF8pEeq6VN3dS8Kibw" name="requestData[ isCached and not cacheUpdated]\requestPending=true;&#xA;" guard="_eS29Rl8pEeq6VN3dS8Kibw" source="_eSwPkF8pEeq6VN3dS8Kibw" target="_eSr-IF8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS29Rl8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS29R18pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return  isCached and not cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS29RV8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS29SF8pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS29SV8pEeq6VN3dS8Kibw" name="requestData[  not isCached or cacheUpdated]\aTMP.readfromServer().send();&#xA;" guard="_eS3kUV8pEeq6VN3dS8Kibw" source="_eSr-IF8pEeq6VN3dS8Kibw" target="_eSgX8F8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS3kUV8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS3kUl8pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS3kUF8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.readfromServer().send();
+</body>
+            </effect>
+            <trigger xmi:id="_eS3kU18pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <transition xmi:id="_eS3kVF8pEeq6VN3dS8Kibw" name="requestData[  not isCached or cacheUpdated]\aTMP.readfromServer().send();&#xA;requestPending=true;&#xA;" guard="_eS3kVl8pEeq6VN3dS8Kibw" source="_eSwPkF8pEeq6VN3dS8Kibw" target="_eSgX8F8pEeq6VN3dS8Kibw">
+            <ownedRule xmi:id="_eS3kVl8pEeq6VN3dS8Kibw" name="test">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_eS3kV18pEeq6VN3dS8Kibw">
+                <language>C++</language>
+                <body>return   not isCached or cacheUpdated;</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_eS3kVV8pEeq6VN3dS8Kibw" name="" visibility="public" isActive="true">
+              <language>C++</language>
+              <body>aTMP.readfromServer().send();
+requestPending=true;
+</body>
+            </effect>
+            <trigger xmi:id="_eS3kWF8pEeq6VN3dS8Kibw" name="requestData" event="_N2ndUGcgEemuW4e_yrz1KQ" port="_6bdjwMJGEemRyvX2EPZatw"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_eSgX8F8pEeq6VN3dS8Kibw" name="S_1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_eSkCUF8pEeq6VN3dS8Kibw" name="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_eSoTwl8pEeq6VN3dS8Kibw" name="S_2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_eSr-IF8pEeq6VN3dS8Kibw" name="S_3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_eSwPkF8pEeq6VN3dS8Kibw" name="S_4"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Kimu4GcgEemuW4e_yrz1KQ" name="ATMP">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_KikSoGcgEemuW4e_yrz1KQ" name="ATMP">
+        <interfaceRealization xmi:id="_KiuqsGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_KiqZQGcgEemuW4e_yrz1KQ" contract="_KiqZQGcgEemuW4e_yrz1KQ"/>
+        <interfaceRealization xmi:id="_Ki5p0GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ" contract="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_KiqZQGcgEemuW4e_yrz1KQ" name="ATMP">
+        <ownedOperation xmi:id="_N2eTYGcgEemuW4e_yrz1KQ" name="requestData"/>
+        <ownedOperation xmi:id="_QN3BgGcgEemuW4e_yrz1KQ" name="updateData"/>
+        <ownedOperation xmi:id="_pMXxYMLREemRyvX2EPZatw" name="readFromServerFinished"/>
+        <ownedOperation xmi:id="_q-NicMLREemRyvX2EPZatw" name="readFromCacheFinished"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Kiv40GcgEemuW4e_yrz1KQ" name="ATMP~">
+        <ownedOperation xmi:id="_XhqiEMJAEemRyvX2EPZatw" name="readfromServer"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_KizjMGcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Kiv40GcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_Ki0KQGcgEemuW4e_yrz1KQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Ki0xUGcgEemuW4e_yrz1KQ" name="ATMPIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Ki638GcgEemuW4e_yrz1KQ" client="_KikSoGcgEemuW4e_yrz1KQ" supplier="_Ki0xUGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_N2ndUGcgEemuW4e_yrz1KQ" operation="_N2eTYGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QN6E0GcgEemuW4e_yrz1KQ" operation="_QN3BgGcgEemuW4e_yrz1KQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_XhtlYMJAEemRyvX2EPZatw" operation="_XhqiEMJAEemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_pMYYcMLREemRyvX2EPZatw" operation="_pMXxYMLREemRyvX2EPZatw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_q-OwkMLREemRyvX2EPZatw" operation="_q-NicMLREemRyvX2EPZatw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4HzBkMJSEemRyvX2EPZatw" name="Server" isActive="true">
+      <ownedAttribute xmi:id="_4HzBlMJSEemRyvX2EPZatw" name="readFromCache" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_4HzBl8JSEemRyvX2EPZatw" name="aTMP" visibility="public" type="_KikSoGcgEemuW4e_yrz1KQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true"/>
+    </packagedElement>
+    <profileApplication xmi:id="_JQHBs2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBtWcfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBtmcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_JQHBt2cfEemuW4e_yrz1KQ">
+      <eAnnotations xmi:id="_JQHBuGcfEemuW4e_yrz1KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_Ya5w4GcfEemuW4e_yrz1KQ" base_Class="_YaycIGcfEemuW4e_yrz1KQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_KipLIGcgEemuW4e_yrz1KQ" base_Package="_Kimu4GcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Kis1gGcgEemuW4e_yrz1KQ" base_Interface="_KiqZQGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_KiyVEGcgEemuW4e_yrz1KQ" base_Interface="_Kiv40GcgEemuW4e_yrz1KQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Ki4bsGcgEemuW4e_yrz1KQ" base_Interface="_Ki0xUGcgEemuW4e_yrz1KQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_Ki7fAGcgEemuW4e_yrz1KQ" base_Collaboration="_KikSoGcgEemuW4e_yrz1KQ"/>
+  <UMLRealTime:RTPort xmi:id="_6cFO0MJGEemRyvX2EPZatw" base_Port="_6bdjwMJGEemRyvX2EPZatw"/>
+  <UMLRealTime:Capsule xmi:id="_4IY3cMJSEemRyvX2EPZatw" base_Class="_4HzBkMJSEemRyvX2EPZatw"/>
+  <UMLRealTime:RTPort xmi:id="_4IgzQMJSEemRyvX2EPZatw" base_Port="_4HzBl8JSEemRyvX2EPZatw"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_4clLgF6iEeqWQYAYEryVBQ" base_StateMachine="_4aJikF6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_4cr5MF6iEeqWQYAYEryVBQ" base_Region="_4cqEAF6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_4c1DIF6iEeqWQYAYEryVBQ" base_State="_4czN8F6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_4c8X4F6iEeqWQYAYEryVBQ" base_Pseudostate="_4c6isF6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_4dETsF6iEeqWQYAYEryVBQ" base_State="_4dDFkF6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_4dIlIF6iEeqWQYAYEryVBQ" base_State="_4dHXAF6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_4dOEsF6iEeqWQYAYEryVBQ" base_State="_4dM2kF6iEeqWQYAYEryVBQ"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_CQ91QF8oEeq0u_Ld1VKUzg" base_StateMachine="_CObeoF8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_CRBfoF8oEeq0u_Ld1VKUzg" base_Region="_CRARgF8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTState xmi:id="_CRFKAF8oEeq0u_Ld1VKUzg" base_State="_CRD74F8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_CRI0YF8oEeq0u_Ld1VKUzg" base_Pseudostate="_CRG_MF8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTState xmi:id="_CRMewF8oEeq0u_Ld1VKUzg" base_State="_CRLQoV8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTState xmi:id="_CRPiEF8oEeq0u_Ld1VKUzg" base_State="_CROT8F8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTState xmi:id="_CRSlYF8oEeq0u_Ld1VKUzg" base_State="_CRR-UF8oEeq0u_Ld1VKUzg"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_eSZqQF8pEeq6VN3dS8Kibw" base_StateMachine="_eP-oYF8pEeq6VN3dS8Kibw"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_eSd7sF8pEeq6VN3dS8Kibw" base_Region="_eSctkF8pEeq6VN3dS8Kibw"/>
+  <UMLRTStateMachines:RTState xmi:id="_eShmEF8pEeq6VN3dS8Kibw" base_State="_eSgX8F8pEeq6VN3dS8Kibw"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_eSlQcF8pEeq6VN3dS8Kibw" base_Pseudostate="_eSkCUF8pEeq6VN3dS8Kibw"/>
+  <UMLRTStateMachines:RTState xmi:id="_eSph4F8pEeq6VN3dS8Kibw" base_State="_eSoTwl8pEeq6VN3dS8Kibw"/>
+  <UMLRTStateMachines:RTState xmi:id="_eStMQF8pEeq6VN3dS8Kibw" base_State="_eSr-IF8pEeq6VN3dS8Kibw"/>
+  <UMLRTStateMachines:RTState xmi:id="_eSxdsF8pEeq6VN3dS8Kibw" base_State="_eSwPkF8pEeq6VN3dS8Kibw"/>
+</xmi:XMI>

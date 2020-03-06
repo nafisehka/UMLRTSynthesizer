@@ -1,0 +1,39 @@
+Context TrainExample {
+				 isDoorClosed : Boolean
+				 isTrainMoving : Boolean
+				 isEmergency:Boolean
+				Init {
+					isDoorClosed=false
+					isTrainMoving=false
+					isEmergency=false
+				}
+				Message openDoor() 
+					Client Pre: not isTrainMoving 
+					Post: not isDoorClosed 
+				Message gps(distance:Integer)
+					Pre: distance < 100
+					Post: not isTrainMoving
+				Message closeDoor()
+					Client Pre: not isEmergency 
+					Post:  isDoorClosed
+				Message moveTrain()
+					Client Pre: isDoorClosed and not isEmergency
+					Post: isTrainMoving
+				Message stopTrain()
+					Post: not isTrainMoving
+				Message emergencyPressed()
+					Post: isEmergency and not isTrainMoving and not isDoorClosed 
+				Message emergencyReleased()
+					Post: not isEmergency 
+				Message openDoorC()
+					Pre: not isTrainMoving
+					Post: not isDoorClosed 
+				Message closeDoorC()
+					Pre: not isEmergency 
+					Post: isDoorClosed  
+				Message moveTrainC()
+					Pre: not isEmergency and isDoorClosed 
+					Post: isTrainMoving 
+				Message stopTrainC()
+					Post: not isTrainMoving 
+			}

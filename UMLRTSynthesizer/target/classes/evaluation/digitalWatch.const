@@ -1,0 +1,56 @@
+Context DigitalWatch{
+				 milliSecond : Integer
+				 second : Integer
+				 minute: Integer
+				 hour: Integer
+				 stopwatchCounter:Integer
+				 cur_milliSecond : Integer
+				 cur_second : Integer
+				 cur_minute: Integer
+				 cur_hour: Integer
+				 cur_stopwatchCounter:Integer
+				 watchMode:Boolean
+
+				Init {
+					milliSecond=0
+					second=0
+					minute=0
+					hour=0
+					stopwatchCounter=0
+					watchMode=true
+
+				}
+				Message tick() 
+					Pre: not watchMode 
+					Post: 
+							( milliSecond = ((cur_milliSecond+1) %1000)) and 
+							( ( (milliSecond %999)!=0) => ( second=cur_second) ) and 
+						    ( ( ( (milliSecond %999)=0) and (milliSecond>0)  ) => ( second=(cur_second+1) %60 ) ) and 
+							( ( ((second %59)=0) and (second>0) ) => (minute=(cur_minute % 60) + 1) ) and 
+							( ( ((second %59)!=0) or (second=0) ) => (minute=cur_minute) ) and 
+							( ( ((minute % 59)=0) and (minute>0) )  => (hour=((cur_hour%24)+1)) ) and 
+							( (  (minute % 59) != 0 or (minute=0) )  => (hour=cur_hour%24 ) )
+						
+				Message tick() 
+					Pre:  watchMode
+					Post: ( stopwatchCounter= (cur_stopwatchCounter+1) ) and 
+							( milliSecond = ((cur_milliSecond+1) %1000)) and 
+							( ( (milliSecond %999)!=0) => ( second=cur_second) ) and 
+						    ( ( ( (milliSecond %999)=0) and (milliSecond>0)  ) => ( second=(cur_second+1) %60 ) ) and 
+							( ( ((second %59)=0) and (second>0) ) => (minute=(cur_minute % 60) + 1) ) and 
+							( ( ((second %59)!=0) or (second=0) ) => (minute=cur_minute) ) and 
+							( ( ((minute % 59)=0) and (minute>0) )  => (hour=((cur_hour%24)+1)) ) and 
+							( (  (minute % 59) != 0 or (minute=0) )  => (hour=cur_hour%24 ) )
+										
+				Message Pin1Pressed() 
+					Pre:  watchMode    // switch to stopwatch
+					Post: not watchMode 
+			   Message Pin1Pressed()          // switch to watch
+					Pre:  not watchMode
+					Post: watchMode 
+				Message Pin2Pressed()        //reset stopwatch
+					Pre:  not watchMode
+					Post: stopwatchCounter=0 
+
+
+			}

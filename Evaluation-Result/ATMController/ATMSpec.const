@@ -1,0 +1,76 @@
+Context ATM{
+				
+				isPinReading : Boolean
+				isAuhorizing: Boolean
+				isCashDepositing: Boolean
+				isCaptuerCard:Boolean
+				cardInserted:Boolean
+				isCardReading:Boolean
+				
+				Init {
+					isPinReading=false
+					isAuhorizing=false
+					isCashDepositing=false
+					isCaptuerCard=false
+					cardInserted=false
+					isCardReading=false
+					hardwareError=false
+
+				}
+				Message cardInsertack()
+					Pre: not cardInserted
+					Post:  cardInserted and isCardReading
+		
+				Message ejectCardReq()
+					Post: not cardInserted 
+					
+				Message cardReadResult(result2:Integer) 
+					Pre:  (result2==0 and isCardReading ) 
+					Post: isPinReading and not isCardReading
+					
+				Message cardReadResult(result2:Integer) 
+					Pre:  ( result2==1 and isCardReading )
+					Post: not cardInserted  and not isCardReading
+				
+				Message pinReadResult(result3:Integer)
+					Pre:  isPinReading and (result3==0) 
+					Post: isAuhorizing and not isPinReading
+					
+				Message pinReadResult(result3:Integer)
+					Pre:  isPinReading and (result3==1) 
+					Post: isPinReading
+					
+				Message pinReadResult(result3:Integer)
+					Pre:  isPinReading and (result3==2) 
+					Post:  not cardInserted and not isPinReading
+					
+				Message pinReadResult(result3:Integer)
+					Pre:  isPinReading and (result3==3) 
+					Post: isCaptuerCard and not isPinReading
+									
+				Message cardCaptured()
+					Pre: isCaptuerCard
+					Post: not isCaptuerCard
+					
+				Message pinReadReq()
+					Post: isPinReading
+					
+				Message autorizateResult(result4:Integer) 
+					Pre: isAuhorizing and (result4==0)
+					Post: isCashDepositing and not isAuhorizing
+					
+			    Message autorizateResult(result4:Integer) 
+					Pre: isAuhorizing and (result4==1)
+					Post: not cardInserted and not isAuhorizing
+					
+				Message deposited()
+				    Pre: isCashDepositing
+					Post: not cardInserted and not isCashDepositing
+					
+				Message depositReq()
+					Post: isCashDepositing
+			
+				Message captureCardReq()
+					Post: isCaptuerCard
+
+			}

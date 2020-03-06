@@ -1,0 +1,25 @@
+2020-03-05 00:18:52,835 (Constraints.java:89): Couldn't resolve reference to Attribute 'hardwareError'.in line number 17
+Epsilon Script Path: epsilonScripts/mainScript.eol
+Metamodels and profiles loaded successfully for UMLRT models
+Model 'UMLRTModel' is loaded from '/Users/mojtababagherzadeh/git-nafiseh/ICSE2020/UMLRTSynthesizer/src/main/resources/evaluation/UMLRTModels/ABMSyntesis/ABMSyntesis.uml'
+Computation time of SMT formula of componets  ABM_Controller is done in 1 milliseconds
+Computation time of SMT formula of componets  ENV is done in 1 milliseconds
+-----  State Spape Exploration (SSE) of component : ABM_Controller with a bound set to ------15
+Exploration node in level 0
+Exploration node in level 1
+Exploration node in level 2
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 4
+Exploration node in level 4
+SSE of ABM_Controller is done in  2046 milliseconds
+Results: Number of state is : 8 and  Number edges: 10
+----- Sytesising actions of LTS for  : ABM_Controller
+Sytesising actions of LTS for  : ABM_Controlleris done in 165 milliseconds 
+---------LTS  mimization---------
+Minimizating of LTS with pairs count: 21
+Results: Number of state is : 4 and  Number edges: 10
+LTS minimization of : ABM_Controller is done in  8 milliseconds
+Results: Number of state is : 4 and  Number edges: 10
+---------Transformation into UML-RT models ---------
+Transfomration of LTS into UMLRT State Machine for  : ABM_Controller is done in  318 milliseconds

@@ -1,0 +1,27 @@
+Epsilon Script Path: epsilonScripts/mainScript.eol
+Metamodels and profiles loaded successfully for UMLRT models
+Model 'UMLRTModel' is loaded from '/Users/mojtababagherzadeh/git-nafiseh/ICSE2020/UMLRTSynthesizer/src/main/resources/evaluation/UMLRTModels/CacheManager/CacheManager.uml'
+Computation time of SMT formula of componets  Server is done in 0 milliseconds
+Computation time of SMT formula of componets  Cache is done in 0 milliseconds
+-----  State Spape Exploration (SSE) of component : Cache with a bound set to ------15
+Exploration node in level 0
+Exploration node in level 1
+Exploration node in level 1
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 2
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 3
+Exploration node in level 4
+SSE of Cache is done in  1219 milliseconds
+Results: Number of state is : 11 and  Number edges: 21
+----- Sytesising actions of LTS for  : Cache
+Sytesising actions of LTS for  : Cacheis done in 112 milliseconds 
+---------LTS  mimization---------
+Minimizating of LTS with pairs count: 45
+Results: Number of state is : 4 and  Number edges: 15
+LTS minimization of : Cache is done in  9 milliseconds
+Results: Number of state is : 4 and  Number edges: 15
+---------Transformation into UML-RT models ---------
+Transfomration of LTS into UMLRT State Machine for  : Cache is done in  345 milliseconds
