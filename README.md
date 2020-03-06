@@ -80,6 +80,6 @@ Usage: UMLRTSyntesizer [options]
 
 ```
 
-Sample models and scripts are available at `UMLRTSynthesizer/src/main/resources/evaluation`. This is the first time that we share this project publicly after more than a year of development. Please do not hesitate to contact us if you face any issue to use code.
+Sample models and scripts are available at `Evaluation-Result`. 
 
 
