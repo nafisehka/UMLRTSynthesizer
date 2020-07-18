@@ -43,7 +43,7 @@ Once the prerequisites are installed, you can simply compile and build the proje
 
 ```
 cd /to/project/location
-cd cd umlrtsyntesizer.ExecTraces.parent/
+cd umlrtsyntesizer.ExecTraces.parent/
 mvn install
 
 cd umlrtsyntesizer.constLang.parent/
