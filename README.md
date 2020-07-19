@@ -83,3 +83,52 @@ Usage: UMLRTSyntesizer [options]
 Sample models and scripts are available at `Evaluation-Result`. 
 
 
+## Short description of the source code structure
+In the following, we present a short description of the source code (`./UMLRTSynthesizer/src/main/`) that can help you extend the source code. 
+
+
+```
+./UMLRTSynthesizer/src/main/
+├── java
+│  └── UMLRTSynthesizer
+│    ├── EMFUtil
+│    │  └── ModelUtility.java. --> source code for editing EMF models
+│    ├── EOLUtil
+│    │  ├── EOLExecutor.java. --> source code for calling EOL script from java code
+│    │  ├── EpsilonEMFModelLoader.java --> loader for EMF modles
+│    │  └── EpsilonUMLRTModelLoader.java --> loader for UMLRT models
+│    ├── ExecTracesUtil
+│    │  ├── ExecTraceModel.java. --> class for saving the result of space explration (LTS)
+│    │  └── TraceGraphModelUtility.java
+│    ├── MainClass.java --> main class of the tool.
+│    ├── ProgArgs.java --> class for parsing command line options
+│    ├── UMLRTmodelutil
+│    │  ├── UMLRTModel.java --> class for editing UMLRT models
+│    │  └── UMLRTModelQuery.java --> class for querying UMLRT model.
+│    ├── Z3
+│    │  ├── ConstToZ3Convertor.java --> the class that concert pre/post conditions to Z3 constraints
+│    │  └── Z3Executor.java --> the class for calling Z3
+│    ├── constraintccript
+│    │  ├── ComponentConstraintScript.java  --> the class that creates an SMT formula for each component
+│    │  ├── ConstraintScriptUtil.java  --> helper class for ComponentConstraintScript
+│    │  ├── Constraints.java --> --> helper class for ComponentConstraintScript
+│    │  ├── Invariant.java --> --> helper class for ComponentConstraintScript
+│    │  └── MessageConditions.java --> --> helper class for ComponentConstraintScript
+│    └── statespaceexploration
+│      ├── Component.java --> helper class
+│      ├── ComponentStateSpaceExplorer.java --> main class for state explration. Also, contains the code for action syntesis
+│      ├── ExpressionInterpreter.java --> helper class 
+│      ├── Heap.java  --> helper class
+│      └── SystemModel.java --> the container class for the whole system
+└── resources
+  ├── epsilonScripts.  // a set of model transfrmation script written by epsilon tp work with UMLRT models
+  │  ├── LogUtil.eol
+  │  ├── UMLRTProfileOperations.eol.  --> contains APIs for editing UMLRT models
+  │  ├── UMLRTQuery.eol.  --> conatins APIs to query UMLRT models
+  │  └── mainScript.eol  --> this script can be called by external application to use the APIs
+  ├── evaluation // contains the case studies to test the tool
+
+```
+
+
+
